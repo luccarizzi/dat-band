@@ -3,7 +3,13 @@ import React from 'react';
 export default class Navbar extends React.Component {
   render() {
     return (
-      <h1>Navbar</h1>
+      <nav className='navbar bg-dark bg-gradient'>
+        <div className='container-fluid'>
+          <a className='navbar-brand logo-font fs-1' href='#'>
+            dat-band
+          </a>
+        </div>
+      </nav>
     )
   }
 }
