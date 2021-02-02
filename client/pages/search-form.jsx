@@ -1,6 +1,27 @@
 import React from 'react';
 
 export default class SearchForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      category: '',
+      search: ''
+    };
+    this.handleCategoryInput = this.handleCategoryInput.bind(this);
+    this.handleSearchInput = this.handleSearchInput.bind(this);
+  }
+
+  handleCategoryInput() {
+    this.setState({
+      category: event.target.value
+    });
+  }
+
+  handleSearchInput() {
+    this.setState({
+      search: event.target.value
+    });
+  }
 
   render() {
     return (
@@ -11,34 +32,37 @@ export default class SearchForm extends React.Component {
               <input
               className="form-check-input"
               type="radio"
-              name="radio-band"
-              id="radio-album"
-              value="band"></input>
+              name="category"
+              id="category-band"
+              value="band"
+                onChange={this.handleCategoryInput}></input>
               <label
               className="form-check-label"
-              htmlFor="radio-band">Band</label>
+              htmlFor="category-band">Band</label>
             </div>
             <div className="form-check form-check-inline">
               <input
               className="form-check-input"
               type="radio"
-              name="radio-album"
-              id="radio-album"
-              value="album"></input>
+              name="category"
+              id="category-album"
+              value="album"
+                onChange={this.handleCategoryInput}></input>
               <label
               className="form-check-label"
-              htmlFor="radio-album">Album</label>
+              htmlFor="category-album">Album</label>
             </div>
             <div className="form-check form-check-inline">
               <input
               className="form-check-input"
               type="radio"
-              name="radio-musician"
-              id="radio-musician"
-              value="musician"></input>
+              name="category"
+              id="category-musician"
+              value="musician"
+                onChange={this.handleCategoryInput}></input>
               <label
               className="form-check-label"
-              htmlFor="radio-musician">Musician</label>
+              htmlFor="category-musician">Musician</label>
             </div>
           </div>
         </div>
@@ -48,7 +72,8 @@ export default class SearchForm extends React.Component {
           type='text'
           name='input-search'
           id='input-search'
-          placeholder='Search'></input>
+          placeholder='Search'
+          onChange={this.handleSearchInput}></input>
         </div>
       </form>
     );
