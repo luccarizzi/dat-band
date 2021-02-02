@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.logo-font {
+  font-family: 'Bebas Neue', cursive;
+  color: #fc6565;
+  letter-spacing: 0.1rem;
+}
+
+.logo-font:hover {
+  color: #fc6565;
+}
