@@ -4,11 +4,21 @@ import Navbar from './pages/navbar';
 import SearchForm from './pages/search-form';
 
 export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.getParameters = this.getParameters.bind(this);
+  }
+
+  getParameters(parameters) {
+    // console.log('Parameters', parameters)
+  }
+
   render() {
     return (
       <>
         <Navbar />
-        <SearchForm />
+        <SearchForm onChange={this.getParameters}/>
       </>
     );
   }

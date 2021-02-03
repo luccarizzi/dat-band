@@ -24,6 +24,13 @@ export default class SearchForm extends React.Component {
   }
 
   render() {
+    const { category, search } = this.state;
+    const parameters = {
+      category: category,
+      search: search
+    };
+    this.props.onChange(parameters);
+
     return (
       <form className='container mt-2'>
         <div className='row'>
@@ -35,7 +42,7 @@ export default class SearchForm extends React.Component {
               name="category"
               id="category-band"
               value="band"
-                onChange={this.handleCategoryInput}></input>
+              onChange={this.handleCategoryInput}></input>
               <label
               className="form-check-label"
               htmlFor="category-band">Band</label>
@@ -47,7 +54,7 @@ export default class SearchForm extends React.Component {
               name="category"
               id="category-album"
               value="album"
-                onChange={this.handleCategoryInput}></input>
+              onChange={this.handleCategoryInput}></input>
               <label
               className="form-check-label"
               htmlFor="category-album">Album</label>
@@ -59,7 +66,7 @@ export default class SearchForm extends React.Component {
               name="category"
               id="category-musician"
               value="musician"
-                onChange={this.handleCategoryInput}></input>
+              onChange={this.handleCategoryInput}></input>
               <label
               className="form-check-label"
               htmlFor="category-musician">Musician</label>
