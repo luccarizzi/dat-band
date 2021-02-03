@@ -11,7 +11,7 @@ export default class App extends React.Component {
   }
 
   getParameters(parameters) {
-    // console.log('Parameters', parameters)
+
   }
 
   render() {
