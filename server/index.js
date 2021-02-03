@@ -12,18 +12,18 @@ const db = new pg.Pool({
 
 const app = express();
 
-const jsonMiddleware = express.json();
-app.use(jsonMiddleware);
+const jsonMiddleware = express.json()
+app.use(jsonMiddleware)
 
 app.use(staticMiddleware);
 
-app.get('/api', (req, res, next) => {
-  const { category, search } = req.body;
+app.post('/api', (req, res, next) => {
+  let { category, search } = req.body;
   if (!category || !search) {
     throw new ClientError(400, 'category and search are required fields');
   }
 
-  const fixedSearch = `${search[0].toUpperCase()}${search.slice(1)}%`; // create function to solve all possible search input
+  const fixedSearch = `${search[0].toUpperCase()}${search.slice(1)}%` // create function to solve all possible search input
 
   let sql;
   switch (category) {
@@ -57,8 +57,7 @@ app.get('/api', (req, res, next) => {
     .query(sql, params)
     .then(result => res.json(result.rows))
     .catch(err => next(err));
-
-});
+})
 
 app.use(errorMiddleware);
 
