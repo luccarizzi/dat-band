@@ -6,7 +6,7 @@ drop schema "public" cascade;
 
 create schema "public";
 
-/* added from DB Design */
+/* added from DB Designer */
 
 CREATE TABLE "users" (
 	"userId" serial NOT NULL,
@@ -64,7 +64,7 @@ CREATE TABLE "albums" (
 
 CREATE TABLE "members" (
 	"bandId" integer NOT NULL,
-	"musiciansId" integer NOT NULL,
+	"musicianId" integer NOT NULL,
 	"current" BOOLEAN NOT NULL
 ) WITH (
   OIDS=FALSE
@@ -192,7 +192,7 @@ ALTER TABLE "musicians" ADD CONSTRAINT "musicians_fk0" FOREIGN KEY ("cityId") RE
 
 
 ALTER TABLE "members" ADD CONSTRAINT "members_fk0" FOREIGN KEY ("bandId") REFERENCES "bands"("bandId");
-ALTER TABLE "members" ADD CONSTRAINT "members_fk1" FOREIGN KEY ("musiciansId") REFERENCES "musicians"("musicianId");
+ALTER TABLE "members" ADD CONSTRAINT "members_fk1" FOREIGN KEY ("musicianId") REFERENCES "musicians"("musicianId");
 
 ALTER TABLE "discography" ADD CONSTRAINT "discography_fk0" FOREIGN KEY ("bandId") REFERENCES "bands"("bandId");
 ALTER TABLE "discography" ADD CONSTRAINT "discography_fk1" FOREIGN KEY ("albumId") REFERENCES "albums"("albumId");
@@ -218,5 +218,3 @@ ALTER TABLE "stateCountry" ADD CONSTRAINT "stateCountry_fk1" FOREIGN KEY ("count
 
 ALTER TABLE "cityState" ADD CONSTRAINT "cityState_fk0" FOREIGN KEY ("cityId") REFERENCES "cities"("cityId");
 ALTER TABLE "cityState" ADD CONSTRAINT "cityState_fk1" FOREIGN KEY ("stateId") REFERENCES "states"("stateId");
-
- Download SQL file Back
