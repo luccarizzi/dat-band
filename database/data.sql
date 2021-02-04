@@ -40,9 +40,9 @@ values                      (1, 1),
                             (4, 3),
                             (5, 4);
 
-insert into "bands"         ("bandName", "debutYear", "cityId")
-values                      ('Metallica', '1981', 1),
-                            ('Megadeth', '1983', 1);
+insert into "bands"         ("bandName", "debutYear", "cityId", "bandImageUrl")
+values                      ('Metallica', '1981', 1, 'https://consequenceofsound.net/wp-content/uploads/2020/06/Metallica-Zoom.jpg?quality=80'),
+                            ('Megadeth', '1983', 1, 'https://www.udiscovermusic.com/wp-content/uploads/2020/02/Megadeth-2018-press-shot-web-optimised-1000.jpg');
 
 insert into "albums"        ("albumTitle", "releaseYear", "recordLabel", "albumImageUrl")
 values                      ('Kill `Em All', '1983', 'Megaforce Records', 'https://upload.wikimedia.org/wikipedia/en/5/5c/Metallica_-_Kill_%27Em_All_cover.jpg'),
@@ -89,7 +89,7 @@ values                      (1, 'https://www.youtube.com/watch?v=CD-E-LDc384'),
                             (2, 'https://www.youtube.com/watch?v=aU-dKoFZT0A'),
                             (2, 'https://www.youtube.com/watch?v=rUGIocJK9Tc');
 
-insert into "carouselImages"("bandId","bandImageUrl")
+insert into "carouselImages"("bandId","bandCarouselImageUrl")
 values                      (1, 'https://consequenceofsound.net/wp-content/uploads/2020/06/Metallica-Zoom.jpg?quality=80'),
                             (1, 'https://pyxis.nymag.com/v1/imgs/230/936/cf8ba87fc19c621e6c915e6e99900adbb3-metallica-superlative.2x.rsocial.w600.jpg'),
                             (1, 'https://www.rollingstone.com/wp-content/uploads/2018/06/metallica-master-of-puppets-1986-f363473b-0ebc-4678-8fc6-5bb871d28c3d.jpg?resize=1800,1200&w=450'),
