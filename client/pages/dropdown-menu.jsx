@@ -8,9 +8,10 @@ export default class DropdownMenu extends React.Component {
   }
 
   renderResult() {
+
     return (
       <div className='col-12'>
-        <div className='card'>
+        <div className='card border-0'>
           <div className='row'>
             <div className='col-5 m-auto'>
               <img className='img-fluid border' src='https://cdn-img.scalabs.com.au/7l-0_puOcUjwbsS7tdj52BOu8axY38g5_kNuPtw-peM/aHR0cHM6Ly9zdy10/cmlwbGVtLXByZC5z/Y2FkaWdpdGFsLmlv/L21lZGlhLzQxNDU5/L21ldGFsbGljYS0x/OTg1LTgwMC5qcGc_/cHJlc2V0PU1haW5J/bWFnZQ'></img>
@@ -31,11 +32,14 @@ export default class DropdownMenu extends React.Component {
   }
 
   render() {
+    // if (this.props.result.data) {
+    //   console.log(this.props.result.data[0].bandName)
+    // }
     return (
       <div className='container'>
-        <div className='row'>
+        <div className='row m-auto dropdown-menu-width border border-secondary border-top-0'>
           <this.renderResult />
-
+          <this.renderResult />
         </div>
       </div>
     );

@@ -104,7 +104,7 @@ export default class SearchForm extends React.Component {
             onChange={this.handleSearchInput}></input>
           </div>
         </form>
-        <DropdownMenu />
+        <DropdownMenu result={this.state}/>
       </>
     );
   }
