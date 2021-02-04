@@ -38,6 +38,15 @@ export default class SearchForm extends React.Component {
     this.setState({
       category: event.target.value
     });
+
+    const { search } = this.state;
+    if (search) {
+      this.setState({
+        search: '',
+        data: ''
+      });
+      document.getElementById('input-search').value = '';
+    }
   }
 
   handleSearchInput(event) {

@@ -33,20 +33,20 @@ app.get('/api', (req, res, next) => {
         from "bands"
         join "cities" using ("cityId")
         where "bandName" like $1
-
       `;
       break;
     case 'album':
       sql = `
-        select "albumTitle", "releaseYear", "recordLabel", "albumImageUrl"
+        select "albumId", "albumTitle", "releaseYear", "recordLabel", "albumImageUrl"
         from "albums"
         where "albumTitle" like $1
       `;
       break;
     case 'musician':
       sql = `
-        select "musicianFirstName", "musicianLastName", "dob", "musicianImageUrl"
+        select *
         from "musicians"
+        join "cities" using ("cityId")
         where "musicianFirstName" like $1
         or    "musicianLastName"  like $1
       `;

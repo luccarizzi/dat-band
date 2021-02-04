@@ -41,7 +41,7 @@ CREATE TABLE "musicians" (
 	"musicianFirstName" TEXT NOT NULL,
 	"musicianLastName" TEXT NOT NULL,
 	"cityId" integer NOT NULL,
-	"dob" DATE NOT NULL,
+	"dob" TEXT NOT NULL,
 	"musicianImageUrl" TEXT NOT NULL,
 	CONSTRAINT "musicians_pk" PRIMARY KEY ("musicianId")
 ) WITH (
