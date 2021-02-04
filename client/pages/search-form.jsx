@@ -16,15 +16,18 @@ export default class SearchForm extends React.Component {
   }
 
   getSearchResults() {
-    fetch(`http://localhost:3000/api?search=${this.state.search}&category=${this.state.category}`)
-      .then(res => res.json())
-      .then(data => {
-        this.setState({
-          data
-        });
-        // console.log(data)
-      })
-      .catch(err => console.error(err));
+    const { category, search } = this.state;
+    if (category && search) {
+      fetch(`http://localhost:3000/api?search=${this.state.search}&category=${this.state.category}`)
+        .then(res => res.json())
+        .then(data => {
+          this.setState({
+            data
+          });
+          // console.log(data)
+        })
+        .catch(err => console.error(err));
+    }
   }
 
   handleCategoryInput(event) {
@@ -42,14 +45,8 @@ export default class SearchForm extends React.Component {
   }
 
   render() {
-    // const { category, search, data } = this.state;
-    // if (category && search) {
-    //   const parameters = {
-    //     category,
-    //     search,
-    //     data
-    //   };
-    // }
+
+    // console.log(this.state)
 
     return (
       <>
