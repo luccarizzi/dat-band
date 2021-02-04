@@ -33,8 +33,12 @@ export default class DropdownMenu extends React.Component {
 
   render() {
     const data = this.props.result.data;
-    const dataList = data.map(data => {
+    const dataList = data.map((data, index) => {
       let result;
+      if (index > 4) {
+        return result;
+      }
+
       if (this.props.result.data) {
         result = <this.result data={data} key={data.bandId} />;
       } else {
