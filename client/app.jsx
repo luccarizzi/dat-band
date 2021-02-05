@@ -2,43 +2,35 @@ import React from 'react';
 import Navbar from './pages/navbar';
 import SearchForm from './pages/search-form';
 import BandPage from './pages/band-page';
+import parseRoute from './lib/parse-route';
 
 export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: ''
+      route: '' // parseRoute(window.location.hash)
     };
-    this.getQueryData = this.getQueryData.bind(this);
   }
 
-  getQueryData(queryData) {
-    this.setState({
-      data: queryData
+  componentDidMount() {
+    window.addEventListener('hashchange', event => {
+      const newRoute = parseRoute(window.location.hash);
+      this.setState({
+        route: newRoute
+      });
     });
   }
 
   render() {
-    const { data } = this.state;
+    const { route } = this.state;
     let seeSearchForm = '';
     let seePage = '';
-    if (!data) {
-      seeSearchForm = <SearchForm sendQueryData={this.getQueryData} />;
+    if (!route.path) {
+      seeSearchForm = <SearchForm />;
     } else {
-      switch (data.category) {
-        case 'band':
-          seePage = <BandPage />;
-          break;
-        case 'album':
-          seePage = <h1>album</h1>; // change
-          break;
-        case 'musician':
-          seePage = <h1>musician</h1>; // change
-          break;
-        default:
-          break;
+      if (route.path.startsWith('band')) {
+        seePage = <BandPage />;
       }
-
     }
 
     return (

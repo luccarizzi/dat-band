@@ -9,33 +9,30 @@ export default class DropdownMenu extends React.Component {
     this.bandResults = this.bandResults.bind(this);
     this.albumResults = this.albumResults.bind(this);
     this.musicianResults = this.musicianResults.bind(this);
-    this.getId = this.getId.bind(this);
-  }
-
-  getId(id) {
-    this.props.sendId(id);
   }
 
   bandResults(props) {
     return (
-      <div id={props.data.bandId} onClick={() => this.getId(props.data.bandId)} className='col-12'>
-        <div className='card border-0'>
-          <div className='row'>
-            <div className='col-5 m-auto'>
-              <img className='img-fluid border' src={props.data.bandImageUrl}></img>
-            </div>
-            <div className='col-7 ps-0 py-1'>
-              <div>
-                <h6>{props.data.bandName}</h6>
-                <div className='detail-font'>
-                  <p className='m-0'>{props.data.city}</p>
-                  <p className='m-0'>{props.data.debutYear}</p>
+      <a href={`#bandId=${props.data.bandId}`} className='text-decoration-none text-dark'>
+        <div className='col-12'>
+          <div className='card border-0'>
+            <div className='row'>
+              <div className='col-5 m-auto'>
+                <img className='img-fluid border' src={props.data.bandImageUrl}></img>
+              </div>
+              <div className='col-7 ps-0 py-1'>
+                <div>
+                  <h6>{props.data.bandName}</h6>
+                  <div className='detail-font'>
+                    <p className='m-0'>{props.data.city}</p>
+                    <p className='m-0'>{props.data.debutYear}</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </a>
     );
   }
 
