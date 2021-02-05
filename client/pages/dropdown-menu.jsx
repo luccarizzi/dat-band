@@ -103,6 +103,8 @@ export default class DropdownMenu extends React.Component {
           case 'musician':
             result = <this.musicianResults data={data} key={data.musicianId} />;
             break;
+          default:
+            break;
         }
       } else {
         result = '';
