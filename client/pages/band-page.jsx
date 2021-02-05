@@ -3,13 +3,23 @@ import React from 'react';
 export default class BandPage extends React.Component {
   constructor(props) {
     super(props);
-
+    this.state = {
+      data: ''
+    };
     this.bandPage = this.bandPage.bind(this);
   }
 
-  // componentDidMount() {
-
-  // }
+  componentDidMount() {
+    const { path } = this.props.send.route;
+    fetch(`api/${path}`)
+      .then(res => res.json())
+      .then(data => {
+        this.setState({
+          data
+        });
+      })
+      .catch(err => console.error(err));
+  }
 
   bandPage(props) {
     return (

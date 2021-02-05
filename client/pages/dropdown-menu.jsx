@@ -13,7 +13,7 @@ export default class DropdownMenu extends React.Component {
 
   bandResults(props) {
     return (
-      <a href={`#bandId=${props.data.bandId}`} className='text-decoration-none text-dark'>
+      <a href={`#band/${props.data.bandId}`} className='text-decoration-none text-dark'>
         <div className='col-12'>
           <div className='card border-0'>
             <div className='row'>

@@ -22,14 +22,14 @@ export default class App extends React.Component {
   }
 
   render() {
-    const { route } = this.state;
+    const { route } = this.state; // console.log(route.path)
     let seeSearchForm = '';
     let seePage = '';
     if (!route.path) {
       seeSearchForm = <SearchForm />;
     } else {
       if (route.path.startsWith('band')) {
-        seePage = <BandPage />;
+        seePage = <BandPage send={this.state}/>;
       }
     }
 

@@ -18,7 +18,7 @@ export default class SearchForm extends React.Component {
   getSearchResults() {
     const { category, search } = this.state;
     if (category && search) {
-      fetch(`http://localhost:3000/api?search=${this.state.search}&category=${this.state.category}`)
+      fetch(`/api?search=${this.state.search}&category=${this.state.category}`)
         .then(res => res.json())
         .then(data => {
           this.setState({
