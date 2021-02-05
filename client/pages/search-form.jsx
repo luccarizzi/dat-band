@@ -12,7 +12,7 @@ export default class SearchForm extends React.Component {
     };
     this.handleCategoryInput = this.handleCategoryInput.bind(this);
     this.handleSearchInput = this.handleSearchInput.bind(this);
-    this.debouncedGetSearchResults = debounce(this.getSearchResults, 800);
+    this.debouncedGetSearchResults = debounce(this.getSearchResults, 600);
     this.getData = this.getData.bind(this);
   }
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from './pages/navbar';
-import SearchForm from './pages/search-form';
+// import SearchForm from './pages/search-form';
+import BandPage from './band-page';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -21,7 +22,8 @@ export default class App extends React.Component {
     return (
       <>
         <Navbar />
-        <SearchForm sendQueryData={this.getQueryData}/>
+        {/* <SearchForm sendQueryData={this.getQueryData}/> */}
+        <BandPage />
       </>
     );
   }
