@@ -24,7 +24,6 @@ export default class SearchForm extends React.Component {
           this.setState({
             data
           });
-          // console.log(data)
         })
         .catch(err => console.error(err));
     } else {
@@ -58,9 +57,6 @@ export default class SearchForm extends React.Component {
   }
 
   render() {
-
-    // console.log(this.state.data)
-
     let dropdownMenu;
     if (this.state.data) {
       dropdownMenu = <DropdownMenu result={this.state} />;

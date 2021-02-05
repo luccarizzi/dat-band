@@ -3,7 +3,6 @@ import React from 'react';
 export default class DropdownMenu extends React.Component {
   constructor(props) {
     super(props);
-
     this.bandResults = this.bandResults.bind(this);
     this.albumResults = this.albumResults.bind(this);
     this.musicianResults = this.musicianResults.bind(this);
@@ -11,7 +10,7 @@ export default class DropdownMenu extends React.Component {
 
   bandResults(props) {
     return (
-      <div className='col-12'>
+      <div id={props.data.bandId} className='col-12'>
         <div className='card border-0'>
           <div className='row'>
             <div className='col-5 m-auto'>
@@ -80,9 +79,7 @@ export default class DropdownMenu extends React.Component {
 
   render() {
     const { category } = this.props.result;
-
     const dataList = this.props.result.data.map((data, index) => {
-
       let result;
       if (index > 4) {
         return result;
