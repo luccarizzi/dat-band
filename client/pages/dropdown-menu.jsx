@@ -3,14 +3,22 @@ import React from 'react';
 export default class DropdownMenu extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      id: ''
+    };
     this.bandResults = this.bandResults.bind(this);
     this.albumResults = this.albumResults.bind(this);
     this.musicianResults = this.musicianResults.bind(this);
+    this.getId = this.getId.bind(this);
+  }
+
+  getId(id) {
+    this.props.sendId(id);
   }
 
   bandResults(props) {
     return (
-      <div id={props.data.bandId} className='col-12'>
+      <div id={props.data.bandId} onClick={() => this.getId(props.data.bandId)} className='col-12'>
         <div className='card border-0'>
           <div className='row'>
             <div className='col-5 m-auto'>
@@ -78,6 +86,7 @@ export default class DropdownMenu extends React.Component {
   }
 
   render() {
+    // console.log(this.state)
     const { category } = this.props.result;
     const dataList = this.props.result.data.map((data, index) => {
       let result;

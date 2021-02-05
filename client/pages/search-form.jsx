@@ -13,6 +13,7 @@ export default class SearchForm extends React.Component {
     this.handleCategoryInput = this.handleCategoryInput.bind(this);
     this.handleSearchInput = this.handleSearchInput.bind(this);
     this.debouncedGetSearchResults = debounce(this.getSearchResults, 800);
+    this.getData = this.getData.bind(this);
   }
 
   getSearchResults() {
@@ -56,10 +57,19 @@ export default class SearchForm extends React.Component {
     });
   }
 
+  getData(id) {
+    const { category } = this.state;
+    const queryData = {
+      category,
+      id
+    };
+    this.props.sendQueryData(queryData);
+  }
+
   render() {
     let dropdownMenu;
     if (this.state.data) {
-      dropdownMenu = <DropdownMenu result={this.state} />;
+      dropdownMenu = <DropdownMenu sendId={this.getData} result={this.state} />;
     } else {
       dropdownMenu = '';
     }

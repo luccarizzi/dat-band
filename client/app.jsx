@@ -6,15 +6,22 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: []
+      data: ''
     };
+    this.getQueryData = this.getQueryData.bind(this);
+  }
+
+  getQueryData(queryData) {
+    this.setState({
+      data: queryData
+    });
   }
 
   render() {
     return (
       <>
         <Navbar />
-        <SearchForm />
+        <SearchForm sendQueryData={this.getQueryData}/>
       </>
     );
   }
