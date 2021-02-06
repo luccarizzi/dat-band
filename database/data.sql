@@ -94,7 +94,7 @@ values                      (1, 'https://consequenceofsound.net/wp-content/uploa
                             (1, 'https://pyxis.nymag.com/v1/imgs/230/936/cf8ba87fc19c621e6c915e6e99900adbb3-metallica-superlative.2x.rsocial.w600.jpg'),
                             (1, 'https://www.rollingstone.com/wp-content/uploads/2018/06/metallica-master-of-puppets-1986-f363473b-0ebc-4678-8fc6-5bb871d28c3d.jpg?resize=1800,1200&w=450'),
                             (2, 'https://www.udiscovermusic.com/wp-content/uploads/2020/02/Megadeth-2018-press-shot-web-optimised-1000.jpg'),
-                            (2, 'https://lh3.googleusercontent.com/proxy/1vJpGbzRL5GdfMG4FLjtf-zPPe04b2e1WGk-WUXkRTUy5b-HeBb1zHFZQ6EnPtLT4xRMJH3By7-7e46EmlP27186J4rwiazIP-18uebdpYPeRSmn2kPVV2SHhrU3E1COzQXxjCc'),
+                            (2, 'https://megadeth.com/wp-content/themes/megadeth/assets/images/2017_0216_10330_5753.jpeg'),
                             (2, 'https://specials-images.forbesimg.com/imageserve/5f57ad29b488eaeabd9364e8/960x0.jpg?fit=scale');
 
 insert into "personnel"     ("musicianId", "albumId")

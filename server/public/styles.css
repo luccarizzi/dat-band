@@ -21,3 +21,8 @@
 .dropdown-menu-width {
   width: 290px;
 }
+
+.carousel-image {
+  height: 250px;
+  object-fit: cover;
+}
