@@ -29,6 +29,7 @@ CREATE TABLE "bands" (
 	"debutYear" TEXT NOT NULL,
 	"cityId" integer NOT NULL,
 	"bandImageUrl" TEXT NOT NULL,
+	"bandGenre" TEXT NOT NULL,
 	CONSTRAINT "bands_pk" PRIMARY KEY ("bandId")
 ) WITH (
   OIDS=FALSE

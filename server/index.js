@@ -5,16 +5,13 @@ const ClientError = require('./client-error');
 const errorMiddleware = require('./error-middleware');
 
 const pg = require('pg');
-
 const db = new pg.Pool({
   connectionString: process.env.DATABASE_URL
 });
 
 const app = express();
-
 const jsonMiddleware = express.json();
 app.use(jsonMiddleware);
-
 app.use(staticMiddleware);
 
 app.get('/api', (req, res, next) => {
@@ -24,7 +21,7 @@ app.get('/api', (req, res, next) => {
   }
 
   const fixedSearch = `${search[0].toUpperCase()}${search.slice(1)}%`; // create function to solve all possible search input
-
+  const params = [fixedSearch];
   let sql;
   switch (category) {
     case 'band':
@@ -53,11 +50,71 @@ app.get('/api', (req, res, next) => {
       break;
   }
 
-  const params = [fixedSearch];
-
   db
     .query(sql, params)
     .then(result => res.json(result.rows))
+    .catch(err => next(err));
+});
+
+app.get('/api/band/:bandId', (req, res, next) => {
+  const bandId = parseInt(req.params.bandId, 10);
+  if (!bandId || bandId < 0) {
+    throw new ClientError(400, 'bandId must be a positive integer');
+  }
+  const data = {};
+  const params = [bandId];
+  const sqlBand = `
+    select "city", "state", "country", "bandName", "bandGenre"
+    from "bands"
+    join "cities" using ("cityId")
+    join "cityState" using ("cityId")
+    join "states" using ("stateId")
+    join "stateCountry" using ("stateId")
+    join "countries" using ("countryId")
+    where "bandId" = $1
+  `;
+
+  const sqlImages = `
+    select "bandCarouselImageUrl"
+    from "bands"
+    join "carouselImages" using ("bandId")
+    where "bandId" = $1
+  `;
+
+  const sqlMembers = `
+    select "current", "musicianFirstName", "musicianLastName", "musicianId"
+    from "bands"
+    join "members" using ("bandId")
+    join "musicians" using ("musicianId")
+    where "bandId" = $1
+  `;
+
+  const sqlAlbums = `
+    select "albumTitle", "releaseYear", "albumId"
+    from "bands"
+    join "discography" using ("bandId")
+    join "albums" using ("albumId")
+    where "bandId" = $1
+  `;
+
+  db
+    .query(sqlBand, params)
+    .then(result => {
+      data.band = result.rows;
+      return db.query(sqlImages, params);
+    })
+    .then(result => {
+      data.images = result.rows;
+      return db.query(sqlMembers, params);
+    })
+    .then(result => {
+      data.members = result.rows;
+      return db.query(sqlAlbums, params);
+    })
+    .then(result => {
+      data.albums = result.rows;
+      res.json(data);
+    })
     .catch(err => next(err));
 });
 

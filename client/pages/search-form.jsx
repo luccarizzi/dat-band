@@ -12,19 +12,18 @@ export default class SearchForm extends React.Component {
     };
     this.handleCategoryInput = this.handleCategoryInput.bind(this);
     this.handleSearchInput = this.handleSearchInput.bind(this);
-    this.debouncedGetSearchResults = debounce(this.getSearchResults, 800);
+    this.debouncedGetSearchResults = debounce(this.getSearchResults, 600);
   }
 
   getSearchResults() {
     const { category, search } = this.state;
     if (category && search) {
-      fetch(`http://localhost:3000/api?search=${this.state.search}&category=${this.state.category}`)
+      fetch(`/api?search=${this.state.search}&category=${this.state.category}`)
         .then(res => res.json())
         .then(data => {
           this.setState({
             data
           });
-          // console.log(data)
         })
         .catch(err => console.error(err));
     } else {
@@ -58,9 +57,6 @@ export default class SearchForm extends React.Component {
   }
 
   render() {
-
-    // console.log(this.state.data)
-
     let dropdownMenu;
     if (this.state.data) {
       dropdownMenu = <DropdownMenu result={this.state} />;

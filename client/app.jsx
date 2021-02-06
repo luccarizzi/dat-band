@@ -1,20 +1,43 @@
 import React from 'react';
 import Navbar from './pages/navbar';
 import SearchForm from './pages/search-form';
+import BandPage from './pages/band-page';
+import parseRoute from './lib/parse-route';
 
 export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: []
+      route: parseRoute(window.location.hash)
     };
   }
 
+  componentDidMount() {
+    window.addEventListener('hashchange', event => {
+      const newRoute = parseRoute(window.location.hash);
+      this.setState({
+        route: newRoute
+      });
+    });
+  }
+
   render() {
+    const { route } = this.state; // console.log(route.path)
+    let seeSearchForm = '';
+    let seePage = '';
+    if (!route.path) {
+      seeSearchForm = <SearchForm />;
+    } else {
+      if (route.path.startsWith('band')) {
+        seePage = <BandPage send={this.state}/>;
+      }
+    }
+
     return (
       <>
         <Navbar />
-        <SearchForm />
+        {seeSearchForm}
+        {seePage}
       </>
     );
   }
