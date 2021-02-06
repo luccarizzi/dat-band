@@ -39,7 +39,11 @@ export default class Carousel extends React.Component {
     const { images } = this.props; // console.log(images)
     const { imageIndex } = this.state;
     return (
-      <img className='img-fluid carousel-image' src={images[imageIndex].bandCarouselImageUrl}></img>
+      <div>
+        <a><i className='fas fa-chevron-left position-absolute arrow left-arrow'></i></a>
+        <img className='img-fluid carousel-image' src={images[imageIndex].bandCarouselImageUrl}></img>
+        <a><i className='fas fa-chevron-right position-absolute arrow right-arrow'></i></a>
+      </div>
     );
   }
 }
