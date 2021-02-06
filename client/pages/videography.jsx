@@ -7,7 +7,7 @@ export default class Videography extends React.Component {
   // }
 
   render() {
-    const { videos } = this.props;
+    const { videos } = this.props; // console.log(videos)
 
     return (
       <div className='col-12 bg-dark bg-gradient g-0 text-white page-font mb-3 g-0'>
@@ -18,7 +18,7 @@ export default class Videography extends React.Component {
           </div>
         </div>
       <iframe
-        src='https://www.youtube.com/embed/YENX5dRVUzE'
+        src={`https://www.youtube.com/embed/${videos[0].videoUrl}`}
         className='pb-2'
         width='320'
         height='220'
@@ -26,6 +26,6 @@ export default class Videography extends React.Component {
         allowFullScreen
       ></iframe>
       </div>
-    )
+    );
   }
 }
