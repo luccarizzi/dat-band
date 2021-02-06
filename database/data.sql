@@ -40,9 +40,9 @@ values                      (1, 1),
                             (4, 3),
                             (5, 4);
 
-insert into "bands"         ("bandName", "debutYear", "cityId", "bandImageUrl")
-values                      ('Metallica', '1981', 1, 'https://consequenceofsound.net/wp-content/uploads/2020/06/Metallica-Zoom.jpg?quality=80'),
-                            ('Megadeth', '1983', 1, 'https://www.udiscovermusic.com/wp-content/uploads/2020/02/Megadeth-2018-press-shot-web-optimised-1000.jpg');
+insert into "bands"         ("bandName", "debutYear", "cityId", "bandGenre", "bandImageUrl")
+values                      ('Metallica', '1981', 1, 'Heavy Metal', 'https://consequenceofsound.net/wp-content/uploads/2020/06/Metallica-Zoom.jpg?quality=80'),
+                            ('Megadeth', '1983', 1, 'Thrash Metal', 'https://www.udiscovermusic.com/wp-content/uploads/2020/02/Megadeth-2018-press-shot-web-optimised-1000.jpg');
 
 insert into "albums"        ("albumTitle", "releaseYear", "recordLabel", "albumImageUrl")
 values                      ('Kill `Em All', '1983', 'Megaforce Records', 'https://upload.wikimedia.org/wikipedia/en/5/5c/Metallica_-_Kill_%27Em_All_cover.jpg'),

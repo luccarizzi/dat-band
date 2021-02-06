@@ -63,8 +63,8 @@ app.get('/api/band/:bandId', (req, res, next) => {
   }
   const data = {};
   const params = [bandId];
-  const sqlLocation = `
-    select "city", "state", "country"
+  const sqlBand = `
+    select "city", "state", "country", "bandName", "bandGenre"
     from "bands"
     join "cities" using ("cityId")
     join "cityState" using ("cityId")
@@ -82,7 +82,7 @@ app.get('/api/band/:bandId', (req, res, next) => {
   `;
 
   const sqlMembers = `
-    select "current", "musicianFirstName", "musicianLastName"
+    select "current", "musicianFirstName", "musicianLastName", "musicianId"
     from "bands"
     join "members" using ("bandId")
     join "musicians" using ("musicianId")
@@ -90,7 +90,7 @@ app.get('/api/band/:bandId', (req, res, next) => {
   `;
 
   const sqlAlbums = `
-    select "albumTitle", "releaseYear"
+    select "albumTitle", "releaseYear", "albumId"
     from "bands"
     join "discography" using ("bandId")
     join "albums" using ("albumId")
@@ -98,9 +98,9 @@ app.get('/api/band/:bandId', (req, res, next) => {
   `;
 
   db
-    .query(sqlLocation, params)
+    .query(sqlBand, params)
     .then(result => {
-      data.location = result.rows;
+      data.band = result.rows;
       return db.query(sqlImages, params);
     })
     .then(result => {
@@ -112,7 +112,7 @@ app.get('/api/band/:bandId', (req, res, next) => {
       return db.query(sqlAlbums, params);
     })
     .then(result => {
-      data.albuns = result.rows;
+      data.albums = result.rows;
       res.json(data);
     })
     .catch(err => next(err));
