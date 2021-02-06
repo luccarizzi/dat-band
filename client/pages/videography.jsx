@@ -17,14 +17,23 @@ export default class Videography extends React.Component {
             <span className='ps-2 text-uppercase fw-bold'>Videography</span>
           </div>
         </div>
-      <iframe
-        src={`https://www.youtube.com/embed/${videos[0].videoUrl}`}
-        className='pb-2'
-        width='320'
-        height='220'
-        allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-        allowFullScreen
-      ></iframe>
+        <div className=''>
+        {
+          videos.map(video => {
+            return (
+              <iframe
+                key={video.videoId}
+                src={`https://www.youtube.com/embed/${video.videoUrl}`}
+                className='pb-2'
+                width='320'
+                height='220'
+                allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+                allowFullScreen>
+              </iframe>
+            );
+          })
+        }
+        </div>
       </div>
     );
   }
