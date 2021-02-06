@@ -82,12 +82,12 @@ values                      (1, 1, true),
                             (2, 8, true);
 
 insert into "videos"        ("bandId", "videoUrl")
-values                      (1, 'https://www.youtube.com/watch?v=CD-E-LDc384'),
-                            (1, 'https://www.youtube.com/watch?v=iT6vqeL-ysI'),
-                            (1, 'https://www.youtube.com/watch?v=dHUHxTiPFUU'),
-                            (2, 'https://www.youtube.com/watch?v=9d4ui9q7eDM'),
-                            (2, 'https://www.youtube.com/watch?v=aU-dKoFZT0A'),
-                            (2, 'https://www.youtube.com/watch?v=rUGIocJK9Tc');
+values                      (1, 'CD-E-LDc384'),
+                            (1, 'iT6vqeL-ysI'),
+                            (1, 'dHUHxTiPFUU'),
+                            (2, '9d4ui9q7eDM'),
+                            (2, 'aU-dKoFZT0A'),
+                            (2, 'rUGIocJK9Tc');
 
 insert into "carouselImages"("bandId","bandCarouselImageUrl")
 values                      (1, 'https://consequenceofsound.net/wp-content/uploads/2020/06/Metallica-Zoom.jpg?quality=80'),

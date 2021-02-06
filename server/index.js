@@ -89,6 +89,12 @@ app.get('/api/band/:bandId', (req, res, next) => {
     where "bandId" = $1
   `;
 
+  const sqlVideos = `
+    select "videoId", "videoUrl"
+    from "videos"
+    where "bandId" = $1
+  `;
+
   const sqlAlbums = `
     select "albumTitle", "releaseYear", "albumId"
     from "bands"
@@ -109,6 +115,10 @@ app.get('/api/band/:bandId', (req, res, next) => {
     })
     .then(result => {
       data.members = result.rows;
+      return db.query(sqlVideos, params);
+    })
+    .then(result => {
+      data.videos = result.rows;
       return db.query(sqlAlbums, params);
     })
     .then(result => {

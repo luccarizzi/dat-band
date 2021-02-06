@@ -1,5 +1,6 @@
 import React from 'react';
 import Carousel from './carousel';
+import Videography from './videography';
 
 export default class BandPage extends React.Component {
   constructor(props) {
@@ -24,14 +25,13 @@ export default class BandPage extends React.Component {
 
   bandPage() {
     const { data } = this.state;
-    const { band, images, albums, members } = data;
+    const { band, images, albums, members, videos } = data;
     if (data) {
       return (
         <div className='container'>
           <div className='row'>
 
             <div className='col-12 g-0'>
-              {/* <img className='img-fluid' src={images[0].bandCarouselImageUrl}></img> */}
               <Carousel images={images}/>
             </div>
 
@@ -99,7 +99,7 @@ export default class BandPage extends React.Component {
                 </ul>
               </div>
             </div>
-
+            <Videography videos={videos}/>
           </div>
         </div>
       );
