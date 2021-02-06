@@ -9,9 +9,9 @@ export default class Carousel extends React.Component {
   }
 
   render() {
-    // console.log(this.props)
+    const { images } = this.props; // console.log(images)
     return (
-      <h1>test</h1>
+      <img className='img-fluid' src={images[0].bandCarouselImageUrl}></img>
     );
   }
 }
