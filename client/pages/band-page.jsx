@@ -24,7 +24,7 @@ export default class BandPage extends React.Component {
 
   bandPage() {
     const { data } = this.state;
-    const { band, albums, members } = data;
+    const { band, images, albums, members } = data;
     if (data) {
       return (
         <div className='container'>
@@ -32,7 +32,7 @@ export default class BandPage extends React.Component {
 
             <div className='col-12 g-0'>
               {/* <img className='img-fluid' src={images[0].bandCarouselImageUrl}></img> */}
-              <Carousel />
+              <Carousel images={images}/>
             </div>
 
             <div className='col-12'>

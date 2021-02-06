@@ -75,7 +75,7 @@ app.get('/api/band/:bandId', (req, res, next) => {
   `;
 
   const sqlImages = `
-    select "bandCarouselImageUrl"
+    select "bandCarouselImageUrl", "bandCarouselImageId"
     from "bands"
     join "carouselImages" using ("bandId")
     where "bandId" = $1
