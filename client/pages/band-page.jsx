@@ -99,10 +99,7 @@ export default class BandPage extends React.Component {
                 </ul>
               </div>
             </div>
-
-            <div className='col-12 bg-dark bg-gradient g-0 text-white page-font mb-3'>
-              <Videography videos={videos}/>
-            </div>
+            <Videography videos={videos}/>
           </div>
         </div>
       );
