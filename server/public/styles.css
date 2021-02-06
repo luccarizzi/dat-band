@@ -21,3 +21,22 @@
 .dropdown-menu-width {
   width: 290px;
 }
+
+.carousel-image {
+  height: 250px;
+  object-fit: cover;
+}
+
+.arrow {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 2.5rem;
+  top: 30%;
+}
+
+.left-arrow {
+  left: 1%;
+}
+
+.right-arrow {
+  right: 1%;
+}

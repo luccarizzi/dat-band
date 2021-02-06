@@ -112,9 +112,11 @@ CREATE TABLE "albumGenre" (
 
 
 CREATE TABLE "tracks" (
+	"trackId" serial NOT NULL,
 	"albumId" integer NOT NULL,
 	"track" TEXT NOT NULL,
-	"duration" TEXT NOT NULL
+	"duration" TEXT NOT NULL,
+	CONSTRAINT "tracks_pk" PRIMARY KEY ("trackId")
 ) WITH (
   OIDS=FALSE
 );
@@ -122,8 +124,10 @@ CREATE TABLE "tracks" (
 
 
 CREATE TABLE "videos" (
+	"videoId" serial NOT NULL,
 	"bandId" integer NOT NULL,
-	"videoUrl" TEXT NOT NULL
+	"videoUrl" TEXT NOT NULL,
+	CONSTRAINT "videos_pk" PRIMARY KEY ("videoId")
 ) WITH (
   OIDS=FALSE
 );
@@ -131,8 +135,10 @@ CREATE TABLE "videos" (
 
 
 CREATE TABLE "carouselImages" (
+	"bandCarouselImageId" serial NOT NULL,
 	"bandId" integer NOT NULL,
-	"bandCarouselImageUrl" TEXT NOT NULL
+	"bandCarouselImageUrl" TEXT NOT NULL,
+	CONSTRAINT "carouselImages_pk" PRIMARY KEY ("bandCarouselImageId")
 ) WITH (
   OIDS=FALSE
 );

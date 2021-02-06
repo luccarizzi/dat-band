@@ -1,4 +1,5 @@
 import React from 'react';
+import Carousel from './carousel';
 
 export default class BandPage extends React.Component {
   constructor(props) {
@@ -30,7 +31,8 @@ export default class BandPage extends React.Component {
           <div className='row'>
 
             <div className='col-12 g-0'>
-              <img className='img-fluid' src={images[0].bandCarouselImageUrl}></img>
+              {/* <img className='img-fluid' src={images[0].bandCarouselImageUrl}></img> */}
+              <Carousel images={images}/>
             </div>
 
             <div className='col-12'>
