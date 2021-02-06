@@ -1,5 +1,6 @@
 import React from 'react';
 import Carousel from './carousel';
+import Videography from './videography';
 
 export default class BandPage extends React.Component {
   constructor(props) {
@@ -100,6 +101,9 @@ export default class BandPage extends React.Component {
               </div>
             </div>
 
+            <div className='col-12 bg-dark bg-gradient g-0 text-white page-font mb-3'>
+              <Videography />
+            </div>
           </div>
         </div>
       );
