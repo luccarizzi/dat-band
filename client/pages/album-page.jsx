@@ -32,10 +32,10 @@ export default class AlbumPage extends React.Component {
       return (
       <div className='container'>
         <div className='row'>
-          <AlbumImage albumData={album}/>
-          <AlbumTitle albumData={album}/>
-          <AlbumInfo albumData={data}/>
-          <AlbumTrackList albumData={tracksList}/>
+          <AlbumImage albumData={album} />
+          <AlbumTitle albumData={album} />
+          <AlbumInfo albumData={data} />
+          <AlbumTrackList albumData={tracksList} />
         </div>
       </div>
       );
