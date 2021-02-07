@@ -5,12 +5,13 @@ export default class AlbumPage extends React.Component {
     super(props);
     this.state = {
       data: ''
-    }
+    };
   }
 
   render() {
+    // console.log(this.props)
     return (
       <h1>test</h1>
-    )
+    );
   }
 }
