@@ -23,7 +23,7 @@ export default class App extends React.Component {
   }
 
   render() {
-    const { route } = this.state; // console.log(route.path)
+    const { route } = this.state;
     let seeSearchForm = '';
     let seePage = '';
     if (!route.path) {

@@ -1,6 +1,7 @@
 import React from 'react';
-import Carousel from './carousel';
-import Videography from './videography';
+import BandImageCarousel from '../components/band-image-carousel';
+import BandTitle from '../components/band-title';
+import BandVideography from '../components/band-videography';
 
 export default class BandPage extends React.Component {
   constructor(props) {
@@ -30,14 +31,8 @@ export default class BandPage extends React.Component {
       return (
         <div className='container'>
           <div className='row'>
-
-            <div className='col-12 g-0'>
-              <Carousel images={images}/>
-            </div>
-
-            <div className='col-12'>
-              <h1 className='display-1'>{band[0].bandName}</h1>
-            </div>
+            <BandImageCarousel bandData={images} />
+            <BandTitle bandData={band} />
 
             <div className='col-12 bg-dark bg-gradient g-0 text-white page-font mb-3'>
               <div className='p-3'>
@@ -99,7 +94,7 @@ export default class BandPage extends React.Component {
                 </ul>
               </div>
             </div>
-            <Videography videos={videos}/>
+            <BandVideography bandData={videos}/>
           </div>
         </div>
       );
