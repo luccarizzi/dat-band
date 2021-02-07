@@ -6,6 +6,7 @@ function AlbumInfo() {
       <div className='p-3'>
         <p className='m-0'>Band: Metallica</p>
         <p className='m-0'>Released: 1984</p>
+        <p className='m-0'>Genre: Heavy Metal</p>
         <p className='m-0'>Label: Elektra Records</p>
       </div>
     </div>

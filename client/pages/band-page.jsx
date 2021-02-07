@@ -12,7 +12,7 @@ export default class BandPage extends React.Component {
   }
 
   componentDidMount() {
-    const { path } = this.props.send.route;
+    const { path } = this.props.queriedRoute.route;
     fetch(`api/${path}`)
       .then(res => res.json())
       .then(data => {

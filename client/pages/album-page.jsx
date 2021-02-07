@@ -13,8 +13,20 @@ export default class AlbumPage extends React.Component {
     this.albumPage = this.albumPage.bind(this);
   }
 
+  // componentDidMount() {
+  //   const { path } = this.props.queriedRoute.route;
+  //   fetch(`api/${path}`)
+  //     .then(res => res.json())
+  //     .then(data => {
+  //       this.setState({
+  //         data
+  //       });
+  //     })
+  //     .catch(err => console.error(err));
+  // }
+
   albumPage() {
-    const { data } = this.state; // console.log(data)
+    const { data } = this.state;
     if (data) {
       return (
       <div className='container'>
@@ -31,7 +43,7 @@ export default class AlbumPage extends React.Component {
     }
   }
 
-  render() {
+  render() { // console.log(this.state)
     return (
       <this.albumPage />
     );

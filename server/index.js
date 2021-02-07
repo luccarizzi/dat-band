@@ -128,6 +128,60 @@ app.get('/api/band/:bandId', (req, res, next) => {
     .catch(err => next(err));
 });
 
+app.get('/api/album/:albumId', (req, res, next) => {
+  const albumId = parseInt(req.params.albumId, 10);
+  if (!albumId || albumId < 0) {
+    throw new ClientError(400, 'albumId must be a positive integer');
+  }
+  const data = {};
+  const params = [albumId];
+  const sqlBand = `
+    select "bandName"
+    from "discography"
+    join "bands" using ("bandId")
+    where "albumId" = $1
+  `;
+
+  const sqlAlbum = `
+    select *
+    from "albums"
+    where "albumId" = $1
+  `;
+
+  const sqlTrackList = `
+    select "trackId", "track", "length"
+    from "tracks"
+    where "albumId" = $1
+  `;
+
+  const sqlAlbumGenre = `
+    select "genre"
+    from "albumGenre"
+    join "genres" using ("genreId")
+    where "albumId" = $1
+  `;
+
+  db
+    .query(sqlBand, params)
+    .then(result => {
+      data.band = result.rows;
+      return db.query(sqlAlbum, params);
+    })
+    .then(result => {
+      data.album = result.rows;
+      return db.query(sqlTrackList, params);
+    })
+    .then(result => {
+      data.tracksList = result.rows;
+      return db.query(sqlAlbumGenre, params);
+    })
+    .then(result => {
+      data.algumGenre = result.rows;
+      res.json(data);
+    })
+    .catch(err => next(err));
+});
+
 app.use(errorMiddleware);
 
 app.listen(process.env.PORT, () => {

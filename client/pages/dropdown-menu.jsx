@@ -38,7 +38,7 @@ export default class DropdownMenu extends React.Component {
 
   albumResults(props) {
     return (
-      <a href={`#album/${props.data.bandId}`} className='text-decoration-none text-dark'>
+      <a href={`#album/${props.data.albumId}`} className='text-decoration-none text-dark'>
         <div className='col-12'>
           <div className='card border-0'>
             <div className='row'>

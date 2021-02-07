@@ -30,9 +30,9 @@ export default class App extends React.Component {
       seeSearchForm = <SearchForm />;
     } else {
       if (route.path.startsWith('band')) {
-        seePage = <BandPage send={this.state} />;
+        seePage = <BandPage queriedRoute={this.state} />;
       } else if (route.path.startsWith('album')) {
-        seePage = <AlbumPage send={this.state} />;
+        seePage = <AlbumPage queriedRoute={this.state} />;
       }
     }
 

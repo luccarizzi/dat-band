@@ -126,7 +126,7 @@ values                      (1, 1),
                             (5, 2),
                             (6, 2);
 
-insert into "tracks"        ("albumId", "track", "duration")
+insert into "tracks"        ("albumId", "track", "length")
 values                      (1, 'Hit the Lights', '4:17'),
                             (1, 'The Four Horsemen', '7:13'),
                             (1, 'Motorbreath', '3:08'),
