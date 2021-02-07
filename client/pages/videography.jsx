@@ -1,13 +1,8 @@
 import React from 'react';
 
 export default class Videography extends React.Component {
-  // constructor(props) {
-  //   super(props);
-
-  // }
-
   render() {
-    const { videos } = this.props; // console.log(videos)
+    const { videos } = this.props;
 
     return (
       <div className='col-12 bg-dark bg-gradient g-0 text-white page-font mb-3 g-0'>

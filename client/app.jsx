@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './pages/navbar';
 import SearchForm from './pages/search-form';
 import BandPage from './pages/band-page';
+import AlbumPage from './pages/album-page';
 import parseRoute from './lib/parse-route';
 
 export default class App extends React.Component {
