@@ -8,33 +8,34 @@ export default class AlbumPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: 'test'
+      data: ''
     };
     this.albumPage = this.albumPage.bind(this);
   }
 
-  // componentDidMount() {
-  //   const { path } = this.props.queriedRoute.route;
-  //   fetch(`api/${path}`)
-  //     .then(res => res.json())
-  //     .then(data => {
-  //       this.setState({
-  //         data
-  //       });
-  //     })
-  //     .catch(err => console.error(err));
-  // }
+  componentDidMount() {
+    const { path } = this.props.queriedRoute.route;
+    fetch(`api/${path}`)
+      .then(res => res.json())
+      .then(data => {
+        this.setState({
+          data
+        });
+      })
+      .catch(err => console.error(err));
+  }
 
   albumPage() {
     const { data } = this.state;
+    const { album, tracksList } = data;
     if (data) {
       return (
       <div className='container'>
         <div className='row'>
-          <AlbumImage />
-          <AlbumTitle />
-          <AlbumInfo />
-          <AlbumTrackList />
+          <AlbumImage albumData={album}/>
+          <AlbumTitle albumData={album}/>
+          <AlbumInfo albumData={data}/>
+          <AlbumTrackList albumData={tracksList}/>
         </div>
       </div>
       );
@@ -43,7 +44,7 @@ export default class AlbumPage extends React.Component {
     }
   }
 
-  render() { // console.log(this.state)
+  render() {
     return (
       <this.albumPage />
     );

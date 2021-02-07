@@ -1,9 +1,10 @@
 import React from 'react';
 
-function AlbumImage() {
+function AlbumImage(props) {
+  const { albumImageUrl } = props.albumData[0];
   return (
     <div className='col-12 g-0'>
-      <img className='image-width' src='https://upload.wikimedia.org/wikipedia/en/b/b2/Metallica_-_Master_of_Puppets_cover.jpg'></img>
+      <img className='image-width' src={albumImageUrl}></img>
     </div>
   );
 }

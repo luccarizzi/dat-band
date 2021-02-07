@@ -149,7 +149,7 @@ app.get('/api/album/:albumId', (req, res, next) => {
   `;
 
   const sqlTrackList = `
-    select "trackId", "track", "length"
+    select "trackId", "trackNo", "track", "length"
     from "tracks"
     where "albumId" = $1
   `;
@@ -176,7 +176,7 @@ app.get('/api/album/:albumId', (req, res, next) => {
       return db.query(sqlAlbumGenre, params);
     })
     .then(result => {
-      data.algumGenre = result.rows;
+      data.albumGenre = result.rows;
       res.json(data);
     })
     .catch(err => next(err));
