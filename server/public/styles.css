@@ -48,3 +48,7 @@
 .image-width {
   width: inherit;
 }
+
+.album-image {
+  object-fit: contain;
+}

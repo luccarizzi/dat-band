@@ -64,7 +64,7 @@ app.get('/api/band/:bandId', (req, res, next) => {
   const data = {};
   const params = [bandId];
   const sqlBand = `
-    select "city", "state", "country", "bandName", "bandGenre"
+    select "city", "state", "country", "bandName", "bandGenre", "debutYear"
     from "bands"
     join "cities" using ("cityId")
     join "cityState" using ("cityId")
@@ -96,7 +96,7 @@ app.get('/api/band/:bandId', (req, res, next) => {
   `;
 
   const sqlAlbums = `
-    select "albumTitle", "releaseYear", "albumId"
+    select "albumTitle", "releaseYear", "albumId", "albumImageUrl"
     from "bands"
     join "discography" using ("bandId")
     join "albums" using ("albumId")

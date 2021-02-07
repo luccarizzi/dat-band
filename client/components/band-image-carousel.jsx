@@ -71,10 +71,12 @@ export default class BandImageCarousel extends React.Component {
     const { bandData } = this.props;
     const { imageIndex } = this.state;
     return (
-      <div className='col-12 g-0'>
-        <a><i onClick={this.leftClick} className='fas fa-chevron-left position-absolute arrow left-arrow'></i></a>
-        <img className='img-fluid carousel-image' src={bandData[imageIndex].bandCarouselImageUrl}></img>
-        <a><i onClick={this.rightClick} className='fas fa-chevron-right position-absolute arrow right-arrow'></i></a>
+      <div className='row'>
+        <div className='col-12 g-0'>
+          <a><i onClick={this.leftClick} className='fas fa-chevron-left position-absolute arrow left-arrow'></i></a>
+          <img className='img-fluid carousel-image' src={bandData[imageIndex].bandCarouselImageUrl}></img>
+          <a><i onClick={this.rightClick} className='fas fa-chevron-right position-absolute arrow right-arrow'></i></a>
+        </div>
       </div>
     );
   }
