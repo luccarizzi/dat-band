@@ -4,7 +4,7 @@ function BandInfo(props) {
   const { city, state, country, bandGenre, debutYear } = props.bandData[0];
   return (
     <div className='row'>
-      <div className='col-12 g-0 bg-dark bg-gradient g-0 text-white page-font mb-3'>
+      <div className='g-0 bg-dark bg-gradient text-white page-font mb-3'>
         <div className='p-3'>
           <p className='m-0'><span className='fw-lighter'>Genre:</span> {bandGenre}</p>
           <p className='m-0'><span className='fw-lighter'>Debut:</span> {debutYear}</p>

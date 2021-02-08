@@ -1,26 +1,51 @@
 insert into "cities"        ("city")
-values                      ('Los Angeles'),
-                            ('Downey'),
-                            ('San Francisco'),
-                            ('Santa Monica'),
-                            ('Gentofte'),
-                            ('La Mesa'),
-                            ('Jackson'),
-                            ('Rio de Janeiro'),
-                            ('Wilrijk');
+values                      ('Los Angeles'), --1
+                            ('Downey'), --2
+                            ('San Francisco'), --3
+                            ('Santa Monica'), --4
+                            ('Gentofte'), --5
+                            ('La Mesa'), --6
+                            ('Jackson'), --7
+                            ('Rio de Janeiro'), --8
+                            ('Wilrijk'), --9
+                            ('Castro Valley'), --10
+                            ('Battle Creek'), --11
+                            ('Dunkirk'), --12
+                            ('Livonia'), --13
+                            ('Ann Arbor'), --14
+                            ('Munich'), --15
+                            ('Washington'), --16
+                            ('Bethlehem'), --17
+                            ('New York'), --18
+                            ('Montreal'), --19
+                            ('Ottawa'), --20
+                            ('Jacksonville'), --21
+                            ('Brooklyn'), --22
+                            ('Lakewood'); --23
 
 insert into "states"        ("state")
-values                      ('California'),
-                            ('Capital Region'),
-                            ('Minnesota'),
-                            ('Rio de Janeiro'),
-                            ('Antwerp');
+values                      ('California'), --1
+                            ('Capital Region'), --2
+                            ('Minnesota'), --3
+                            ('Rio de Janeiro'), --4
+                            ('Antwerp'), --5
+                            ('Michigan'), --6
+                            ('New York'), --7
+                            ('Bavaria'), --8
+                            ('D.C.'), -- 9
+                            ('Pennsylvania'), --10
+                            ('Quebec'), --11
+                            ('Ontario'), --12
+                            ('Florida'), --13
+                            ('Colorado'); --14
 
 insert into "countries"     ("country")
-values                      ('United States'),
-                            ('Denmark'),
-                            ('Brazil'),
-                            ('Belgium');
+values                      ('United States'), --1
+                            ('Denmark'), --2
+                            ('Brazil'), --3
+                            ('Belgium'), --4
+                            ('Germany'), --5
+                            ('Canada'); --6
 
 insert into "cityState"     ("cityId", "stateId")
 values                      (1, 1),
@@ -31,14 +56,37 @@ values                      (1, 1),
                             (6, 1),
                             (7, 3),
                             (8, 4),
-                            (9, 5);
+                            (9, 5),
+                            (10, 1),
+                            (11, 6),
+                            (12, 7),
+                            (13, 6),
+                            (14, 6),
+                            (15, 8),
+                            (16, 9),
+                            (17, 10),
+                            (18, 7),
+                            (19, 11),
+                            (20, 12),
+                            (21, 13),
+                            (22, 7),
+                            (23, 14);
 
 insert into "stateCountry"  ("stateId", "countryId")
 values                      (1, 1),
                             (2, 2),
                             (3, 1),
                             (4, 3),
-                            (5, 4);
+                            (5, 4),
+                            (6, 1),
+                            (7, 1),
+                            (8, 5),
+                            (9, 1),
+                            (10, 1),
+                            (11, 6),
+                            (12, 6),
+                            (13, 1),
+                            (14, 1);
 
 insert into "bands"         ("bandName", "debutYear", "cityId", "bandGenre", "bandImageUrl")
 values                      ('Metallica', '1981', 1, 'Heavy Metal', 'https://consequenceofsound.net/wp-content/uploads/2020/06/Metallica-Zoom.jpg?quality=80'),
@@ -53,14 +101,32 @@ values                      ('Kill `Em All', '1983', 'Megaforce Records', 'https
                             ('So Far, So Good... So What!','1988','Capitol Records','https://upload.wikimedia.org/wikipedia/en/7/7f/Megadeth-SoFar.jpg');
 
 insert into "musicians"     ("musicianFirstName", "musicianLastName", "cityId", "dob", "musicianImageUrl")
-values                      ('James','Hetfield', 2,'August 3, 1963','https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/James_Hetfield_2017.jpg/440px-James_Hetfield_2017.jpg'),
-                            ('Kirk','Hammett', 3,'November 18, 1962','https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Kirk_Hammett_2017.jpg/440px-Kirk_Hammett_2017.jpg'),
-                            ('Robert','Trujillo', 4,'October 23, 1964','https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Robert_Trujillo_2017.jpg/440px-Robert_Trujillo_2017.jpg'),
-                            ('Lars','Ulrich', 5,'26 December 1963','https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/LarsUlrich.jpg/440px-LarsUlrich.jpg'),
-                            ('Dave','Mustaine', 6,'September 13, 1961','https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Megadeth_performing_in_San_Antonio%2C_Texas_%2827420120171%29.jpg/440px-Megadeth_performing_in_San_Antonio%2C_Texas_%2827420120171%29.jpg'),
-                            ('David','Ellefson', 7,'November 12, 1964','https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/David_Ellefson_%28cropped2%29.jpg/440px-David_Ellefson_%28cropped2%29.jpg'),
-                            ('Kiko','Loureiro', 8,'June 16, 1972','https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/KikoLoureiro2020.png/440px-KikoLoureiro2020.png'),
-                            ('Dirk','Verbeuren', 9,'January 8, 1975','https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Dirk_Verbeuren.jpg/440px-Dirk_Verbeuren.jpg');
+values                      ('James','Hetfield', 2,'August 3, 1963','https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/James_Hetfield_2017.jpg/440px-James_Hetfield_2017.jpg'), --1
+                            ('Kirk','Hammett', 3,'November 18, 1962','https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Kirk_Hammett_2017.jpg/440px-Kirk_Hammett_2017.jpg'), --2
+                            ('Robert','Trujillo', 4,'October 23, 1964','https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Robert_Trujillo_2017.jpg/440px-Robert_Trujillo_2017.jpg'), --3
+                            ('Lars','Ulrich', 5,'26 December 1963','https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/LarsUlrich.jpg/440px-LarsUlrich.jpg'), --4
+                            ('Dave','Mustaine', 6,'September 13, 1961','https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Megadeth_performing_in_San_Antonio%2C_Texas_%2827420120171%29.jpg/440px-Megadeth_performing_in_San_Antonio%2C_Texas_%2827420120171%29.jpg'), --5
+                            ('David','Ellefson', 7,'November 12, 1964','https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/David_Ellefson_%28cropped2%29.jpg/440px-David_Ellefson_%28cropped2%29.jpg'), --6
+                            ('Kiko','Loureiro', 8,'June 16, 1972','https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/KikoLoureiro2020.png/440px-KikoLoureiro2020.png'), --7
+                            ('Dirk','Verbeuren', 9,'January 8, 1975','https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Dirk_Verbeuren.jpg/440px-Dirk_Verbeuren.jpg'), --8
+                            ('Ron','McGovney', 1, 'November 2, 1962','https://static.wikia.nocookie.net/metallica/images/5/5c/Ron.jpg/revision/latest/scale-to-width-down/340?cb=20151218231852'), --9
+                            ('Cliff','Burton', 10, 'February 10, 1962','https://upload.wikimedia.org/wikipedia/en/0/0c/Bass_burton.jpg'), --10
+                            ('Jason','Newsted', 11, 'March 4, 1963','https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/13-06-09_RaR_Newsted_14.jpg/440px-13-06-09_RaR_Newsted_14.jpg'), --11
+                            ('Gar','Samuelson', 12, 'February 18, 1958','https://lh3.googleusercontent.com/proxy/ejWQXz6_xdhe-p1DG3bI9js5bQLzlN9mmuAH1fxXAmIiSpRNf_CENIWvy-4WhUgGJSnEmT_IMJzQ_crY7j5zbC-hazFQ0T1Lq41KktM8Xg'), --12
+                            ('Chris','Poland', 12, 'December 1, 1957','https://lastfm.freetls.fastly.net/i/u/770x0/58763eeddefea437033c71f247f1c2d9.jpg'), --13
+                            ('Chuck','Behler', 13, 'June 13, 1965','https://upload.wikimedia.org/wikipedia/mk/d/da/Chuck_behler.jpg'), --14
+                            ('Jeff','Young', 14, 'March 31, 1962','https://i.redd.it/phcwerwmrdp21.jpg'), --15
+                            ('Nick','Menza', 15, 'July 23, 1964','https://upload.wikimedia.org/wikipedia/en/6/63/Nick_menza_photo.jpg'), --16
+                            ('Marty','Friedman', 16, 'December 8, 1962','https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Marty_Friedman_in_Tokyo--2009-03.jpg/440px-Marty_Friedman_in_Tokyo--2009-03.jpg'), --17
+                            ('Jimmy','DeGrasso', 17, 'March 16, 1963','https://www.innovativepercussion.com/docs/document_selector/images/atw2yzgr.jpg'), --18
+                            ('Al','Pitrelli', 18, 'September 26, 1962','https://nafme.org/wp-content/uploads/2019/12/Al-Pitrelli-image-2.jpg'), --19
+                            ('Shawn', 'Drover', 19, 'May 5, 1966', 'https://www.metal-archives.com/images/2/2/3/223_artist.jpg?4118'), --20
+                            ('Glen','Drover', 20,'May 25, 1969','https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Glen_Drover_performing_in_Dubai_with_Megadeth_2005.jpg/440px-Glen_Drover_performing_in_Dubai_with_Megadeth_2005.jpg'), --21
+                            ('James','MacDonough', 21,'April 3, 1970','https://lh3.googleusercontent.com/proxy/EnMbS42RsvvtEJY0IHxoxp7rbAGjujXpK02UjQuyh-HtoZQ4cByNOfOmeicdhbyItCD1dt1ab1HmN2Xlosk0vI18u-BzaFzRLDbnWTGOg7Zw8G2mK1_LOAFcBmCtS5r5GU0xzSFGZkLfkhGK1zWAFFQ'), --22
+                            ('James','LoMenzo', 22,'January 13, 1959','https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Metalmania_2008_Megadeth_James_LoMenzo_02.jpg/1200px-Metalmania_2008_Megadeth_James_LoMenzo_02.jpg'), --23
+                            ('Chris','Broderick', 23,'March 6, 1970','https://i.pinimg.com/originals/0f/13/3c/0f133ca5ff8213aea4cf773d7d8ff38d.jpg'), --24
+                            ('Chris','Adler', 16,'November 23, 1972','https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/2015_RiP_Lamb_of_God_-_Chris_Adler_by_2eight_-_3SC5483.jpg/440px-2015_RiP_Lamb_of_God_-_Chris_Adler_by_2eight_-_3SC5483.jpg'); --25
+                            -- ('','', ,'',''),
 
 insert into "discography"   ("bandId", "albumId")
 values                      (1, 1),
@@ -79,7 +145,24 @@ values                      (1, 1, true),
                             (2, 5, true),
                             (2, 6, true),
                             (2, 7, true),
-                            (2, 8, true);
+                            (2, 8, true),
+                            (1, 9, false),
+                            (1, 10, false),
+                            (1, 11, false),
+                            (2, 12, false),
+                            (2, 13, false),
+                            (2, 14, false),
+                            (2, 15, false),
+                            (2, 16, false),
+                            (2, 17, false),
+                            (2, 18, false),
+                            (2, 19, false),
+                            (2, 20, false),
+                            (2, 21, false),
+                            (2, 22, false),
+                            (2, 23, false),
+                            (2, 24, false),
+                            (2, 25, false);
 
 insert into "videos"        ("bandId", "videoUrl")
 values                      (1, 'CD-E-LDc384'),
@@ -114,7 +197,7 @@ values                      (1, 1),
                             (5, 6),
                             (6, 6);
 
-insert into "genres"         ("genre")
+insert into "genres"        ("genre")
 values                      ('Thrash Metal'),
                             ('Heavy Metal');
 

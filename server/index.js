@@ -3,6 +3,7 @@ const express = require('express');
 const staticMiddleware = require('./static-middleware');
 const ClientError = require('./client-error');
 const errorMiddleware = require('./error-middleware');
+const searchInput = require('./search-input');
 
 const pg = require('pg');
 const db = new pg.Pool({
@@ -20,8 +21,7 @@ app.get('/api', (req, res, next) => {
     throw new ClientError(400, 'category and search are required fields');
   }
 
-  const fixedSearch = `${search[0].toUpperCase()}${search.slice(1)}%`; // create function to solve all possible search input
-  const params = [fixedSearch];
+  const params = [searchInput(search)];
   let sql;
   switch (category) {
     case 'band':
@@ -161,6 +161,13 @@ app.get('/api/album/:albumId', (req, res, next) => {
     where "albumId" = $1
   `;
 
+  const sqlPersonnel = `
+    select "musicianId", "musicianFirstName", "musicianLastName"
+    from "personnel"
+    join "musicians" using ("musicianId")
+    where "albumId" = $1
+  `;
+
   db
     .query(sqlBand, params)
     .then(result => {
@@ -177,6 +184,10 @@ app.get('/api/album/:albumId', (req, res, next) => {
     })
     .then(result => {
       data.albumGenre = result.rows;
+      return db.query(sqlPersonnel, params);
+    })
+    .then(result => {
+      data.personnel = result.rows;
       res.json(data);
     })
     .catch(err => next(err));

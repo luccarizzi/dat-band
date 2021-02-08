@@ -4,7 +4,7 @@ function BandVideography(props) {
   const videos = props.bandData;
   return (
     <div className='row'>
-      <div className='col-12 bg-dark bg-gradient g-0 text-white page-font mb-3 g-0'>
+      <div className='col-12 bg-dark bg-gradient text-white page-font mb-3 g-0'>
         <div className='p-3'>
           <p className='m-0 text-uppercase fw-bold'>Videography</p>
         </div>
