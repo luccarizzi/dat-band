@@ -63,24 +63,26 @@ export default class DropdownMenu extends React.Component {
 
   musicianResults(props) {
     return (
-      <div className='col-12'>
-        <div className='card border-0'>
-          <div className='row'>
-            <div className='col-5 m-auto'>
-              <img className='img-fluid border' src={props.data.musicianImageUrl}></img>
-            </div>
-            <div className='col-7 ps-0 py-1'>
-              <div>
-                <h6>{props.data.musicianFirstName} {props.data.musicianLastName}</h6>
-                <div className='detail-font'>
-                  <p className='m-0'>{props.data.dob}</p>
-                  <p className='m-0'>{props.data.city}</p>
+      <a href={`#musician/${props.data.musicianId}`} className='text-decoration-none text-dark'>
+        <div className='col-12'>
+          <div className='card border-0'>
+            <div className='row'>
+              <div className='col-5 m-auto'>
+                <img className='img-fluid border' src={props.data.musicianImageUrl}></img>
+              </div>
+              <div className='col-7 ps-0 py-1'>
+                <div>
+                  <h6>{props.data.musicianFirstName} {props.data.musicianLastName}</h6>
+                  <div className='detail-font'>
+                    <p className='m-0'>{props.data.dob}</p>
+                    <p className='m-0'>{props.data.city}</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </a>
     );
   }
 
