@@ -3,6 +3,7 @@ import Navbar from './pages/navbar';
 import SearchForm from './pages/search-form';
 import BandPage from './pages/band-page';
 import AlbumPage from './pages/album-page';
+import MusicianPage from './pages/musician-page';
 import parseRoute from './lib/parse-route';
 
 export default class App extends React.Component {
@@ -33,6 +34,8 @@ export default class App extends React.Component {
         seePage = <BandPage queriedRoute={this.state} />;
       } else if (route.path.startsWith('album')) {
         seePage = <AlbumPage queriedRoute={this.state} />;
+      } else if (route.path.startsWith('musician')) {
+        seePage = <MusicianPage queriedRoute={this.state} />;
       }
     }
 
