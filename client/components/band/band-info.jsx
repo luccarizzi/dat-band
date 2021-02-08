@@ -8,7 +8,7 @@ function BandInfo(props) {
         <div className='py-3'>
           <p className='m-0'><span className='fw-lighter'>Genre:</span> {bandGenre}</p>
           <p className='m-0'><span className='fw-lighter'>Debut:</span> {debutYear}</p>
-          <p className='m-0'><span className='fw-lighter'>Location:</span> {city}, {state}, {country}</p>
+          <p className='m-0'><span className='fw-lighter'>From:</span> {city}, {state}, {country}</p>
         </div>
       </div>
     </div>
