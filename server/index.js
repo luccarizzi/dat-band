@@ -22,6 +22,7 @@ app.get('/api', (req, res, next) => {
   }
 
   const params = [searchInput(search)];
+
   let sql;
   switch (category) {
     case 'band':
@@ -63,6 +64,7 @@ app.get('/api/band/:bandId', (req, res, next) => {
   }
   const data = {};
   const params = [bandId];
+
   const sqlBand = `
     select "city", "state", "country", "bandName", "bandGenre", "debutYear"
     from "bands"
@@ -135,6 +137,7 @@ app.get('/api/album/:albumId', (req, res, next) => {
   }
   const data = {};
   const params = [albumId];
+
   const sqlBand = `
     select "bandName"
     from "discography"
@@ -188,6 +191,72 @@ app.get('/api/album/:albumId', (req, res, next) => {
     })
     .then(result => {
       data.personnel = result.rows;
+      res.json(data);
+    })
+    .catch(err => next(err));
+});
+
+app.get('/api/musician/:musicianId', (req, res, next) => {
+  const musicianId = parseInt(req.params.musicianId, 10);
+  if (!musicianId || musicianId < 0) {
+    throw new ClientError(400, 'musicianId must be a positive integer');
+  }
+  const data = {};
+  const params = [musicianId];
+
+  const sqlImage = `
+    select "musicianImageUrl"
+    from "musicians"
+    where "musicianId" = $1
+  `;
+  const sqlTitle = `
+    select "musicianFirstName", "musicianLastName"
+    from "musicians"
+    where "musicianId" = $1
+  `;
+  const sqlInfo = `
+    select "dob", "city", "state", "country"
+    from "musicians"
+    join "cities" using ("cityId")
+    join "cityState" using ("cityId")
+    join "states" using ("stateId")
+    join "stateCountry" using ("stateId")
+    join "countries" using ("countryId")
+    where "musicianId" = $1
+  `;
+  const sqlAssociated = `
+    select "bandId", "bandName"
+    from "members"
+    join "bands" using ("bandId")
+    where "musicianId" = $1
+  `;
+  const sqlRecorded = `
+    select "albumId", "albumImageUrl", "albumTitle", "releaseYear"
+    from "personnel"
+    join "albums" using ("albumId")
+    where "musicianId" = $1
+  `;
+
+  db
+    .query(sqlImage, params)
+    .then(result => {
+      data.image = result.rows;
+      return db.query(sqlTitle, params);
+    })
+    .then(result => {
+      data.title = result.rows;
+      return db.query(sqlInfo, params);
+    })
+    .then(result => {
+      data.info = result.rows;
+      return db.query(sqlAssociated, params);
+    })
+    .then(result => {
+      data.associated = result.rows;
+      return db.query(sqlRecorded, params);
+    })
+    .then(result => {
+      data.recorded = result.rows;
       res.json(data);
     })
     .catch(err => next(err));
