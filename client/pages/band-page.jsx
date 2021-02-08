@@ -1,10 +1,10 @@
 import React from 'react';
-import BandImageCarousel from '../components/band-image-carousel';
-import BandTitle from '../components/band-title';
-import BandInfo from '../components/band-info';
-import BandMembers from '../components/band-members';
-import BandDiscography from '../components/band-discography';
-import BandVideography from '../components/band-videography';
+import BandImageCarousel from '../components/band/band-image-carousel';
+import BandTitle from '../components/band/band-title';
+import BandInfo from '../components/band/band-info';
+import BandMembers from '../components/band/band-members';
+import BandDiscography from '../components/band/band-discography';
+import BandVideography from '../components/band/band-videography';
 
 export default class BandPage extends React.Component {
   constructor(props) {
@@ -12,7 +12,7 @@ export default class BandPage extends React.Component {
     this.state = {
       data: ''
     };
-    this.bandPage = this.bandPage.bind(this);
+    this.page = this.page.bind(this);
   }
 
   componentDidMount() {
@@ -27,7 +27,7 @@ export default class BandPage extends React.Component {
       .catch(err => console.error(err));
   }
 
-  bandPage() {
+  page() {
     const { data } = this.state;
     const { band, images, albums, members, videos } = data;
     if (data) {
@@ -48,7 +48,7 @@ export default class BandPage extends React.Component {
 
   render() {
     return (
-      <this.bandPage />
+      <this.page />
     );
   }
 }

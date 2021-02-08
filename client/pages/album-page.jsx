@@ -1,9 +1,9 @@
 import React from 'react';
-import AlbumImage from '../components/album-image';
-import AlbumInfo from '../components/album-info';
-import AlbumTitle from '../components/album-title';
-import AlbumPersonnel from '../components/album-personnel';
-import AlbumTrackList from '../components/album-track-list';
+import AlbumImage from '../components/album/album-image';
+import AlbumInfo from '../components/album/album-info';
+import AlbumTitle from '../components/album/album-title';
+import AlbumPersonnel from '../components/album/album-personnel';
+import AlbumTrackList from '../components/album/album-track-list';
 
 export default class AlbumPage extends React.Component {
   constructor(props) {
@@ -11,7 +11,7 @@ export default class AlbumPage extends React.Component {
     this.state = {
       data: ''
     };
-    this.albumPage = this.albumPage.bind(this);
+    this.page = this.page.bind(this);
   }
 
   componentDidMount() {
@@ -26,18 +26,18 @@ export default class AlbumPage extends React.Component {
       .catch(err => console.error(err));
   }
 
-  albumPage() {
+  page() {
     const { data } = this.state;
     const { album, tracksList, personnel } = data;
     if (data) {
       return (
-      <div className='container'>
+        <div className='container'>
           <AlbumImage albumData={album} />
           <AlbumTitle albumData={album} />
           <AlbumInfo albumData={data} />
           <AlbumPersonnel albumData={personnel}/>
           <AlbumTrackList albumData={tracksList} />
-      </div>
+        </div>
       );
     } else {
       return (<></>);
@@ -46,7 +46,7 @@ export default class AlbumPage extends React.Component {
 
   render() {
     return (
-      <this.albumPage />
+      <this.page />
     );
   }
 }
