@@ -15,6 +15,18 @@ export default class MusicianPage extends React.Component {
     this.page = this.page.bind(this);
   }
 
+  componentDidMount() {
+    const { path } = this.props.queriedRoute.route;
+    fetch(`api/${path}`)
+      .then(res => res.json())
+      .then(data => {
+        this.setState({
+          data
+        });
+      })
+      .catch(err => console.error(err));
+  }
+
   page() {
     return (
       <div className='container'>
