@@ -38,24 +38,26 @@ export default class DropdownMenu extends React.Component {
 
   albumResults(props) {
     return (
-      <div className='col-12'>
-        <div className='card border-0'>
-          <div className='row'>
-            <div className='col-5 m-auto'>
-              <img className='img-fluid border' src={props.data.albumImageUrl}></img>
-            </div>
-            <div className='col-7 ps-0 py-1'>
-              <div>
-                <h6>{props.data.albumTitle}</h6>
-                <div className='detail-font'>
-                  <p className='m-0'>{props.data.recordLabel}</p>
-                  <p className='m-0'>{props.data.releaseYear}</p>
+      <a href={`#album/${props.data.albumId}`} className='text-decoration-none text-dark'>
+        <div className='col-12'>
+          <div className='card border-0'>
+            <div className='row'>
+              <div className='col-5 m-auto'>
+                <img className='img-fluid border' src={props.data.albumImageUrl}></img>
+              </div>
+              <div className='col-7 ps-0 py-1'>
+                <div>
+                  <h6>{props.data.albumTitle}</h6>
+                  <div className='detail-font'>
+                    <p className='m-0'>{props.data.recordLabel}</p>
+                    <p className='m-0'>{props.data.releaseYear}</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </a>
     );
   }
 

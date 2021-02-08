@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './pages/navbar';
 import SearchForm from './pages/search-form';
 import BandPage from './pages/band-page';
+import AlbumPage from './pages/album-page';
 import parseRoute from './lib/parse-route';
 
 export default class App extends React.Component {
@@ -22,14 +23,16 @@ export default class App extends React.Component {
   }
 
   render() {
-    const { route } = this.state; // console.log(route.path)
+    const { route } = this.state;
     let seeSearchForm = '';
     let seePage = '';
     if (!route.path) {
       seeSearchForm = <SearchForm />;
     } else {
       if (route.path.startsWith('band')) {
-        seePage = <BandPage send={this.state}/>;
+        seePage = <BandPage queriedRoute={this.state} />;
+      } else if (route.path.startsWith('album')) {
+        seePage = <AlbumPage queriedRoute={this.state} />;
       }
     }
 

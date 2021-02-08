@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class Carousel extends React.Component {
+export default class BandImageCarousel extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -68,13 +68,15 @@ export default class Carousel extends React.Component {
   }
 
   render() {
-    const { images } = this.props;
+    const { bandData } = this.props;
     const { imageIndex } = this.state;
     return (
-      <div>
-        <a><i onClick={this.leftClick} className='fas fa-chevron-left position-absolute arrow left-arrow'></i></a>
-        <img className='img-fluid carousel-image' src={images[imageIndex].bandCarouselImageUrl}></img>
-        <a><i onClick={this.rightClick} className='fas fa-chevron-right position-absolute arrow right-arrow'></i></a>
+      <div className='row'>
+        <div className='col-12 g-0'>
+          <a><i onClick={this.leftClick} className='fas fa-chevron-left position-absolute arrow left-arrow'></i></a>
+          <img className='img-fluid carousel-image' src={bandData[imageIndex].bandCarouselImageUrl}></img>
+          <a><i onClick={this.rightClick} className='fas fa-chevron-right position-absolute arrow right-arrow'></i></a>
+        </div>
       </div>
     );
   }

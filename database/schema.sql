@@ -112,10 +112,11 @@ CREATE TABLE "albumGenre" (
 
 
 CREATE TABLE "tracks" (
-	"trackId" serial NOT NULL,
 	"albumId" integer NOT NULL,
+	"trackId" serial NOT NULL,
+	"trackNo" integer NOT NULL,
 	"track" TEXT NOT NULL,
-	"duration" TEXT NOT NULL,
+	"length" TEXT NOT NULL,
 	CONSTRAINT "tracks_pk" PRIMARY KEY ("trackId")
 ) WITH (
   OIDS=FALSE

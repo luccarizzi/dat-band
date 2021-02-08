@@ -3,6 +3,7 @@ const express = require('express');
 const staticMiddleware = require('./static-middleware');
 const ClientError = require('./client-error');
 const errorMiddleware = require('./error-middleware');
+const searchInput = require('./search-input');
 
 const pg = require('pg');
 const db = new pg.Pool({
@@ -20,8 +21,7 @@ app.get('/api', (req, res, next) => {
     throw new ClientError(400, 'category and search are required fields');
   }
 
-  const fixedSearch = `${search[0].toUpperCase()}${search.slice(1)}%`; // create function to solve all possible search input
-  const params = [fixedSearch];
+  const params = [searchInput(search)];
   let sql;
   switch (category) {
     case 'band':
@@ -64,7 +64,7 @@ app.get('/api/band/:bandId', (req, res, next) => {
   const data = {};
   const params = [bandId];
   const sqlBand = `
-    select "city", "state", "country", "bandName", "bandGenre"
+    select "city", "state", "country", "bandName", "bandGenre", "debutYear"
     from "bands"
     join "cities" using ("cityId")
     join "cityState" using ("cityId")
@@ -96,7 +96,7 @@ app.get('/api/band/:bandId', (req, res, next) => {
   `;
 
   const sqlAlbums = `
-    select "albumTitle", "releaseYear", "albumId"
+    select "albumTitle", "releaseYear", "albumId", "albumImageUrl"
     from "bands"
     join "discography" using ("bandId")
     join "albums" using ("albumId")
@@ -123,6 +123,71 @@ app.get('/api/band/:bandId', (req, res, next) => {
     })
     .then(result => {
       data.albums = result.rows;
+      res.json(data);
+    })
+    .catch(err => next(err));
+});
+
+app.get('/api/album/:albumId', (req, res, next) => {
+  const albumId = parseInt(req.params.albumId, 10);
+  if (!albumId || albumId < 0) {
+    throw new ClientError(400, 'albumId must be a positive integer');
+  }
+  const data = {};
+  const params = [albumId];
+  const sqlBand = `
+    select "bandName"
+    from "discography"
+    join "bands" using ("bandId")
+    where "albumId" = $1
+  `;
+
+  const sqlAlbum = `
+    select *
+    from "albums"
+    where "albumId" = $1
+  `;
+
+  const sqlTrackList = `
+    select "trackId", "trackNo", "track", "length"
+    from "tracks"
+    where "albumId" = $1
+  `;
+
+  const sqlAlbumGenre = `
+    select "genre"
+    from "albumGenre"
+    join "genres" using ("genreId")
+    where "albumId" = $1
+  `;
+
+  const sqlPersonnel = `
+    select "musicianId", "musicianFirstName", "musicianLastName"
+    from "personnel"
+    join "musicians" using ("musicianId")
+    where "albumId" = $1
+  `;
+
+  db
+    .query(sqlBand, params)
+    .then(result => {
+      data.band = result.rows;
+      return db.query(sqlAlbum, params);
+    })
+    .then(result => {
+      data.album = result.rows;
+      return db.query(sqlTrackList, params);
+    })
+    .then(result => {
+      data.tracksList = result.rows;
+      return db.query(sqlAlbumGenre, params);
+    })
+    .then(result => {
+      data.albumGenre = result.rows;
+      return db.query(sqlPersonnel, params);
+    })
+    .then(result => {
+      data.personnel = result.rows;
       res.json(data);
     })
     .catch(err => next(err));
