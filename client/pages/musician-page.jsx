@@ -1,4 +1,5 @@
 import React from 'react';
+import MusicianImage from '../components/musician/musician-image';
 
 export default class MusicianPage extends React.Component {
   constructor(props) {
@@ -12,7 +13,9 @@ export default class MusicianPage extends React.Component {
 
   page() {
     return (
-      <h1>test</h1>
+      <div className='container'>
+        <MusicianImage />
+      </div>
     );
   }
 

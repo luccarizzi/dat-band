@@ -52,3 +52,7 @@
 .album-image {
   object-fit: contain;
 }
+
+.musician-image {
+  clip: rect(auto, auto, 20rem, auto);
+}
