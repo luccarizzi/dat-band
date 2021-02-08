@@ -54,5 +54,6 @@
 }
 
 .musician-image {
-  clip: rect(auto, auto, 20rem, auto);
+  max-height: 20rem;
+  overflow: hidden;
 }
