@@ -101,18 +101,18 @@ values                      ('Kill `Em All', '1983', 'Megaforce Records', 'https
                             ('So Far, So Good... So What!','1988','Capitol Records','https://upload.wikimedia.org/wikipedia/en/7/7f/Megadeth-SoFar.jpg');
 
 insert into "musicians"     ("musicianFirstName", "musicianLastName", "cityId", "dob", "musicianImageUrl")
-values                      ('James','Hetfield', 2,'August 3, 1963','https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/James_Hetfield_2017.jpg/440px-James_Hetfield_2017.jpg'), --1
-                            ('Kirk','Hammett', 3,'November 18, 1962','https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Kirk_Hammett_2017.jpg/440px-Kirk_Hammett_2017.jpg'), --2
+values                      ('James','Hetfield', 2,'August 3, 1963','https://pbs.twimg.com/media/BFpl57SCIAACLWt.jpg'), --1
+                            ('Kirk','Hammett', 3,'November 18, 1962','https://64.media.tumblr.com/tumblr_luz5dszHCx1qh5mm2o1_1280.png'), --2
                             ('Robert','Trujillo', 4,'October 23, 1964','https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Robert_Trujillo_2017.jpg/440px-Robert_Trujillo_2017.jpg'), --3
-                            ('Lars','Ulrich', 5,'26 December 1963','https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/LarsUlrich.jpg/440px-LarsUlrich.jpg'), --4
-                            ('Dave','Mustaine', 6,'September 13, 1961','https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Megadeth_performing_in_San_Antonio%2C_Texas_%2827420120171%29.jpg/440px-Megadeth_performing_in_San_Antonio%2C_Texas_%2827420120171%29.jpg'), --5
-                            ('David','Ellefson', 7,'November 12, 1964','https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/David_Ellefson_%28cropped2%29.jpg/440px-David_Ellefson_%28cropped2%29.jpg'), --6
+                            ('Lars','Ulrich', 5,'26 December 1963','https://www.drummerworld.com/drummerworld2/larsulrich550mn.jpg'), --4
+                            ('Dave','Mustaine', 6,'September 13, 1961','https://i.pinimg.com/originals/9d/f5/79/9df579e269c8b20e26c0d689e1200553.jpg'), --5
+                            ('David','Ellefson', 7,'November 12, 1964','https://i.pinimg.com/originals/78/b0/e7/78b0e7d08428a7e47bfd05ff7b34cecf.jpg'), --6
                             ('Kiko','Loureiro', 8,'June 16, 1972','https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/KikoLoureiro2020.png/440px-KikoLoureiro2020.png'), --7
                             ('Dirk','Verbeuren', 9,'January 8, 1975','https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Dirk_Verbeuren.jpg/440px-Dirk_Verbeuren.jpg'), --8
-                            ('Ron','McGovney', 1, 'November 2, 1962','https://static.wikia.nocookie.net/metallica/images/5/5c/Ron.jpg/revision/latest/scale-to-width-down/340?cb=20151218231852'), --9
-                            ('Cliff','Burton', 10, 'February 10, 1962','https://upload.wikimedia.org/wikipedia/en/0/0c/Bass_burton.jpg'), --10
-                            ('Jason','Newsted', 11, 'March 4, 1963','https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/13-06-09_RaR_Newsted_14.jpg/440px-13-06-09_RaR_Newsted_14.jpg'), --11
-                            ('Gar','Samuelson', 12, 'February 18, 1958','https://lh3.googleusercontent.com/proxy/ejWQXz6_xdhe-p1DG3bI9js5bQLzlN9mmuAH1fxXAmIiSpRNf_CENIWvy-4WhUgGJSnEmT_IMJzQ_crY7j5zbC-hazFQ0T1Lq41KktM8Xg'), --12
+                            ('Ron','McGovney', 1, 'November 2, 1962','https://pbs.twimg.com/media/DNmvNIUUQAAE12K.jpg'), --9
+                            ('Cliff','Burton', 10, 'February 10, 1962','https://i.pinimg.com/originals/91/f6/47/91f6470537eda90bb198a1341946c392.jpg'), --10
+                            ('Jason','Newsted', 11, 'March 4, 1963','https://i.pinimg.com/originals/49/4a/05/494a053405741c900e5b61d991f99265.jpg'), --11
+                            ('Gar','Samuelson', 12, 'February 18, 1958','https://i.pinimg.com/originals/bc/37/22/bc3722ab733d5198b7d4fec1ad8adf47.jpg'), --12
                             ('Chris','Poland', 12, 'December 1, 1957','https://lastfm.freetls.fastly.net/i/u/770x0/58763eeddefea437033c71f247f1c2d9.jpg'), --13
                             ('Chuck','Behler', 13, 'June 13, 1965','https://upload.wikimedia.org/wikipedia/mk/d/da/Chuck_behler.jpg'), --14
                             ('Jeff','Young', 14, 'March 31, 1962','https://i.redd.it/phcwerwmrdp21.jpg'), --15

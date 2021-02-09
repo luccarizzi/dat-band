@@ -13,7 +13,12 @@ function BandMembers(props) {
               members.map(member => {
                 let li;
                 if (member.current) {
-                  li = <li key={member.musicianId}>{member.musicianFirstName} {member.musicianLastName}</li>;
+                  li =
+                    <a key={member.musicianId} href={`#musician/${member.musicianId}`}>
+                      <li>
+                        {member.musicianFirstName} {member.musicianLastName}
+                      </li>
+                    </a>;
                 }
                 return li;
               })
@@ -27,7 +32,12 @@ function BandMembers(props) {
               members.map(member => {
                 let li;
                 if (!member.current) {
-                  li = <li key={member.musicianId}>{member.musicianFirstName} {member.musicianLastName}</li>;
+                  li =
+                    <a key={member.musicianId} href={`#musician/${member.musicianId}`}>
+                      <li>
+                        {member.musicianFirstName} {member.musicianLastName}
+                      </li>
+                    </a>;
                 }
                 return li;
               })
