@@ -1,7 +1,6 @@
 import React from 'react';
 
 function BandTitle(props) {
-
   const { bandName } = props.bandData[0];
   return (
     <div className='row'>

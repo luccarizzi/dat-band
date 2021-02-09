@@ -122,7 +122,7 @@ values                      ('James','Hetfield', 2,'August 3, 1963','https://upl
                             ('Al','Pitrelli', 18, 'September 26, 1962','https://nafme.org/wp-content/uploads/2019/12/Al-Pitrelli-image-2.jpg'), --19
                             ('Shawn', 'Drover', 19, 'May 5, 1966', 'https://www.metal-archives.com/images/2/2/3/223_artist.jpg?4118'), --20
                             ('Glen','Drover', 20,'May 25, 1969','https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Glen_Drover_performing_in_Dubai_with_Megadeth_2005.jpg/440px-Glen_Drover_performing_in_Dubai_with_Megadeth_2005.jpg'), --21
-                            ('James','MacDonough', 21,'April 3, 1970','https://lh3.googleusercontent.com/proxy/EnMbS42RsvvtEJY0IHxoxp7rbAGjujXpK02UjQuyh-HtoZQ4cByNOfOmeicdhbyItCD1dt1ab1HmN2Xlosk0vI18u-BzaFzRLDbnWTGOg7Zw8G2mK1_LOAFcBmCtS5r5GU0xzSFGZkLfkhGK1zWAFFQ'), --22
+                            ('James','MacDonough', 21,'April 3, 1970','http://img.over-blog-kiwi.com/0/93/85/50/20150331/ob_3d1296_james-macdonough-megadeth-03.jpg'), --22
                             ('James','LoMenzo', 22,'January 13, 1959','https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Metalmania_2008_Megadeth_James_LoMenzo_02.jpg/1200px-Metalmania_2008_Megadeth_James_LoMenzo_02.jpg'), --23
                             ('Chris','Broderick', 23,'March 6, 1970','https://i.pinimg.com/originals/0f/13/3c/0f133ca5ff8213aea4cf773d7d8ff38d.jpg'), --24
                             ('Chris','Adler', 16,'November 23, 1972','https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/2015_RiP_Lamb_of_God_-_Chris_Adler_by_2eight_-_3SC5483.jpg/440px-2015_RiP_Lamb_of_God_-_Chris_Adler_by_2eight_-_3SC5483.jpg'); --25

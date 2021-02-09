@@ -52,3 +52,8 @@
 .album-image {
   object-fit: contain;
 }
+
+.musician-image {
+  max-height: 20rem;
+  overflow: hidden;
+}
