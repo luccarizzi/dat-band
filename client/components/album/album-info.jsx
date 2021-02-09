@@ -6,7 +6,7 @@ function AlbumInfo(props) {
     <div className='row'>
       <div className='bg-dark bg-gradient text-white page-font mb-3'>
         <div className='py-3'>
-          <p className='m-0'><span className='fw-lighter'>Band:</span> <a href={`#band/${bandId}`}>{bandName}</a></p>
+          <p className='m-0'><span className='fw-lighter'>Band:</span> <a href={`#band/${bandId}`} className='link-light'>{bandName}</a></p>
           <p className='m-0'><span className='fw-lighter'>Released:</span> {releaseYear}</p>
           <p className='m-0'><span className='fw-lighter'>Genre:</span> {genre}</p>
           <p className='m-0'><span className='fw-lighter'>Label:</span> {recordLabel}</p>

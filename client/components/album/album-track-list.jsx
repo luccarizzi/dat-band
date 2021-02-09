@@ -5,7 +5,7 @@ function AlbumTrackList(props) {
   return (
     <div className='row'>
       <div className='bg-dark bg-gradient text-white mb-3'>
-        <p className='py-3 mb-0 text-uppercase fw-bold'>Track List</p>
+        <p className='py-3 mb-0 text-uppercase fw-bold section-title'>Track List</p>
         <table className='table text-white table-font'>
           <thead>
             <tr>

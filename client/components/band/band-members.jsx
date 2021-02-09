@@ -5,7 +5,7 @@ function BandMembers(props) {
   return (
     <div className='row'>
       <div className='bg-dark bg-gradient text-white mb-3'>
-        <p className='py-3 mb-0 text-uppercase fw-bold'>Members</p>
+        <p className='py-3 mb-0 text-uppercase fw-bold section-title'>Members</p>
         <div className='row page-font'>
           <p className='col-3 fw-lighter'>Current:</p>
           <ul className='col-9 list-unstyled'>
@@ -14,7 +14,7 @@ function BandMembers(props) {
                 let li;
                 if (member.current) {
                   li =
-                    <a href={`#musician/${member.musicianId}`} key={member.musicianId}>
+                    <a href={`#musician/${member.musicianId}`} key={member.musicianId} className='link-light'>
                       <li>
                         {member.musicianFirstName} {member.musicianLastName}
                       </li>
@@ -33,7 +33,7 @@ function BandMembers(props) {
                 let li;
                 if (!member.current) {
                   li =
-                    <a href={`#musician/${member.musicianId}`} key={member.musicianId}>
+                    <a href={`#musician/${member.musicianId}`} key={member.musicianId} className='link-light'>
                       <li>
                         {member.musicianFirstName} {member.musicianLastName}
                       </li>
