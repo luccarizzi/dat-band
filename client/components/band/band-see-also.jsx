@@ -1,12 +1,19 @@
 import React from 'react';
 
-function BandSeeAlso(props) {
-  return (
-    <div className='row'>
-      <div className='bg-dark bg-gradient text-white mb-3'>
-        <p className='py-3 mb-0 text-uppercase fw-bold section-title'>See Also</p>
-        <div className='page-font'>
-          <ul className='list-unstyled'>
+export default class BandSeeAlso extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.setState = this.seeAlso.bind(this);
+  }
+
+  seeAlso(props) {
+    return (
+      <div className='row'>
+        <div className='bg-dark bg-gradient text-white mb-3'>
+          <p className='py-3 mb-0 text-uppercase fw-bold section-title'>See Also</p>
+          <div className='page-font'>
+            <ul className='list-unstyled'>
 
               <a href='#' className='link-light text-decoration-none'>
                 <li className='row mb-3'>
@@ -19,11 +26,16 @@ function BandSeeAlso(props) {
                 </li>
               </a>
 
-          </ul>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  );
-}
+    );
+  }
 
-export default BandSeeAlso;
+  render() {
+    return (
+      <this.seeAlso />
+    );
+  }
+}
