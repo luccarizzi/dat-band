@@ -3,34 +3,53 @@ import React from 'react';
 export default class BandSeeAlso extends React.Component {
   constructor(props) {
     super(props);
-
-    this.setState = this.seeAlso.bind(this);
+    this.state = {
+      bands: ''
+    };
+    this.seeAlso = this.seeAlso.bind(this);
   }
 
-  seeAlso(props) {
-    return (
-      <div className='row'>
-        <div className='bg-dark bg-gradient text-white mb-3'>
-          <p className='py-3 mb-0 text-uppercase fw-bold section-title'>See Also</p>
-          <div className='page-font'>
-            <ul className='list-unstyled'>
+  componentDidMount() {
+    const { bandGenre } = this.props.bandData[0];
+    fetch(`/api/genre?bandGenre=${bandGenre}`)
+      .then(res => res.json())
+      .then(data => {
+        this.setState({
+          bands: data
+        });
+      })
+      .catch(err => console.error(err));
+  }
 
-              <a href='#' className='link-light text-decoration-none'>
-                <li className='row mb-3'>
-                  <div className='col-4'>
-                    <img className='album-image img-fluid border border-secondary' src='https://cdn.mos.cms.futurecdn.net/siHgwBd6RWtMx2jKX8cK9b.jpg'></img>
-                  </div>
-                  <div className='col-8 d-flex'>
-                    <p className='mb-0 text-decoration-underline align-self-center'>Iron Maiden</p>
-                  </div>
-                </li>
-              </a>
+  seeAlso() {
+    const { bands } = this.state; // console.log(bands)
+    if (bands) {
+      return (
+        <div className='row'>
+          <div className='bg-dark bg-gradient text-white mb-3'>
+            <p className='py-3 mb-0 text-uppercase fw-bold section-title'>See Also</p>
+            <div className='page-font'>
+              <ul className='list-unstyled'>
 
-            </ul>
+                <a href='#' className='link-light text-decoration-none'>
+                  <li className='row mb-3'>
+                    <div className='col-4'>
+                      <img className='album-image img-fluid border border-secondary' src='https://cdn.mos.cms.futurecdn.net/siHgwBd6RWtMx2jKX8cK9b.jpg'></img>
+                    </div>
+                    <div className='col-8 d-flex'>
+                      <p className='mb-0 text-decoration-underline align-self-center'>{bands[0].bandName}</p>
+                    </div>
+                  </li>
+                </a>
+
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
-    );
+      );
+    } else {
+      return (<></>);
+    }
   }
 
   render() {

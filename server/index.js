@@ -265,9 +265,10 @@ app.get('/api/genre', (req, res, next) => {
   }
   const params = [bandGenre];
   const sqlGenre = `
-    select "bandId", "bandName"
+    select "bandId", "bandName", "bandImageUrl"
     from "bands"
     where "bandGenre" = $1
+    limit 3
   `;
   db
     .query(sqlGenre, params)
