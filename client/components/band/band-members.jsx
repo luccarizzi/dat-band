@@ -14,7 +14,7 @@ function BandMembers(props) {
                 let li;
                 if (member.current) {
                   li =
-                    <a key={member.musicianId} href={`#musician/${member.musicianId}`}>
+                    <a href={`#musician/${member.musicianId}`} key={member.musicianId}>
                       <li>
                         {member.musicianFirstName} {member.musicianLastName}
                       </li>
@@ -33,7 +33,7 @@ function BandMembers(props) {
                 let li;
                 if (!member.current) {
                   li =
-                    <a key={member.musicianId} href={`#musician/${member.musicianId}`}>
+                    <a href={`#musician/${member.musicianId}`} key={member.musicianId}>
                       <li>
                         {member.musicianFirstName} {member.musicianLastName}
                       </li>

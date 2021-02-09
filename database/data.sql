@@ -93,7 +93,7 @@ values                      ('Metallica', '1981', 1, 'Heavy Metal', 'https://con
                             ('Megadeth', '1983', 1, 'Thrash Metal', 'https://www.udiscovermusic.com/wp-content/uploads/2020/02/Megadeth-2018-press-shot-web-optimised-1000.jpg');
 
 insert into "albums"        ("albumTitle", "releaseYear", "recordLabel", "albumImageUrl")
-values                      ('Kill `Em All', '1983', 'Megaforce Records', 'https://upload.wikimedia.org/wikipedia/en/5/5c/Metallica_-_Kill_%27Em_All_cover.jpg'),
+values                      ('Kill `Em All', '1983', 'Megaforce Records', 'https://img.discogs.com/vzc_hGUuoEkf9x_83pyyeS5laDk=/fit-in/600x596/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-384613-1470347454-4183.jpeg.jpg'),
                             ('Ride the Lightning','1984','Megaforce Records','https://upload.wikimedia.org/wikipedia/en/f/f4/Ridetl.png'),
                             ('Master of Puppets','1986','Elektra Records','https://upload.wikimedia.org/wikipedia/en/b/b2/Metallica_-_Master_of_Puppets_cover.jpg'),
                             ('Killing Is My Business... and Business Is Good!','1985','Combat Records','https://upload.wikimedia.org/wikipedia/en/5/54/Combat_KIMB.jpg'),
@@ -101,10 +101,10 @@ values                      ('Kill `Em All', '1983', 'Megaforce Records', 'https
                             ('So Far, So Good... So What!','1988','Capitol Records','https://upload.wikimedia.org/wikipedia/en/7/7f/Megadeth-SoFar.jpg');
 
 insert into "musicians"     ("musicianFirstName", "musicianLastName", "cityId", "dob", "musicianImageUrl")
-values                      ('James','Hetfield', 2,'August 3, 1963','https://pbs.twimg.com/media/BFpl57SCIAACLWt.jpg'), --1
+values                      ('James','Hetfield', 2,'August 3, 1963','https://i.pinimg.com/originals/46/26/10/462610b50d7ec520a1fe945f463d0333.jpg'), --1
                             ('Kirk','Hammett', 3,'November 18, 1962','https://64.media.tumblr.com/tumblr_luz5dszHCx1qh5mm2o1_1280.png'), --2
                             ('Robert','Trujillo', 4,'October 23, 1964','https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Robert_Trujillo_2017.jpg/440px-Robert_Trujillo_2017.jpg'), --3
-                            ('Lars','Ulrich', 5,'26 December 1963','https://www.drummerworld.com/drummerworld2/larsulrich550mn.jpg'), --4
+                            ('Lars','Ulrich', 5,'26 December 1963','https://i.pinimg.com/originals/7f/e2/d1/7fe2d10ef02e690b38b3b0bcf785d7d1.jpg'), --4
                             ('Dave','Mustaine', 6,'September 13, 1961','https://i.pinimg.com/originals/9d/f5/79/9df579e269c8b20e26c0d689e1200553.jpg'), --5
                             ('David','Ellefson', 7,'November 12, 1964','https://i.pinimg.com/originals/78/b0/e7/78b0e7d08428a7e47bfd05ff7b34cecf.jpg'), --6
                             ('Kiko','Loureiro', 8,'June 16, 1972','https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/KikoLoureiro2020.png/440px-KikoLoureiro2020.png'), --7

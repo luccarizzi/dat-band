@@ -10,7 +10,11 @@ function AlbumPersonnel(props) {
           {
             personnel.map(person => {
               return (
-                <li key={person.musicianId}>{person.musicianFirstName} {person.musicianLastName}</li>
+                <a href={`#musician/${person.musicianId}`} key={person.musicianId}>
+                  <li>
+                    {person.musicianFirstName} {person.musicianLastName}
+                  </li>
+                </a>
               );
             })
           }
