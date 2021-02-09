@@ -5,20 +5,22 @@ function MusicianRecorded(props) {
   return (
     <div className='row'>
       <div className='bg-dark bg-gradient text-white mb-3'>
-        <p className='py-3 mb-0 text-uppercase fw-bold'>Recorded</p>
+        <p className='py-3 mb-0 text-uppercase fw-bold section-title'>Recorded</p>
         <ul className='list-unstyled page-font ps-2'>
           {
             recorded.map(record => {
               return (
-                <li key={record.albumId} className='row mb-3'>
-                  <div className='col-3'>
-                    <img className='album-image img-fluid border border-secondary' src={record.albumImageUrl}></img>
-                  </div>
-                  <div className='col-9'>
-                    <p className='mb-0'>{record.albumTitle}</p>
-                    <p className='mb-0 fw-lighter'>{record.releaseYear}</p>
-                  </div>
-                </li>
+                <a href={`#album/${record.albumId}`} key={record.albumId} className='link-light text-decoration-none'>
+                  <li className='row mb-3'>
+                    <div className='col-3'>
+                      <img className='album-image img-fluid border border-secondary' src={record.albumImageUrl}></img>
+                    </div>
+                    <div className='col-9'>
+                      <p className='mb-0 text-decoration-underline'>{record.albumTitle}</p>
+                      <p className='mb-0 fw-lighter'>{record.releaseYear}</p>
+                    </div>
+                  </li>
+                </a>
               );
             })
           }

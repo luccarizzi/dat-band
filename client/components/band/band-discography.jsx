@@ -5,21 +5,23 @@ function BandDiscography(props) {
   return (
     <div className='row'>
       <div className='bg-dark bg-gradient text-white mb-3'>
-        <p className='py-3 mb-0 text-uppercase fw-bold'>Discography</p>
+        <p className='py-3 mb-0 text-uppercase fw-bold section-title'>Discography</p>
         <div className='page-font'>
           <ul className='list-unstyled'>
             {
               albums.map(album => {
                 return (
-                  <li key={album.albumId} className='row mb-3'>
-                    <div className='col-3'>
-                      <img className='album-image img-fluid border border-secondary' src={album.albumImageUrl}></img>
-                    </div>
-                    <div className='col-9'>
-                      <p className='mb-0'>{album.albumTitle}</p>
-                      <p className='mb-0 fw-lighter'>{album.releaseYear}</p>
-                    </div>
-                  </li>
+                  <a href={`#album/${album.albumId}`} key={album.albumId} className='link-light text-decoration-none'>
+                    <li className='row mb-3'>
+                      <div className='col-3'>
+                        <img className='album-image img-fluid border border-secondary' src={album.albumImageUrl}></img>
+                      </div>
+                      <div className='col-9'>
+                        <p className='mb-0 text-decoration-underline'>{album.albumTitle}</p>
+                        <p className='mb-0 fw-lighter'>{album.releaseYear}</p>
+                      </div>
+                    </li>
+                  </a>
                 );
               })
             }
