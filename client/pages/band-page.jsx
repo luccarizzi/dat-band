@@ -5,6 +5,7 @@ import BandInfo from '../components/band/band-info';
 import BandMembers from '../components/band/band-members';
 import BandDiscography from '../components/band/band-discography';
 import BandVideography from '../components/band/band-videography';
+import BandSeeAlso from '../components/band/band-see-also';
 
 export default class BandPage extends React.Component {
   constructor(props) {
@@ -39,6 +40,7 @@ export default class BandPage extends React.Component {
           <BandMembers bandData={members}/>
           <BandDiscography bandData={discography}/>
           <BandVideography bandData={videography}/>
+          <BandSeeAlso />
         </div>
       );
     } else {
