@@ -30,17 +30,22 @@ export default class BandSeeAlso extends React.Component {
             <p className='py-3 mb-0 text-uppercase fw-bold section-title'>See Also</p>
             <div className='page-font'>
               <ul className='list-unstyled'>
-
-                <a href='#' className='link-light text-decoration-none'>
-                  <li className='row mb-3'>
-                    <div className='col-4'>
-                      <img className='album-image img-fluid border border-secondary' src='https://cdn.mos.cms.futurecdn.net/siHgwBd6RWtMx2jKX8cK9b.jpg'></img>
-                    </div>
-                    <div className='col-8 d-flex'>
-                      <p className='mb-0 text-decoration-underline align-self-center'>{bands[0].bandName}</p>
-                    </div>
-                  </li>
-                </a>
+                {
+                  bands.map(band => {
+                    return (
+                      <a href='#' key={band.bandId} className='link-light text-decoration-none'>
+                        <li className='row mb-3'>
+                          <div className='col-4'>
+                            <img className='album-image img-fluid border border-secondary' src={band.bandImageUrl}></img>
+                          </div>
+                          <div className='col-8 d-flex'>
+                            <p className='mb-0 text-decoration-underline align-self-center'>{band.bandName}</p>
+                          </div>
+                        </li>
+                      </a>
+                    );
+                  })
+                }
 
               </ul>
             </div>
