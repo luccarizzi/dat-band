@@ -11,7 +11,6 @@ export default class MusicianPage extends React.Component {
     this.state = {
       data: ''
     };
-
     this.page = this.page.bind(this);
   }
 
@@ -28,15 +27,21 @@ export default class MusicianPage extends React.Component {
   }
 
   page() {
-    return (
-      <div className='container'>
-        <MusicianImage />
-        <MusicianTitle />
-        <MusicianInfo />
-        <MusicianAssociated />
-        <MusicianRecorded />
-      </div>
-    );
+    const { data } = this.state;
+    const { image, title, info, associated, recorded } = data;
+    if (data) {
+      return (
+        <div className='container'>
+          <MusicianImage musicianData={image}/>
+          <MusicianTitle musicianData={title}/>
+          <MusicianInfo musicianData={info}/>
+          <MusicianAssociated musicianData={associated}/>
+          <MusicianRecorded musicianData={recorded}/>
+        </div>
+      );
+    } else {
+      return (<></>);
+    }
   }
 
   render() {

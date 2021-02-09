@@ -29,16 +29,16 @@ export default class BandPage extends React.Component {
 
   page() {
     const { data } = this.state;
-    const { band, images, albums, members, videos } = data;
+    const { imageCarousel, title, info, members, discography, videography } = data;
     if (data) {
       return (
         <div className='container'>
-          <BandImageCarousel bandData={images} />
-          <BandTitle bandData={band} />
-          <BandInfo bandData={band}/>
+          <BandImageCarousel bandData={imageCarousel} />
+          <BandTitle bandData={title} />
+          <BandInfo bandData={info}/>
           <BandMembers bandData={members}/>
-          <BandDiscography bandData={albums}/>
-          <BandVideography bandData={videos}/>
+          <BandDiscography bandData={discography}/>
+          <BandVideography bandData={videography}/>
         </div>
       );
     } else {

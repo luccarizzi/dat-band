@@ -28,15 +28,15 @@ export default class AlbumPage extends React.Component {
 
   page() {
     const { data } = this.state;
-    const { album, tracksList, personnel } = data;
+    const { image, title, info, personnel, trackList } = data;
     if (data) {
       return (
         <div className='container'>
-          <AlbumImage albumData={album} />
-          <AlbumTitle albumData={album} />
-          <AlbumInfo albumData={data} />
+          <AlbumImage albumData={image} />
+          <AlbumTitle albumData={title} />
+          <AlbumInfo albumData={info} />
           <AlbumPersonnel albumData={personnel}/>
-          <AlbumTrackList albumData={tracksList} />
+          <AlbumTrackList albumData={trackList} />
         </div>
       );
     } else {
