@@ -10,7 +10,10 @@ function MusicianAssociated(props) {
           {
             associated.map(association => {
               return (
-                <a href={`#band/${association.bandId}`} key={association.bandId}>
+                <a
+                href={`#band/${association.bandId}`}
+                className='fw-bold a'
+                key={association.bandId}>
                   <li>{association.bandName}</li>
                 </a>
               );
