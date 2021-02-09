@@ -152,7 +152,7 @@ app.get('/api/album/:albumId', (req, res, next) => {
     where "albumId" = $1
   `;
   const sqlInfo = `
-    select "bandName", "releaseYear", "genre", "recordLabel"
+    select "bandId", "bandName", "releaseYear", "genre", "recordLabel"
     from "albums"
     join "discography" using ("albumId")
     join "bands" using ("bandId")

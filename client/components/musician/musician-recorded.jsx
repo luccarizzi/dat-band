@@ -10,15 +10,17 @@ function MusicianRecorded(props) {
           {
             recorded.map(record => {
               return (
-                <li key={record.albumId} className='row mb-3'>
-                  <div className='col-3'>
-                    <img className='album-image img-fluid border border-secondary' src={record.albumImageUrl}></img>
-                  </div>
-                  <div className='col-9'>
-                    <p className='mb-0'>{record.albumTitle}</p>
-                    <p className='mb-0 fw-lighter'>{record.releaseYear}</p>
-                  </div>
-                </li>
+                <a href={`#album/${record.albumId}`} key={record.albumId}>
+                  <li className='row mb-3'>
+                    <div className='col-3'>
+                      <img className='album-image img-fluid border border-secondary' src={record.albumImageUrl}></img>
+                    </div>
+                    <div className='col-9'>
+                      <p className='mb-0'>{record.albumTitle}</p>
+                      <p className='mb-0 fw-lighter'>{record.releaseYear}</p>
+                    </div>
+                  </li>
+                </a>
               );
             })
           }
