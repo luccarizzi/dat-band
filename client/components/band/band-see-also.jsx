@@ -56,7 +56,7 @@ export default class BandSeeAlso extends React.Component {
         </div>
       );
     } else {
-      return (<></>);
+      return null;
     }
   }
 

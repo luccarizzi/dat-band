@@ -40,7 +40,7 @@ export default class AlbumPage extends React.Component {
         </div>
       );
     } else {
-      return (<></>);
+      return null;
     }
   }
 
