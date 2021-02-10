@@ -21,7 +21,16 @@ values                      ('Los Angeles'), --1
                             ('Ottawa'), --20
                             ('Jacksonville'), --21
                             ('Brooklyn'), --22
-                            ('Lakewood'); --23
+                            ('Lakewood'), --23
+                            ('London'), --24
+                            ('Leytonstone'), --25
+                            ('Edmonton'), --26
+                            ('Hackney'), --27
+                            ('Worksop'), --28
+                            ('Hartlepool'), --29
+                            ('Chingford'), --30
+                            ('East Ham'), --31
+                            ('Birmingham'); --32
 
 insert into "states"        ("state")
 values                      ('California'), --1
@@ -37,7 +46,12 @@ values                      ('California'), --1
                             ('Quebec'), --11
                             ('Ontario'), --12
                             ('Florida'), --13
-                            ('Colorado'); --14
+                            ('Colorado'), --14
+                            ('City of London'), --15
+                            ('London'), --16
+                            ('East Midlands'), --17
+                            ('North East'), --18
+                            ('West Midlands'); --19
 
 insert into "countries"     ("country")
 values                      ('United States'), --1
@@ -45,7 +59,8 @@ values                      ('United States'), --1
                             ('Brazil'), --3
                             ('Belgium'), --4
                             ('Germany'), --5
-                            ('Canada'); --6
+                            ('Canada'), --6
+                            ('England'); --7
 
 insert into "cityState"     ("cityId", "stateId")
 values                      (1, 1),
@@ -70,7 +85,16 @@ values                      (1, 1),
                             (20, 12),
                             (21, 13),
                             (22, 7),
-                            (23, 14);
+                            (23, 14),
+                            (24, 15),
+                            (25, 16),
+                            (26, 16),
+                            (27, 16),
+                            (28, 17),
+                            (29, 18),
+                            (30, 16),
+                            (31, 16),
+                            (32, 19);
 
 insert into "stateCountry"  ("stateId", "countryId")
 values                      (1, 1),
@@ -86,11 +110,17 @@ values                      (1, 1),
                             (11, 6),
                             (12, 6),
                             (13, 1),
-                            (14, 1);
+                            (14, 1),
+                            (15, 7),
+                            (16, 7),
+                            (17, 7),
+                            (18, 7),
+                            (19, 7);
 
 insert into "bands"         ("bandName", "debutYear", "cityId", "bandGenre", "bandImageUrl")
-values                      ('Metallica', '1981', 1, 'Heavy Metal', 'https://consequenceofsound.net/wp-content/uploads/2020/06/Metallica-Zoom.jpg?quality=80'),
-                            ('Megadeth', '1983', 1, 'Thrash Metal', 'https://www.udiscovermusic.com/wp-content/uploads/2020/02/Megadeth-2018-press-shot-web-optimised-1000.jpg');
+values                      ('Metallica', '1981', 1, 'Thrash Metal', 'https://consequenceofsound.net/wp-content/uploads/2020/06/Metallica-Zoom.jpg?quality=80'),
+                            ('Megadeth', '1983', 1, 'Thrash Metal', 'https://www.udiscovermusic.com/wp-content/uploads/2020/02/Megadeth-2018-press-shot-web-optimised-1000.jpg'),
+                            ('Iron Maiden', '1975', 24, 'Heavy Metal', 'https://cdn.mos.cms.futurecdn.net/siHgwBd6RWtMx2jKX8cK9b.jpg');
 
 insert into "albums"        ("albumTitle", "releaseYear", "recordLabel", "albumImageUrl")
 values                      ('Kill `Em All', '1983', 'Megaforce Records', 'https://img.discogs.com/vzc_hGUuoEkf9x_83pyyeS5laDk=/fit-in/600x596/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-384613-1470347454-4183.jpeg.jpg'),
@@ -98,7 +128,10 @@ values                      ('Kill `Em All', '1983', 'Megaforce Records', 'https
                             ('Master of Puppets','1986','Elektra Records','https://upload.wikimedia.org/wikipedia/en/b/b2/Metallica_-_Master_of_Puppets_cover.jpg'),
                             ('Killing Is My Business... and Business Is Good!','1985','Combat Records','https://upload.wikimedia.org/wikipedia/en/5/54/Combat_KIMB.jpg'),
                             ('Peace Sells... but Who`s Buying?','1986','Capitol Records','https://upload.wikimedia.org/wikipedia/en/4/40/Megadeth_-_Peace_Sells..._But_Who%27s_Buying-.jpg'),
-                            ('So Far, So Good... So What!','1988','Capitol Records','https://upload.wikimedia.org/wikipedia/en/7/7f/Megadeth-SoFar.jpg');
+                            ('So Far, So Good... So What!','1988','Capitol Records','https://upload.wikimedia.org/wikipedia/en/7/7f/Megadeth-SoFar.jpg'),
+                            ('Iron Maiden', '1980', 'EMI', 'https://upload.wikimedia.org/wikipedia/en/7/7c/Iron_Maiden_%28album%29_cover.jpg'),
+                            ('Killers', '1981', 'EMI', 'https://upload.wikimedia.org/wikipedia/en/b/b4/Iron_Maiden_Killers.jpg'),
+                            ('The Number of the Beast', '1982', 'EMI', 'https://upload.wikimedia.org/wikipedia/en/3/32/IronMaiden_NumberOfBeast.jpg');
 
 insert into "musicians"     ("musicianFirstName", "musicianLastName", "cityId", "dob", "musicianImageUrl")
 values                      ('James','Hetfield', 2,'August 3, 1963','https://i.pinimg.com/originals/46/26/10/462610b50d7ec520a1fe945f463d0333.jpg'), --1
@@ -125,8 +158,17 @@ values                      ('James','Hetfield', 2,'August 3, 1963','https://i.p
                             ('James','MacDonough', 21,'April 3, 1970','http://img.over-blog-kiwi.com/0/93/85/50/20150331/ob_3d1296_james-macdonough-megadeth-03.jpg'), --22
                             ('James','LoMenzo', 22,'January 13, 1959','https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Metalmania_2008_Megadeth_James_LoMenzo_02.jpg/1200px-Metalmania_2008_Megadeth_James_LoMenzo_02.jpg'), --23
                             ('Chris','Broderick', 23,'March 6, 1970','https://i.pinimg.com/originals/0f/13/3c/0f133ca5ff8213aea4cf773d7d8ff38d.jpg'), --24
-                            ('Chris','Adler', 16,'November 23, 1972','https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/2015_RiP_Lamb_of_God_-_Chris_Adler_by_2eight_-_3SC5483.jpg/440px-2015_RiP_Lamb_of_God_-_Chris_Adler_by_2eight_-_3SC5483.jpg'); --25
-                            -- ('','', ,'',''),
+                            ('Chris','Adler', 16,'November 23, 1972','https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/2015_RiP_Lamb_of_God_-_Chris_Adler_by_2eight_-_3SC5483.jpg/440px-2015_RiP_Lamb_of_God_-_Chris_Adler_by_2eight_-_3SC5483.jpg'), --25
+                            ('Steve','Harris', 25, 'March 12, 1956','https://i.imgur.com/97zjFdy.jpg'), --26
+                            ('Dave','Murray', 26,'December 23, 1956','https://upload.wikimedia.org/wikipedia/commons/9/94/Davemurray.jpg'), --27
+                            ('Adrian', 'Smith', 27, 'February 27, 1957', 'https://thehande.files.wordpress.com/2015/08/adrian-smith.jpg'), --28
+                            ('Bruce', 'Dickinson', 28, 'August 7, 1958', 'https://i.pinimg.com/originals/8f/1d/df/8f1ddfd1ff4bc3d2f9f07fdb60cf2ca6.jpg'), --29
+                            ('Nicko', 'McBrain', 27, 'June 5, 1952', 'https://upload.wikimedia.org/wikipedia/commons/a/a9/Nicko_McBrain_2.jpg'), --30
+                            ('Janick', 'Gers', 29, 'January 27, 1957', 'https://www.metal-archives.com/images/1/1/9/119_artist.jpg?2159'), --31
+                            ('Paul', 'Di`Anno', 30, 'May 17, 1958', 'https://i.pinimg.com/736x/18/db/fd/18dbfdabea8bb7c123fc2ffd6f447011--vintage-rock-paul-dianno.jpg'), --32
+                            ('Clive', 'Burr', 31, 'March 8, 1957', 'https://lh3.googleusercontent.com/proxy/N0bCmTGRAuBHVJWAsa58ot2u8K3qVfsgEVBFj7g49Uvqoo83ufhHqPrP0WEIHfqb11PagWdtz-x_BBMJw3oSSP96kHdeQL_B2leONVamnXVU9MFRq9YjiXz5vc0'), --33
+                            ('Blaze', 'Bayley', 32, 'May 29, 1963', 'http://www.getreadytorock.com/reviews2008/blaze_bayley_gig08a.jpg'), --34
+                            ('Dennis', 'Stratton', 24, 'October 9, 1952', 'http://3.bp.blogspot.com/-x5mNM1jHF_s/T-jMkUa4ioI/AAAAAAAAAlk/1g80NSPZPcg/s1600/dennis+live75.jpg'); --35
 
 insert into "discography"   ("bandId", "albumId")
 values                      (1, 1),
@@ -134,7 +176,10 @@ values                      (1, 1),
                             (1, 3),
                             (2, 4),
                             (2, 5),
-                            (2, 6);
+                            (2, 6),
+                            (3, 7),
+                            (3, 8),
+                            (3, 9);
 
 insert into "members"       ("bandId", "musicianId", "current")
 values                      (1, 1, true),
@@ -162,15 +207,28 @@ values                      (1, 1, true),
                             (2, 22, false),
                             (2, 23, false),
                             (2, 24, false),
-                            (2, 25, false);
+                            (2, 25, false),
+                            (3, 26, true),
+                            (3, 27, true),
+                            (3, 28, true),
+                            (3, 29, true),
+                            (3, 30, true),
+                            (3, 31, true),
+                            (3, 32, false),
+                            (3, 33, false),
+                            (3, 34, false),
+                            (3, 35, false);
 
 insert into "videos"        ("bandId", "videoUrl")
-values                      (1, 'CD-E-LDc384'),
+values                      (1, 'CD-E-LDc384'), --qdlQyNe_9tE
                             (1, 'iT6vqeL-ysI'),
                             (1, 'dHUHxTiPFUU'),
                             (2, '9d4ui9q7eDM'),
                             (2, 'aU-dKoFZT0A'),
-                            (2, 'rUGIocJK9Tc');
+                            (2, 'rUGIocJK9Tc'),
+                            (3, 'Xg9aQvjMS60'),
+                            (3, 'p4w2BZXL6Ss'),
+                            (3, 'WxnN05vOuSM');
 
 insert into "carouselImages"("bandId","bandCarouselImageUrl")
 values                      (1, 'https://consequenceofsound.net/wp-content/uploads/2020/06/Metallica-Zoom.jpg?quality=80'),
@@ -178,24 +236,51 @@ values                      (1, 'https://consequenceofsound.net/wp-content/uploa
                             (1, 'https://www.rollingstone.com/wp-content/uploads/2018/06/metallica-master-of-puppets-1986-f363473b-0ebc-4678-8fc6-5bb871d28c3d.jpg?resize=1800,1200&w=450'),
                             (2, 'https://www.udiscovermusic.com/wp-content/uploads/2020/02/Megadeth-2018-press-shot-web-optimised-1000.jpg'),
                             (2, 'https://megadeth.com/wp-content/themes/megadeth/assets/images/2017_0216_10330_5753.jpeg'),
-                            (2, 'https://specials-images.forbesimg.com/imageserve/5f57ad29b488eaeabd9364e8/960x0.jpg?fit=scale');
+                            (2, 'https://specials-images.forbesimg.com/imageserve/5f57ad29b488eaeabd9364e8/960x0.jpg?fit=scale'),
+                            (3, 'https://cdn.mos.cms.futurecdn.net/siHgwBd6RWtMx2jKX8cK9b.jpg'),
+                            (3, 'https://list.lisimg.com/image/283947/500full.jpg'),
+                            (3, 'https://static.billboard.com/files/media/iron-maiden-1988-billboard-1548-768x433.jpg');
 
 insert into "personnel"     ("musicianId", "albumId")
 values                      (1, 1),
                             (2, 1),
                             (4, 1),
+                            (10, 1),
                             (1, 2),
                             (2, 2),
                             (4, 2),
+                            (10, 2),
                             (1, 3),
                             (2, 3),
                             (4, 3),
+                            (10, 3),
                             (5, 4),
                             (6, 4),
+                            (12, 4),
+                            (13, 4),
                             (5, 5),
                             (6, 5),
+                            (12, 5),
+                            (13, 5),
                             (5, 6),
-                            (6, 6);
+                            (6, 6),
+                            (14, 6),
+                            (15, 6),
+                            (26, 7),
+                            (27, 7),
+                            (32, 7),
+                            (33, 7),
+                            (35, 7),
+                            (26, 8),
+                            (27, 8),
+                            (32, 8),
+                            (33, 8),
+                            (28, 8),
+                            (26, 9),
+                            (27, 9),
+                            (28, 9),
+                            (29, 9),
+                            (33, 9);
 
 insert into "genres"        ("genre")
 values                      ('Thrash Metal'),
@@ -207,7 +292,10 @@ values                      (1, 1),
                             (3, 2),
                             (4, 1),
                             (5, 2),
-                            (6, 2);
+                            (6, 2),
+                            (7, 2),
+                            (8, 2),
+                            (9, 2);
 
 insert into "tracks"        ("albumId", "trackNo", "track", "length")
 values                      (1, 1, 'Hit the Lights', '4:17'),
@@ -259,4 +347,30 @@ values                      (1, 1, 'Hit the Lights', '4:17'),
                             (6, 5, '502', '3:28'),
                             (6, 6, 'In My Darkest Hour', '6:16'),
                             (6, 7, 'Liar', '3:20'),
-                            (6, 8, 'Hook in Mouth', '4:40');
+                            (6, 8, 'Hook in Mouth', '4:40'),
+                            (7, 1, 'Prowler', '3:56'),
+                            (7, 2, 'Remember Tomorrow', '5:30'),
+                            (7, 3, 'Running Free', '3:22'),
+                            (7, 4, 'Phantom of the Opera', '7:02'),
+                            (7, 5, 'Transylvania', '4:09'),
+                            (7, 6, 'Strange World', '5:43'),
+                            (7, 7, 'Charlotte the Harlot', '4:14'),
+                            (7, 8, 'Iron Maiden', '3:43'),
+                            (8, 1, 'The Ides of March', '1:48'),
+                            (8, 2, 'Wrathchild', '2:54'),
+                            (8, 3, 'Murders in the Rue Morgue', '4:14'),
+                            (8, 4, 'Another Life', '3:22'),
+                            (8, 5, 'Genghis Khan', '3:02'),
+                            (8, 6, 'Innocent Exile', '3:50'),
+                            (8, 7, 'Killers', '4:58'),
+                            (8, 8, 'Prodigal Son', '6:05'),
+                            (8, 9, 'Purgatory', '3:18'),
+                            (8, 10, 'Drifter', '4:47'),
+                            (9, 1, 'Invaders', '3:20'),
+                            (9, 2, 'Children of the Damned', '4:34'),
+                            (9, 3, 'The Prisoner', '5:34'),
+                            (9, 4, '22 Acacia Avenue', '6:34'),
+                            (9, 5, 'The Number of the Beast', '4:25'),
+                            (9, 6, 'Run to the Hills', '3:50'),
+                            (9, 7, 'Gangland', '3:46'),
+                            (9, 8, 'Hallowed Be Thy Name', '7:08');

@@ -20,9 +20,7 @@ app.get('/api', (req, res, next) => {
   if (!search || !category) {
     throw new ClientError(400, 'category and search are required fields');
   }
-
   const params = [searchInput(search)];
-
   let sql;
   switch (category) {
     case 'band':
@@ -64,7 +62,6 @@ app.get('/api/band/:bandId', (req, res, next) => {
   }
   const data = {};
   const params = [bandId];
-
   const sqlImageCarousel = `
     select "bandCarouselImageUrl", "bandCarouselImageId"
     from "bands"
@@ -103,6 +100,11 @@ app.get('/api/band/:bandId', (req, res, next) => {
     from "videos"
     where "bandId" = $1
   `;
+  const sqlGenre = `
+    select "bandId", "bandGenre"
+    from "bands"
+    where "bandId" = $1
+  `;
 
   db
     .query(sqlImageCarousel, params)
@@ -128,6 +130,10 @@ app.get('/api/band/:bandId', (req, res, next) => {
     })
     .then(result => {
       data.videography = result.rows;
+      return db.query(sqlGenre, params);
+    })
+    .then(result => {
+      data.genre = result.rows;
       res.json(data);
     })
     .catch(err => next(err));
@@ -140,7 +146,6 @@ app.get('/api/album/:albumId', (req, res, next) => {
   }
   const data = {};
   const params = [albumId];
-
   const sqlImage = `
     select "albumImageUrl"
     from "albums"
@@ -204,7 +209,6 @@ app.get('/api/musician/:musicianId', (req, res, next) => {
   }
   const data = {};
   const params = [musicianId];
-
   const sqlImage = `
     select "musicianImageUrl"
     from "musicians"
@@ -259,6 +263,26 @@ app.get('/api/musician/:musicianId', (req, res, next) => {
     .then(result => {
       data.recorded = result.rows;
       res.json(data);
+    })
+    .catch(err => next(err));
+});
+
+app.get('/api/genre', (req, res, next) => {
+  const { bandGenre } = req.query;
+  if (!bandGenre) {
+    throw new ClientError(400, 'bandGenre is a required field');
+  }
+  const params = [bandGenre];
+  const sqlGenre = `
+    select "bandId", "bandName", "bandImageUrl"
+    from "bands"
+    where "bandGenre" = $1
+    limit 3
+  `;
+  db
+    .query(sqlGenre, params)
+    .then(result => {
+      res.json(result.rows);
     })
     .catch(err => next(err));
 });
