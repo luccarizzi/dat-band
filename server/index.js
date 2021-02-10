@@ -100,6 +100,11 @@ app.get('/api/band/:bandId', (req, res, next) => {
     from "videos"
     where "bandId" = $1
   `;
+  const sqlGenre = `
+    select "bandId", "bandGenre"
+    from "bands"
+    where "bandId" = $1
+  `;
 
   db
     .query(sqlImageCarousel, params)
@@ -125,6 +130,10 @@ app.get('/api/band/:bandId', (req, res, next) => {
     })
     .then(result => {
       data.videography = result.rows;
+      return db.query(sqlGenre, params);
+    })
+    .then(result => {
+      data.genre = result.rows;
       res.json(data);
     })
     .catch(err => next(err));

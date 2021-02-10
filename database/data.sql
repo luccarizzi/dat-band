@@ -118,7 +118,7 @@ values                      (1, 1),
                             (19, 7);
 
 insert into "bands"         ("bandName", "debutYear", "cityId", "bandGenre", "bandImageUrl")
-values                      ('Metallica', '1981', 1, 'Heavy Metal', 'https://consequenceofsound.net/wp-content/uploads/2020/06/Metallica-Zoom.jpg?quality=80'),
+values                      ('Metallica', '1981', 1, 'Thrash Metal', 'https://consequenceofsound.net/wp-content/uploads/2020/06/Metallica-Zoom.jpg?quality=80'),
                             ('Megadeth', '1983', 1, 'Thrash Metal', 'https://www.udiscovermusic.com/wp-content/uploads/2020/02/Megadeth-2018-press-shot-web-optimised-1000.jpg'),
                             ('Iron Maiden', '1975', 24, 'Heavy Metal', 'https://cdn.mos.cms.futurecdn.net/siHgwBd6RWtMx2jKX8cK9b.jpg');
 

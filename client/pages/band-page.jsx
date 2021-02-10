@@ -45,7 +45,7 @@ export default class BandPage extends React.Component {
 
   page() {
     const { data } = this.state;
-    const { imageCarousel, title, info, members, discography, videography } = data;
+    const { imageCarousel, title, info, members, discography, videography, genre } = data;
     if (data) {
       return (
         <div className='container'>
@@ -55,7 +55,7 @@ export default class BandPage extends React.Component {
           <BandMembers bandData={members}/>
           <BandDiscography bandData={discography}/>
           <BandVideography bandData={videography}/>
-          <BandSeeAlso bandData={info}/>
+          <BandSeeAlso bandData={genre}/>
         </div>
       );
     } else {

@@ -21,8 +21,8 @@ export default class BandSeeAlso extends React.Component {
       .catch(err => console.error(err));
   }
 
-  seeAlso() {
-    const { bands } = this.state; // console.log(bands)
+  seeAlso(props) {
+    const { bands } = this.state;
     if (bands) {
       return (
         <div className='row'>
@@ -32,6 +32,10 @@ export default class BandSeeAlso extends React.Component {
               <ul className='list-unstyled'>
                 {
                   bands.map(band => {
+                    const { bandId } = props.genre;
+                    if (bandId === band.bandId) {
+                      return (<a key={band.bandId} ></a>);
+                    }
                     return (
                       <a href={`#band/${band.bandId}`} key={band.bandId} className='link-light text-decoration-none'>
                         <li className='row mb-3'>
@@ -58,7 +62,7 @@ export default class BandSeeAlso extends React.Component {
 
   render() {
     return (
-      <this.seeAlso />
+      <this.seeAlso genre={this.props.bandData[0]} />
     );
   }
 }
