@@ -33,7 +33,7 @@ export default class BandSeeAlso extends React.Component {
                 {
                   bands.map(band => {
                     return (
-                      <a href='#' key={band.bandId} className='link-light text-decoration-none'>
+                      <a href={`#band/${band.bandId}`} key={band.bandId} className='link-light text-decoration-none'>
                         <li className='row mb-3'>
                           <div className='col-4'>
                             <img className='album-image img-fluid border border-secondary' src={band.bandImageUrl}></img>
@@ -46,7 +46,6 @@ export default class BandSeeAlso extends React.Component {
                     );
                   })
                 }
-
               </ul>
             </div>
           </div>

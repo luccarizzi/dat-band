@@ -28,6 +28,21 @@ export default class BandPage extends React.Component {
       .catch(err => console.error(err));
   }
 
+  componentDidUpdate(prevProps) {
+    if (this.props !== prevProps) {
+      const { path } = this.props.queriedRoute.route;
+      fetch(`api/${path}`)
+        .then(res => res.json())
+        .then(data => {
+          this.setState({
+            data
+          });
+        })
+        .catch(err => console.error(err));
+      window.scrollTo(1, 1);
+    }
+  }
+
   page() {
     const { data } = this.state;
     const { imageCarousel, title, info, members, discography, videography } = data;
