@@ -1,4 +1,5 @@
 import React from 'react';
+import NoMatchMessage from '../components/no-match-message';
 
 export default class DropdownMenu extends React.Component {
   constructor(props) {
@@ -87,13 +88,18 @@ export default class DropdownMenu extends React.Component {
   }
 
   render() {
-    const { category } = this.props.result;
+    let noResult;
+    const { category, data } = this.props.result;
+    if (data.length === 0) {
+      noResult = <NoMatchMessage result={this.props.result} />;
+    }
+
     const dataList = this.props.result.data.map((data, index) => {
       let result;
       if (index > 4) {
         return result;
       }
-      if (this.props.result.data) {
+      if (data && category) {
         switch (category) {
           case 'band':
             result = <this.bandResults data={data} key={data.bandId} />;
@@ -115,8 +121,9 @@ export default class DropdownMenu extends React.Component {
 
     return (
       <div className='container'>
-        <div className='row m-auto dropdown-menu-width border border-secondary border-top-0'>
+        <div className='row m-auto dropdown-menu-width border border-secondary border-top-0 justify-content-center'>
           {dataList}
+          {noResult}
         </div>
       </div>
     );
