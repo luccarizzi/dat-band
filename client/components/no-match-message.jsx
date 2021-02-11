@@ -5,7 +5,7 @@ function NoMatchMessage(props) {
   return (
     <div className='row'>
       <div className='col my-2'>
-        <p>Sorry, no {category}s found for &apos;{search}&apos;.</p>
+        <p className='alert alert-warning p-1'>Sorry, no {category}s found for &apos;{search}&apos;.</p>
       </div>
     </div>
   );

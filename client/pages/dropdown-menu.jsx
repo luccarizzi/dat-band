@@ -121,7 +121,7 @@ export default class DropdownMenu extends React.Component {
 
     return (
       <div className='container'>
-        <div className='row m-auto dropdown-menu-width border border-secondary border-top-0'>
+        <div className='row m-auto dropdown-menu-width border border-secondary border-top-0 justify-content-center'>
           {dataList}
           {noResult}
         </div>
