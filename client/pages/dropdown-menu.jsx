@@ -91,7 +91,7 @@ export default class DropdownMenu extends React.Component {
     let noResult;
     const { category, data } = this.props.result;
     if (data.length === 0) {
-      noResult = <NoMatchMessage />;
+      noResult = <NoMatchMessage result={this.props.result} />;
     }
 
     const dataList = this.props.result.data.map((data, index) => {

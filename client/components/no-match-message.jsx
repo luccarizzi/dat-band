@@ -1,8 +1,13 @@
 import React from 'react';
 
-function NoMatchMessage() {
+function NoMatchMessage(props) {
+  const { search, category } = props.result;
   return (
-    <p>test</p>
+    <div className='row'>
+      <div className='col my-2'>
+        <p>Sorry, no {category}s found for &apos;{search}&apos;.</p>
+      </div>
+    </div>
   );
 }
 
