@@ -1,5 +1,6 @@
 import React from 'react';
 import NoMatchMessage from '../components/no-match-message';
+import NoCategorySelectedMessage from '../components/no-category-selected-message';
 
 export default class DropdownMenu extends React.Component {
   constructor(props) {
