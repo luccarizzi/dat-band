@@ -1,5 +1,6 @@
 import React from 'react';
 import DropdownMenu from './dropdown-menu';
+import NoCategorySelectedMessage from '../components/no-category-selected-message';
 import { debounce } from 'lodash';
 
 export default class SearchForm extends React.Component {
@@ -57,8 +58,13 @@ export default class SearchForm extends React.Component {
   }
 
   render() {
+    const { category, search, data } = this.state;
+    if (search && !category) {
+      console.log('problem')
+    }
+
     let dropdownMenu;
-    if (this.state.data) {
+    if (data) {
       dropdownMenu = <DropdownMenu result={this.state} />;
     } else {
       dropdownMenu = '';

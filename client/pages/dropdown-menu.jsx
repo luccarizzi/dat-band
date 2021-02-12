@@ -1,6 +1,5 @@
 import React from 'react';
 import NoMatchMessage from '../components/no-match-message';
-import NoCategorySelectedMessage from '../components/no-category-selected-message';
 
 export default class DropdownMenu extends React.Component {
   constructor(props) {
@@ -90,7 +89,7 @@ export default class DropdownMenu extends React.Component {
 
   render() {
     let noResult;
-    const { category, search, data } = this.props.result;
+    const { category, data } = this.props.result;
     if (data.length === 0) {
       noResult = <NoMatchMessage result={this.props.result} />;
     }
