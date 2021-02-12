@@ -59,8 +59,9 @@ export default class SearchForm extends React.Component {
 
   render() {
     const { category, search, data } = this.state;
+    let noCategory;
     if (search && !category) {
-      console.log('problem')
+      noCategory = <NoCategorySelectedMessage />;
     }
 
     let dropdownMenu;
@@ -123,7 +124,8 @@ export default class SearchForm extends React.Component {
             onChange={this.handleSearchInput}></input>
           </div>
         </form>
-          {dropdownMenu}
+        {dropdownMenu}
+        {noCategory}
       </>
     );
   }
