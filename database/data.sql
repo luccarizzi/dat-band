@@ -149,7 +149,7 @@ values                      ('James','Hetfield', 2,'August 3, 1963','https://i.p
                             ('Chris','Poland', 12, 'December 1, 1957','https://lastfm.freetls.fastly.net/i/u/770x0/58763eeddefea437033c71f247f1c2d9.jpg'), --13
                             ('Chuck','Behler', 13, 'June 13, 1965','https://upload.wikimedia.org/wikipedia/mk/d/da/Chuck_behler.jpg'), --14
                             ('Jeff','Young', 14, 'March 31, 1962','https://i.redd.it/phcwerwmrdp21.jpg'), --15
-                            ('Nick','Menza', 15, 'July 23, 1964','https://upload.wikimedia.org/wikipedia/en/6/63/Nick_menza_photo.jpg'), --16
+                            ('Nick','Menza', 15, 'July 23, 1964','https://64.media.tumblr.com/d24cc306df3475cd5ef0c058e5d121b7/c1094dac51243860-34/s640x960/4d31832b8e1053de38eb928a364d68f919f0addf.jpg'), --16
                             ('Marty','Friedman', 16, 'December 8, 1962','https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Marty_Friedman_in_Tokyo--2009-03.jpg/440px-Marty_Friedman_in_Tokyo--2009-03.jpg'), --17
                             ('Jimmy','DeGrasso', 17, 'March 16, 1963','https://www.innovativepercussion.com/docs/document_selector/images/atw2yzgr.jpg'), --18
                             ('Al','Pitrelli', 18, 'September 26, 1962','https://nafme.org/wp-content/uploads/2019/12/Al-Pitrelli-image-2.jpg'), --19
