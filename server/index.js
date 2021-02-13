@@ -236,7 +236,7 @@ app.get('/api/musician/:musicianId', (req, res, next) => {
     where "musicianId" = $1
   `;
   const sqlRecorded = `
-    select "albumId", "albumImageUrl", "albumTitle", "releaseYear"
+    select "albumId", "albumImageUrl", "albumTitle", "releaseYear", "recordLabel"
     from "personnel"
     join "albums" using ("albumId")
     where "musicianId" = $1

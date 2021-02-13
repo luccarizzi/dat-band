@@ -32,8 +32,8 @@ export default class MusicianPage extends React.Component {
     if (data) {
       return (
         <div className='container'>
-          <MusicianImage musicianData={image}/>
           <MusicianTitle musicianData={title}/>
+          <MusicianImage musicianData={image}/>
           <MusicianInfo musicianData={info}/>
           <MusicianAssociated musicianData={associated}/>
           <MusicianRecorded musicianData={recorded}/>
