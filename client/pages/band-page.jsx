@@ -55,7 +55,7 @@ export default class BandPage extends React.Component {
           <BandMembers bandData={members}/>
           <BandDiscography bandData={discography}/>
           <BandVideography bandData={videography}/>
-          {/* <BandSeeAlso bandData={genre}/> */}
+          <BandSeeAlso bandData={genre}/>
         </div>
       );
     } else {
