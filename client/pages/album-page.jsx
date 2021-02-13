@@ -32,8 +32,8 @@ export default class AlbumPage extends React.Component {
     if (data) {
       return (
         <div className='container'>
-          <AlbumImage albumData={image} />
           <AlbumTitle albumData={title} />
+          <AlbumImage albumData={image} />
           <AlbumInfo albumData={info} />
           <AlbumPersonnel albumData={personnel}/>
           <AlbumTrackList albumData={trackList} />

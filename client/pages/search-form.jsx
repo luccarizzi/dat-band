@@ -72,61 +72,45 @@ export default class SearchForm extends React.Component {
     }
 
     return (
-      <>
-        <form className='container mt-2'>
-          <div className='row'>
-            <div className='col d-flex justify-content-center mb-2'>
-              <div className="form-check form-check-inline">
-                <input
-                className="form-check-input"
-                type="radio"
-                name="category"
-                id="category-band"
-                value="band"
-                onChange={this.handleCategoryInput}></input>
-                <label
-                className="form-check-label"
-                htmlFor="category-band">Band</label>
-              </div>
-              <div className="form-check form-check-inline">
-                <input
-                className="form-check-input"
-                type="radio"
-                name="category"
-                id="category-album"
-                value="album"
-                onChange={this.handleCategoryInput}></input>
-                <label
-                className="form-check-label"
-                htmlFor="category-album">Album</label>
-              </div>
-              <div className="form-check form-check-inline">
-                <input
-                className="form-check-input"
-                type="radio"
-                name="category"
-                id="category-musician"
-                value="musician"
-                onChange={this.handleCategoryInput}></input>
-                <label
-                className="form-check-label"
-                htmlFor="category-musician">Musician</label>
-              </div>
-            </div>
+      <div className='container'>
+        <div className='row justify-content-center'>
+          <div className='col col-lg-8 m-3'>
+            <h1 className='display-4'>Search</h1>
+            <figure>
+              <blockquote className="blockquote">
+                <p className='fw-light'>What was &apos;dat&apos; band called?</p>
+              </blockquote>
+              <figcaption className="blockquote-footer">
+                your blurry <cite title="Source Title">Memory</cite>
+              </figcaption>
+            </figure>
           </div>
-          <div className='col d-flex justify-content-center'>
-            <input
-            className='w-100'
-            type='text'
-            name='input-search'
-            id='input-search'
-            placeholder='Search'
-            onChange={this.handleSearchInput}></input>
+        </div>
+        <form>
+          <div className='row justify-content-center g-2 pb-3'>
+            <div className='col-10 col-sm-3 col-md-2 pb-1'>
+              <select
+                className="form-select btn btn-light"
+                onChange={this.handleCategoryInput}>
+                  <option value='' defaultValue>Category</option>
+                  <option value="band">Band</option>
+                  <option value="album">Album</option>
+                  <option value="musician">Musician</option>
+              </select>
+            </div>
+            <div className='col-10 col-sm-6 col-md-4'>
+              <input
+                className="form-control btn-light"
+                onChange={this.handleSearchInput}
+                type="text"
+                placeholder='search'>
+              </input>
+            </div>
           </div>
         </form>
         {dropdownMenu}
         {noCategory}
-      </>
+      </div>
     );
   }
 }

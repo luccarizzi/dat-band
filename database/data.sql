@@ -135,7 +135,7 @@ values                      ('Kill `Em All', '1983', 'Megaforce Records', 'https
 
 insert into "musicians"     ("musicianFirstName", "musicianLastName", "cityId", "dob", "musicianImageUrl")
 values                      ('James','Hetfield', 2,'August 3, 1963','https://i.pinimg.com/originals/46/26/10/462610b50d7ec520a1fe945f463d0333.jpg'), --1
-                            ('Kirk','Hammett', 3,'November 18, 1962','https://64.media.tumblr.com/tumblr_luz5dszHCx1qh5mm2o1_1280.png'), --2
+                            ('Kirk','Hammett', 3,'November 18, 1962','https://townsquare.media/site/366/files/2017/06/Metallica-Metlife-Loudwire-IMG-02.jpg?w=980&q=75'), --2
                             ('Robert','Trujillo', 4,'October 23, 1964','https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Robert_Trujillo_2017.jpg/440px-Robert_Trujillo_2017.jpg'), --3
                             ('Lars','Ulrich', 5,'26 December 1963','https://i.pinimg.com/originals/7f/e2/d1/7fe2d10ef02e690b38b3b0bcf785d7d1.jpg'), --4
                             ('Dave','Mustaine', 6,'September 13, 1961','https://i.pinimg.com/originals/9d/f5/79/9df579e269c8b20e26c0d689e1200553.jpg'), --5
@@ -149,7 +149,7 @@ values                      ('James','Hetfield', 2,'August 3, 1963','https://i.p
                             ('Chris','Poland', 12, 'December 1, 1957','https://lastfm.freetls.fastly.net/i/u/770x0/58763eeddefea437033c71f247f1c2d9.jpg'), --13
                             ('Chuck','Behler', 13, 'June 13, 1965','https://upload.wikimedia.org/wikipedia/mk/d/da/Chuck_behler.jpg'), --14
                             ('Jeff','Young', 14, 'March 31, 1962','https://i.redd.it/phcwerwmrdp21.jpg'), --15
-                            ('Nick','Menza', 15, 'July 23, 1964','https://upload.wikimedia.org/wikipedia/en/6/63/Nick_menza_photo.jpg'), --16
+                            ('Nick','Menza', 15, 'July 23, 1964','https://64.media.tumblr.com/d24cc306df3475cd5ef0c058e5d121b7/c1094dac51243860-34/s640x960/4d31832b8e1053de38eb928a364d68f919f0addf.jpg'), --16
                             ('Marty','Friedman', 16, 'December 8, 1962','https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Marty_Friedman_in_Tokyo--2009-03.jpg/440px-Marty_Friedman_in_Tokyo--2009-03.jpg'), --17
                             ('Jimmy','DeGrasso', 17, 'March 16, 1963','https://www.innovativepercussion.com/docs/document_selector/images/atw2yzgr.jpg'), --18
                             ('Al','Pitrelli', 18, 'September 26, 1962','https://nafme.org/wp-content/uploads/2019/12/Al-Pitrelli-image-2.jpg'), --19
@@ -166,7 +166,7 @@ values                      ('James','Hetfield', 2,'August 3, 1963','https://i.p
                             ('Nicko', 'McBrain', 27, 'June 5, 1952', 'https://upload.wikimedia.org/wikipedia/commons/a/a9/Nicko_McBrain_2.jpg'), --30
                             ('Janick', 'Gers', 29, 'January 27, 1957', 'https://www.metal-archives.com/images/1/1/9/119_artist.jpg?2159'), --31
                             ('Paul', 'Di`Anno', 30, 'May 17, 1958', 'https://i.pinimg.com/736x/18/db/fd/18dbfdabea8bb7c123fc2ffd6f447011--vintage-rock-paul-dianno.jpg'), --32
-                            ('Clive', 'Burr', 31, 'March 8, 1957', 'https://lh3.googleusercontent.com/proxy/N0bCmTGRAuBHVJWAsa58ot2u8K3qVfsgEVBFj7g49Uvqoo83ufhHqPrP0WEIHfqb11PagWdtz-x_BBMJw3oSSP96kHdeQL_B2leONVamnXVU9MFRq9YjiXz5vc0'), --33
+                            ('Clive', 'Burr', 31, 'March 8, 1957', 'https://townsquare.media/site/295/files/2013/03/Clive-Burr.jpg?w=980&q=75'), --33
                             ('Blaze', 'Bayley', 32, 'May 29, 1963', 'http://www.getreadytorock.com/reviews2008/blaze_bayley_gig08a.jpg'), --34
                             ('Dennis', 'Stratton', 24, 'October 9, 1952', 'http://3.bp.blogspot.com/-x5mNM1jHF_s/T-jMkUa4ioI/AAAAAAAAAlk/1g80NSPZPcg/s1600/dennis+live75.jpg'); --35
 

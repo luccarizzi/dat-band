@@ -25,10 +25,10 @@ export default class BandSeeAlso extends React.Component {
     const { bands } = this.state;
     if (bands) {
       return (
-        <div className='row'>
-          <div className='bg-dark bg-gradient text-white mb-3'>
-            <p className='py-3 mb-0 text-uppercase fw-bold section-title'>See Also</p>
-            <div className='page-font'>
+        <div className='row justify-content-center'>
+          <div className='col col-lg-8 mx-3 mb-5 text-white bg-dark bg-gradient rounded'>
+            <h3 className='p-2 p-sm-3 my-3 text-uppercase fw-bold font-title border-bottom'>See Also</h3>
+            <div className='font-title'>
               <ul className='list-unstyled'>
                 {
                   bands.map(band => {
@@ -39,11 +39,11 @@ export default class BandSeeAlso extends React.Component {
                     return (
                       <a href={`#band/${band.bandId}`} key={band.bandId} className='link-light text-decoration-none'>
                         <li className='row mb-3'>
-                          <div className='col-4'>
-                            <img className='album-image img-fluid border border-secondary' src={band.bandImageUrl}></img>
+                          <div className='col-5'>
+                            <img className='img-fluid rounded' src={band.bandImageUrl}></img>
                           </div>
-                          <div className='col-8 d-flex'>
-                            <p className='mb-0 text-decoration-underline align-self-center'>{band.bandName}</p>
+                          <div className='col-7 d-flex'>
+                            <p className='text-decoration-underline align-self-center'>{band.bandName}</p>
                           </div>
                         </li>
                       </a>

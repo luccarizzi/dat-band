@@ -25,7 +25,7 @@ app.get('/api', (req, res, next) => {
   switch (category) {
     case 'band':
       sql = `
-        select *
+        select "bandId", "bandName", "bandImageUrl", "bandGenre", "debutYear", "city"
         from "bands"
         join "cities" using ("cityId")
         where "bandName" like $1
@@ -63,7 +63,7 @@ app.get('/api/band/:bandId', (req, res, next) => {
   const data = {};
   const params = [bandId];
   const sqlImageCarousel = `
-    select "bandCarouselImageUrl", "bandCarouselImageId"
+    select "bandCarouselImageUrl", "bandCarouselImageId", "bandName"
     from "bands"
     join "carouselImages" using ("bandId")
     where "bandId" = $1
@@ -90,7 +90,7 @@ app.get('/api/band/:bandId', (req, res, next) => {
     where "bandId" = $1
   `;
   const sqlDiscography = `
-    select "albumId", "albumTitle", "albumImageUrl", "releaseYear"
+    select "albumId", "albumTitle", "albumImageUrl", "releaseYear", "recordLabel"
     from "discography"
     join "albums" using ("albumId")
     where "bandId" = $1
@@ -147,7 +147,7 @@ app.get('/api/album/:albumId', (req, res, next) => {
   const data = {};
   const params = [albumId];
   const sqlImage = `
-    select "albumImageUrl"
+    select "albumImageUrl", "albumTitle"
     from "albums"
     where "albumId" = $1
   `;
@@ -210,7 +210,7 @@ app.get('/api/musician/:musicianId', (req, res, next) => {
   const data = {};
   const params = [musicianId];
   const sqlImage = `
-    select "musicianImageUrl"
+    select "musicianImageUrl", "musicianFirstName", "musicianLastName"
     from "musicians"
     where "musicianId" = $1
   `;
@@ -236,7 +236,7 @@ app.get('/api/musician/:musicianId', (req, res, next) => {
     where "musicianId" = $1
   `;
   const sqlRecorded = `
-    select "albumId", "albumImageUrl", "albumTitle", "releaseYear"
+    select "albumId", "albumImageUrl", "albumTitle", "releaseYear", "recordLabel"
     from "personnel"
     join "albums" using ("albumId")
     where "musicianId" = $1
