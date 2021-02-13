@@ -135,7 +135,7 @@ values                      ('Kill `Em All', '1983', 'Megaforce Records', 'https
 
 insert into "musicians"     ("musicianFirstName", "musicianLastName", "cityId", "dob", "musicianImageUrl")
 values                      ('James','Hetfield', 2,'August 3, 1963','https://i.pinimg.com/originals/46/26/10/462610b50d7ec520a1fe945f463d0333.jpg'), --1
-                            ('Kirk','Hammett', 3,'November 18, 1962','https://64.media.tumblr.com/tumblr_luz5dszHCx1qh5mm2o1_1280.png'), --2
+                            ('Kirk','Hammett', 3,'November 18, 1962','https://townsquare.media/site/366/files/2017/06/Metallica-Metlife-Loudwire-IMG-02.jpg?w=980&q=75'), --2
                             ('Robert','Trujillo', 4,'October 23, 1964','https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Robert_Trujillo_2017.jpg/440px-Robert_Trujillo_2017.jpg'), --3
                             ('Lars','Ulrich', 5,'26 December 1963','https://i.pinimg.com/originals/7f/e2/d1/7fe2d10ef02e690b38b3b0bcf785d7d1.jpg'), --4
                             ('Dave','Mustaine', 6,'September 13, 1961','https://i.pinimg.com/originals/9d/f5/79/9df579e269c8b20e26c0d689e1200553.jpg'), --5

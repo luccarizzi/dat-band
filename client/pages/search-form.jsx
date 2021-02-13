@@ -57,7 +57,7 @@ export default class SearchForm extends React.Component {
     });
   }
 
-  render() { // console.log(this.state)
+  render() {
     const { category, search, data } = this.state;
     let noCategory;
     if (search && !category) {
@@ -78,7 +78,7 @@ export default class SearchForm extends React.Component {
             <h1 className='display-4'>Search</h1>
             <figure>
               <blockquote className="blockquote">
-                <p className='fw-light'>What was &apos;dat&apos; band called</p>
+                <p className='fw-light'>What was &apos;dat&apos; band called?</p>
               </blockquote>
               <figcaption className="blockquote-footer">
                 your blurry <cite title="Source Title">Memory</cite>
@@ -86,9 +86,8 @@ export default class SearchForm extends React.Component {
             </figure>
           </div>
         </div>
-
         <form>
-          <div className='row justify-content-center g-2'>
+          <div className='row justify-content-center g-2 pb-3'>
             <div className='col-10 col-sm-3 col-md-2 pb-1'>
               <select
                 className="form-select btn btn-light"
@@ -109,53 +108,6 @@ export default class SearchForm extends React.Component {
             </div>
           </div>
         </form>
-
-          {/* <div className="form-check form-check-inline">
-            <input
-            className="form-check-input"
-            type="radio"
-            name="category"
-            id="category-band"
-            value="band"
-            onChange={this.handleCategoryInput}></input>
-            <label
-            className="form-check-label"
-            htmlFor="category-album">Band</label>
-          </div>
-          <div className="form-check form-check-inline">
-            <input
-            className="form-check-input"
-            type="radio"
-            name="category"
-            id="category-album"
-            value="album"
-            onChange={this.handleCategoryInput}></input>
-            <label
-            className="form-check-label"
-            htmlFor="category-album">Album</label>
-          </div>
-          <div className="form-check form-check-inline">
-            <input
-            className="form-check-input"
-            type="radio"
-            name="category"
-            id="category-musician"
-            value="musician"
-            onChange={this.handleCategoryInput}></input>
-            <label
-            className="form-check-label"
-            htmlFor="category-musician">Musician</label>
-          </div> */}
-          {/* <div className='col d-flex justify-content-center'>
-            <input
-            className='w-100'
-            type='text'
-            name='input-search'
-            id='input-search'
-            placeholder='Search'
-            onChange={this.handleSearchInput}></input>
-          </div> */}
-
         {dropdownMenu}
         {noCategory}
       </div>

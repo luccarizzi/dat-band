@@ -25,7 +25,7 @@ app.get('/api', (req, res, next) => {
   switch (category) {
     case 'band':
       sql = `
-        select *
+        select "bandId", "bandName", "bandImageUrl", "bandGenre", "debutYear", "city"
         from "bands"
         join "cities" using ("cityId")
         where "bandName" like $1

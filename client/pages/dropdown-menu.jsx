@@ -13,24 +13,17 @@ export default class DropdownMenu extends React.Component {
   }
 
   bandResults(props) {
+    const { bandId, bandImageUrl, bandName, city, debutYear } = props.data;
     return (
-      <a href={`#band/${props.data.bandId}`} className='text-decoration-none text-dark'>
-        <div className='col-12'>
-          <div className='card border-0'>
-            <div className='row'>
-              <div className='col-5 m-auto'>
-                <img className='img-fluid border' src={props.data.bandImageUrl}></img>
-              </div>
-              <div className='col-7 ps-0 py-1'>
-                <div>
-                  <h6>{props.data.bandName}</h6>
-                  <div className='detail-font'>
-                    <p className='m-0'>{props.data.city}</p>
-                    <p className='m-0'>{props.data.debutYear}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+      <a href={`#band/${bandId}`} className='text-decoration-none text-dark'>
+        <div className='row pb-3 g-2 g-sm-4 justify-content-center'>
+          <div className='col-6 col-sm-6 col-md-5 col-lg-4'>
+            <img className='rounded object-fit-cover float-end band-image' src={bandImageUrl}></img>
+          </div>
+          <div className='col-6 col-sm-6 col-md-5 col-lg-4'>
+            <h6 className='font-result-title'>{bandName}</h6>
+            <p className='font-result-detail m-0'>{city}</p>
+            <p className='font-result-detail m-0'>{debutYear}</p>
           </div>
         </div>
       </a>
@@ -38,24 +31,17 @@ export default class DropdownMenu extends React.Component {
   }
 
   albumResults(props) {
+    const { albumId, albumImageUrl, albumTitle, recordLabel, releaseYear } = props.data;
     return (
-      <a href={`#album/${props.data.albumId}`} className='text-decoration-none text-dark'>
-        <div className='col-12'>
-          <div className='card border-0'>
-            <div className='row'>
-              <div className='col-5 m-auto'>
-                <img className='img-fluid border' src={props.data.albumImageUrl}></img>
-              </div>
-              <div className='col-7 ps-0 py-1'>
-                <div>
-                  <h6>{props.data.albumTitle}</h6>
-                  <div className='detail-font'>
-                    <p className='m-0'>{props.data.recordLabel}</p>
-                    <p className='m-0'>{props.data.releaseYear}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+      <a href={`#album/${albumId}`} className='text-decoration-none text-dark'>
+        <div className='row pb-3 g-2 g-sm-4 justify-content-center'>
+          <div className='col-6 col-sm-6 col-md-5 col-lg-4 album-image'>
+            <img className='img-fluid rounded' src={albumImageUrl}></img>
+          </div>
+          <div className='col-6 col-sm-6 col-md-5 col-lg-4'>
+            <h6 className='font-result-title'>{albumTitle}</h6>
+            <p className='font-result-detail m-0'>{recordLabel}</p>
+            <p className='font-result-detail m-0'>{releaseYear}</p>
           </div>
         </div>
       </a>
@@ -63,24 +49,17 @@ export default class DropdownMenu extends React.Component {
   }
 
   musicianResults(props) {
+    const { musicianId, musicianImageUrl, musicianFirstName, musicianLastName, dob, city } = props.data;
     return (
-      <a href={`#musician/${props.data.musicianId}`} className='text-decoration-none text-dark'>
-        <div className='col-12'>
-          <div className='card border-0'>
-            <div className='row'>
-              <div className='col-5 m-auto'>
-                <img className='img-fluid border' src={props.data.musicianImageUrl}></img>
-              </div>
-              <div className='col-7 ps-0 py-1'>
-                <div>
-                  <h6>{props.data.musicianFirstName} {props.data.musicianLastName}</h6>
-                  <div className='detail-font'>
-                    <p className='m-0'>{props.data.dob}</p>
-                    <p className='m-0'>{props.data.city}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+      <a href={`#musician/${musicianId}`} className='text-decoration-none text-dark'>
+        <div className='row pb-3 g-2 g-sm-4 justify-content-center'>
+          <div className='col-6 col-sm-6 col-md-5 col-lg-4'>
+            <img className='rounded object-fit-cover float-end musician-image' src={musicianImageUrl}></img>
+          </div>
+          <div className='col-6 col-sm-6 col-md-5 col-lg-4'>
+            <h6 className='font-result-title'>{musicianFirstName} {musicianLastName}</h6>
+            <p className='font-result-detail m-0'>{dob}</p>
+            <p className='font-result-detail m-0'>{city}</p>
           </div>
         </div>
       </a>
@@ -121,10 +100,8 @@ export default class DropdownMenu extends React.Component {
 
     return (
       <div className='container'>
-        <div className='row m-auto dropdown-menu-width border border-secondary border-top-0 justify-content-center'>
-          {dataList}
-          {noResult}
-        </div>
+        {dataList}
+        {noResult}
       </div>
     );
   }
