@@ -10,52 +10,6 @@
   color: #fc6565;
 }
 
-.detail-font {
-  font-size: 10px;
-}
-
-.table-font {
-  font-size: 12px;
-}
-
-.page-font {
-  font-size: 14px;
-}
-
-/*
-.dropdown-menu-width {
-  width: 290px;
-} */
-
-/* .carousel-image {
-  height: 250px;
-  object-fit: cover;
-} */
-
-/*
-.image-width {
-  width: inherit;
-}
-
-.album-image {
-  object-fit: contain;
-} */
-
-/* .musician-image {
-  max-height: 20rem;
-  overflow: hidden;
-} */
-
-.a {
-  color: #db5e6a;
-}
-
-/*
-.color-title {
-  color: #fc6565;
-} */
-
-/* dropdown menu font */
 .font-title {
   font-size: 14px;
 }
