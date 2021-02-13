@@ -21,9 +21,9 @@ export default class DropdownMenu extends React.Component {
             <img className='rounded object-fit-cover float-end band-image' src={bandImageUrl}></img>
           </div>
           <div className='col-6 col-sm-6 col-md-5 col-lg-4'>
-            <h6 className='font-result-title'>{bandName}</h6>
-            <p className='font-result-detail m-0'>{city}</p>
-            <p className='font-result-detail m-0'>{debutYear}</p>
+            <h6 className='font-title'>{bandName}</h6>
+            <p className='font-detail m-0'>{city}</p>
+            <p className='font-detail m-0'>{debutYear}</p>
           </div>
         </div>
       </a>
@@ -39,9 +39,9 @@ export default class DropdownMenu extends React.Component {
             <img className='img-fluid rounded' src={albumImageUrl}></img>
           </div>
           <div className='col-6 col-sm-6 col-md-5 col-lg-4'>
-            <h6 className='font-result-title'>{albumTitle}</h6>
-            <p className='font-result-detail m-0'>{recordLabel}</p>
-            <p className='font-result-detail m-0'>{releaseYear}</p>
+            <h6 className='font-title'>{albumTitle}</h6>
+            <p className='font-detail m-0'>{recordLabel}</p>
+            <p className='font-detail m-0'>{releaseYear}</p>
           </div>
         </div>
       </a>
@@ -57,9 +57,9 @@ export default class DropdownMenu extends React.Component {
             <img className='rounded object-fit-cover float-end musician-image' src={musicianImageUrl}></img>
           </div>
           <div className='col-6 col-sm-6 col-md-5 col-lg-4'>
-            <h6 className='font-result-title'>{musicianFirstName} {musicianLastName}</h6>
-            <p className='font-result-detail m-0'>{dob}</p>
-            <p className='font-result-detail m-0'>{city}</p>
+            <h6 className='font-title'>{musicianFirstName} {musicianLastName}</h6>
+            <p className='font-detail m-0'>{dob}</p>
+            <p className='font-detail m-0'>{city}</p>
           </div>
         </div>
       </a>

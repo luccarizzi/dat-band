@@ -3,29 +3,30 @@ import React from 'react';
 function BandDiscography(props) {
   const albums = props.bandData;
   return (
-    <div className='row'>
-      <div className='bg-dark bg-gradient text-white mb-3'>
-        <p className='py-3 mb-0 text-uppercase fw-bold section-title'>Discography</p>
-        <div className='page-font'>
-          <ul className='list-unstyled'>
-            {
-              albums.map(album => {
-                return (
-                  <a href={`#album/${album.albumId}`} key={album.albumId} className='link-light text-decoration-none'>
-                    <li className='row mb-3'>
-                      <div className='col-3'>
-                        <img className='album-image img-fluid border border-secondary' src={album.albumImageUrl}></img>
-                      </div>
-                      <div className='col-9'>
-                        <p className='mb-0 text-decoration-underline'>{album.albumTitle}</p>
-                        <p className='mb-0 fw-lighter'>{album.releaseYear}</p>
-                      </div>
-                    </li>
-                  </a>
-                );
-              })
-            }
-          </ul>
+    <div className='row justify-content-center'>
+      <div className='col col-lg-8 mx-3 mb-2 text-white bg-dark bg-gradient rounded'>
+        <div className='p-2 p-sm-3'>
+          <h3 className='my-3 text-uppercase fw-bold font-title border-bottom'>Discography</h3>
+            <ul className='list-unstyled'>
+              {
+                albums.map(album => {
+                  return (
+                    <a href={`#album/${album.albumId}`} key={album.albumId} className='link-light text-decoration-none'>
+                      <li className='row font-detail py-2 py-sm-3'>
+                        <div className='col-5'>
+                          <img className='img-fluid rounded' src={album.albumImageUrl}></img>
+                        </div>
+                        <div className='col-7'>
+                          <p className='mb-1 mb-sm-2 text-decoration-underline font-title'>{album.albumTitle}</p>
+                          <p className='mb-0 fw-lighter'>{album.recordLabel}</p>
+                          <p className='mb-0 fw-lighter'>{album.releaseYear}</p>
+                        </div>
+                      </li>
+                    </a>
+                  );
+                })
+              }
+            </ul>
         </div>
       </div>
     </div>

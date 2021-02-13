@@ -21,29 +21,15 @@
 .page-font {
   font-size: 14px;
 }
-
+/*
 .dropdown-menu-width {
   width: 290px;
-}
+} */
 
-.carousel-image {
+/* .carousel-image {
   height: 250px;
   object-fit: cover;
-}
-
-.arrow {
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 2.5rem;
-  top: 30%;
-}
-
-.left-arrow {
-  left: 1%;
-}
-
-.right-arrow {
-  right: 1%;
-}
+} */
 
 .image-width {
   width: inherit;
@@ -62,68 +48,59 @@
   color: #db5e6a;
 }
 
-.section-title {
+.color-title {
   color: #fc6565;
 }
 
-.font-result-title {
+/* dropdown menu font */
+.font-title {
   font-size: 14px;
 }
-
-.font-result-detail {
+.font-detail {
   font-size: 12px;
 }
-
 @media (min-width: 376px) {
-  .font-result-title {
+  .font-title {
     font-size: 18px;
   }
-
-  .font-result-detail {
+  .font-detail {
     font-size: 16px;
   }
 }
-
 @media (min-width: 576px) {
-  .font-result-title {
+  .font-title {
     font-size: 20px;
   }
-
-  .font-result-detail {
+  .font-detail {
     font-size: 18px;
   }
 }
-
 @media (min-width: 768px) {
-  .font-result-title {
+  .font-title {
     font-size: 24px;
   }
-
-  .font-result-detail {
+  .font-detail {
     font-size: 20px;
   }
 }
-
 @media (min-width: 992px) {
-  .font-result-title {
+  .font-title {
     font-size: 30px;
   }
-
-  .font-result-detail {
+  .font-detail {
     font-size: 22px;
   }
 }
-
 @media (min-width: 1200px) {
-  .font-result-title {
+  .font-title {
     font-size: 36px;
   }
-
-  .font-result-detail {
+  .font-detail {
     font-size: 24px;
   }
 }
 
+/* crop images */
 .object-fit-cover {
   object-fit: cover;
 }
@@ -133,49 +110,42 @@
   width: 100px;
   height: 75px;
 }
-
 @media (min-width: 300px) {
   .band-image {
     width: 125px;
     height: calc(125px * 0.75);
   }
 }
-
 @media (min-width: 376px) {
   .band-image {
     width: 150px;
     height: calc(150px * 0.75);
   }
 }
-
 @media (min-width: 476px) {
   .band-image {
     width: 200px;
     height: calc(200px * 0.75);
   }
 }
-
 @media (min-width: 576px) {
   .band-image {
     width: 250px;
     height: calc(250px * 0.75);
   }
 }
-
 @media (min-width: 768px) {
   .band-image {
     width: 275px;
     height: calc(275px * 0.75);
   }
 }
-
 @media (min-width: 992px) {
   .band-image {
     width: 300px;
     height: calc(300px * 0.75);
   }
 }
-
 @media (min-width: 1200px) {
   .band-image {
     width: 325px;
@@ -189,19 +159,16 @@
     max-width: 275px;
   }
 }
-
 @media (min-width: 768px) {
   .album-image {
     max-width: 300px;
   }
 }
-
 @media (min-width: 992px) {
   .album-image {
     max-width: 325px;
   }
 }
-
 @media (min-width: 1200px) {
   .album-image {
     max-width: 325px;
@@ -213,52 +180,119 @@
   width: 100px;
   height: 100px;
 }
-
 @media (min-width: 300px) {
   .musician-image {
     width: 125px;
     height: 125px;
   }
 }
-
 @media (min-width: 376px) {
   .musician-image {
     width: 150px;
     height: 150px;
   }
 }
-
 @media (min-width: 476px) {
   .musician-image {
     width: 200px;
     height: 200px;
   }
 }
-
 @media (min-width: 576px) {
   .musician-image {
     width: 250px;
     height: 250px;
   }
 }
-
 @media (min-width: 768px) {
   .musician-image {
     width: 275px;
     height: 275px;
   }
 }
-
 @media (min-width: 992px) {
   .musician-image {
     width: 300px;
     height: 300px;
   }
 }
-
 @media (min-width: 1200px) {
   .musician-image {
     width: 325px;
     height: 325px;
+  }
+}
+
+/* image carousel */
+.carousel-image {
+  width: 168px;
+  height: calc(168px * 0.6);
+}
+@media (min-width: 300px) {
+  .carousel-image {
+    width: 268px;
+    height: calc(268px * 0.6);
+  }
+}
+@media (min-width: 400px) {
+  .carousel-image {
+    width: 368px;
+    height: calc(368px * 0.6);
+  }
+}
+@media (min-width: 500px) {
+  .carousel-image {
+    width: 465px;
+    height: calc(465px * 0.6);
+  }
+}
+@media (min-width: 576px) {
+  .carousel-image {
+    width: 508px;
+    height: calc(508px * 0.6);
+  }
+}
+@media (min-width: 768px) {
+  .carousel-image {
+    width: 688px;
+    height: calc(688px * 0.6);
+  }
+}
+@media (min-width: 992px) {
+  .carousel-image {
+    width: 640px;
+    height: calc(640px * 0.6);
+  }
+}
+@media (min-width: 1200px) {
+  .carousel-image {
+    width: 760px;
+    height: calc(760px * 0.6);
+  }
+}
+
+/* video frame */
+@media (min-width: 576px) {
+  .video-frame {
+    width: 484px;
+    height: 242px;
+  }
+}
+@media (min-width: 768px) {
+  .video-frame {
+    width: 664px;
+    height: 332px;
+  }
+}
+@media (min-width: 992px) {
+  .video-frame {
+    width: 736px;
+    height: 368px;
+  }
+}
+@media (min-width: 1200px) {
+  .video-frame {
+    width: 856px;
+    height: 428px;
   }
 }

@@ -49,13 +49,13 @@ export default class BandPage extends React.Component {
     if (data) {
       return (
         <div className='container'>
-          <BandImageCarousel bandData={imageCarousel} />
           <BandTitle bandData={title} />
+          <BandImageCarousel bandData={imageCarousel} />
           <BandInfo bandData={info}/>
           <BandMembers bandData={members}/>
           <BandDiscography bandData={discography}/>
           <BandVideography bandData={videography}/>
-          <BandSeeAlso bandData={genre}/>
+          {/* <BandSeeAlso bandData={genre}/> */}
         </div>
       );
     } else {
