@@ -7,7 +7,7 @@ function AlbumTrackList(props) {
       <div className='col col-lg-8 mx-2 mb-2 text-white bg-dark bg-gradient rounded'>
         <div className='p-2 p-sm-3'>
           <h3 className='my-3 text-uppercase fw-bold font-title border-bottom'>Track List</h3>
-          <table className='table text-white table-font'>
+          <table className='table text-white font-detail'>
             <thead>
               <tr>
                 <th scope='col'>No.</th>

@@ -166,7 +166,7 @@ values                      ('James','Hetfield', 2,'August 3, 1963','https://i.p
                             ('Nicko', 'McBrain', 27, 'June 5, 1952', 'https://upload.wikimedia.org/wikipedia/commons/a/a9/Nicko_McBrain_2.jpg'), --30
                             ('Janick', 'Gers', 29, 'January 27, 1957', 'https://www.metal-archives.com/images/1/1/9/119_artist.jpg?2159'), --31
                             ('Paul', 'Di`Anno', 30, 'May 17, 1958', 'https://i.pinimg.com/736x/18/db/fd/18dbfdabea8bb7c123fc2ffd6f447011--vintage-rock-paul-dianno.jpg'), --32
-                            ('Clive', 'Burr', 31, 'March 8, 1957', 'https://lh3.googleusercontent.com/proxy/N0bCmTGRAuBHVJWAsa58ot2u8K3qVfsgEVBFj7g49Uvqoo83ufhHqPrP0WEIHfqb11PagWdtz-x_BBMJw3oSSP96kHdeQL_B2leONVamnXVU9MFRq9YjiXz5vc0'), --33
+                            ('Clive', 'Burr', 31, 'March 8, 1957', 'https://townsquare.media/site/295/files/2013/03/Clive-Burr.jpg?w=980&q=75'), --33
                             ('Blaze', 'Bayley', 32, 'May 29, 1963', 'http://www.getreadytorock.com/reviews2008/blaze_bayley_gig08a.jpg'), --34
                             ('Dennis', 'Stratton', 24, 'October 9, 1952', 'http://3.bp.blogspot.com/-x5mNM1jHF_s/T-jMkUa4ioI/AAAAAAAAAlk/1g80NSPZPcg/s1600/dennis+live75.jpg'); --35
 
