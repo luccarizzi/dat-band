@@ -14,7 +14,7 @@ function MusicianRecorded(props) {
                   <a href={`#album/${record.albumId}`} key={record.albumId} className='link-light text-decoration-none'>
                     <li className='row font-detail py-2 py-sm-3'>
                       <div className='col-5'>
-                        <img className='img-fluid rounded' src={record.albumImageUrl}></img>
+                        <img className='img-fluid rounded' src={record.albumImageUrl} alt={`${record.albumTitle} album cover.`}></img>
                       </div>
                       <div className='col-7'>
                         <p className='mb-1 mb-sm-2 text-decoration-underline font-title'>{record.albumTitle}</p>

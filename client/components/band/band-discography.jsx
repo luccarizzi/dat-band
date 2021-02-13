@@ -14,7 +14,7 @@ function BandDiscography(props) {
                     <a href={`#album/${album.albumId}`} key={album.albumId} className='link-light text-decoration-none'>
                       <li className='row font-detail py-2 py-sm-3'>
                         <div className='col-5'>
-                          <img className='img-fluid rounded' src={album.albumImageUrl}></img>
+                          <img className='img-fluid rounded' src={album.albumImageUrl} alt={`${album.albumTitle} album cover.`}></img>
                         </div>
                         <div className='col-7'>
                           <p className='mb-1 mb-sm-2 text-decoration-underline font-title'>{album.albumTitle}</p>

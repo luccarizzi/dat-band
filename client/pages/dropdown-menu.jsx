@@ -18,7 +18,7 @@ export default class DropdownMenu extends React.Component {
       <a href={`#band/${bandId}`} className='text-decoration-none text-dark'>
         <div className='row pb-3 g-2 g-sm-4 justify-content-center'>
           <div className='col-6 col-sm-6 col-md-5 col-lg-4'>
-            <img className='rounded object-fit-cover float-end band-image' src={bandImageUrl}></img>
+            <img className='rounded object-fit-cover float-end band-image' src={bandImageUrl} alt={`${bandName} band members.`}></img>
           </div>
           <div className='col-6 col-sm-6 col-md-5 col-lg-4'>
             <h6 className='font-title'>{bandName}</h6>
@@ -36,7 +36,7 @@ export default class DropdownMenu extends React.Component {
       <a href={`#album/${albumId}`} className='text-decoration-none text-dark'>
         <div className='row pb-3 g-2 g-sm-4 justify-content-center'>
           <div className='col-6 col-sm-6 col-md-5 col-lg-4 album-image'>
-            <img className='img-fluid rounded' src={albumImageUrl}></img>
+            <img className='img-fluid rounded' src={albumImageUrl} alt={`${albumTitle} album cover.`}></img>
           </div>
           <div className='col-6 col-sm-6 col-md-5 col-lg-4'>
             <h6 className='font-title'>{albumTitle}</h6>
@@ -54,7 +54,7 @@ export default class DropdownMenu extends React.Component {
       <a href={`#musician/${musicianId}`} className='text-decoration-none text-dark'>
         <div className='row pb-3 g-2 g-sm-4 justify-content-center'>
           <div className='col-6 col-sm-6 col-md-5 col-lg-4'>
-            <img className='rounded object-fit-cover float-end musician-image' src={musicianImageUrl}></img>
+            <img className='rounded object-fit-cover float-end musician-image' src={musicianImageUrl} alt={`Musician ${musicianFirstName} ${musicianLastName}`}></img>
           </div>
           <div className='col-6 col-sm-6 col-md-5 col-lg-4'>
             <h6 className='font-title'>{musicianFirstName} {musicianLastName}</h6>

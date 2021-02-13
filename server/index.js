@@ -63,7 +63,7 @@ app.get('/api/band/:bandId', (req, res, next) => {
   const data = {};
   const params = [bandId];
   const sqlImageCarousel = `
-    select "bandCarouselImageUrl", "bandCarouselImageId"
+    select "bandCarouselImageUrl", "bandCarouselImageId", "bandName"
     from "bands"
     join "carouselImages" using ("bandId")
     where "bandId" = $1
@@ -147,7 +147,7 @@ app.get('/api/album/:albumId', (req, res, next) => {
   const data = {};
   const params = [albumId];
   const sqlImage = `
-    select "albumImageUrl"
+    select "albumImageUrl", "albumTitle"
     from "albums"
     where "albumId" = $1
   `;
@@ -210,7 +210,7 @@ app.get('/api/musician/:musicianId', (req, res, next) => {
   const data = {};
   const params = [musicianId];
   const sqlImage = `
-    select "musicianImageUrl"
+    select "musicianImageUrl", "musicianFirstName", "musicianLastName"
     from "musicians"
     where "musicianId" = $1
   `;

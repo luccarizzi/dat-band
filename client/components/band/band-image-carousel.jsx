@@ -74,7 +74,7 @@ export default class BandImageCarousel extends React.Component {
       <div className='row g-0'>
         <div className='col d-flex justify-content-center mb-2'>
           {/* <a><i onClick={this.leftClick} className='fas fa-chevron-left arrows'></i></a> */}
-          <img className='object-fit-cover carousel-image rounded' src={bandData[imageIndex].bandCarouselImageUrl}></img>
+          <img className='object-fit-cover carousel-image rounded' src={bandData[imageIndex].bandCarouselImageUrl} alt={`${bandData[imageIndex].bandName} band members.`}></img>
           {/* <a><i onClick={this.rightClick} className='fas fa-chevron-right arrows'></i></a> */}
         </div>
       </div>
