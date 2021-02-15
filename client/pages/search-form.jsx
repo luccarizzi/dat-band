@@ -1,7 +1,6 @@
 import React from 'react';
 import DropdownMenu from './dropdown-menu';
 import NoCategorySelectedMessage from '../components/no-category-selected-message';
-import { debounce } from 'lodash';
 
 export default class SearchForm extends React.Component {
   constructor(props) {
@@ -13,13 +12,12 @@ export default class SearchForm extends React.Component {
     };
     this.handleCategoryInput = this.handleCategoryInput.bind(this);
     this.handleSearchInput = this.handleSearchInput.bind(this);
-    this.debouncedGetSearchResults = debounce(this.getSearchResults, 600);
   }
 
   getSearchResults() {
     const { category, search } = this.state;
     if (category && search) {
-      fetch(`/api?search=${this.state.search}&category=${this.state.category}`)
+      fetch(`/api?search=${search}&category=${category}`)
         .then(res => res.json())
         .then(data => {
           this.setState({
@@ -52,8 +50,8 @@ export default class SearchForm extends React.Component {
   handleSearchInput(event) {
     this.setState({
       search: event.target.value
-    }, state => {
-      this.debouncedGetSearchResults(state);
+    }, () => {
+      this.getSearchResults();
     });
   }
 
@@ -67,8 +65,6 @@ export default class SearchForm extends React.Component {
     let dropdownMenu;
     if (data) {
       dropdownMenu = <DropdownMenu result={this.state} />;
-    } else {
-      dropdownMenu = '';
     }
 
     return (
