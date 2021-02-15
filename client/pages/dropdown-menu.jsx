@@ -4,9 +4,7 @@ import NoMatchMessage from '../components/no-match-message';
 export default class DropdownMenu extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      id: ''
-    };
+
     this.bandResults = this.bandResults.bind(this);
     this.albumResults = this.albumResults.bind(this);
     this.musicianResults = this.musicianResults.bind(this);
@@ -73,27 +71,20 @@ export default class DropdownMenu extends React.Component {
       noResult = <NoMatchMessage result={this.props.result} />;
     }
 
-    const dataList = this.props.result.data.map((data, index) => {
+    const dataList = data.map((data, index) => {
       let result;
-      if (index > 4) {
-        return result;
-      }
-      if (data && category) {
-        switch (category) {
-          case 'band':
-            result = <this.bandResults data={data} key={data.bandId} />;
-            break;
-          case 'album':
-            result = <this.albumResults data={data} key={data.albumId}/>;
-            break;
-          case 'musician':
-            result = <this.musicianResults data={data} key={data.musicianId} />;
-            break;
-          default:
-            break;
-        }
-      } else {
-        result = '';
+      switch (category) {
+        case 'band':
+          result = <this.bandResults data={data} key={data.bandId} />;
+          break;
+        case 'album':
+          result = <this.albumResults data={data} key={data.albumId} />;
+          break;
+        case 'musician':
+          result = <this.musicianResults data={data} key={data.musicianId} />;
+          break;
+        default:
+          break;
       }
       return result;
     });
