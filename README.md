@@ -42,6 +42,13 @@ User can watch YouTube videos within the Band page
     ```shell
     npm install
     ```
+    
+1. Import the example database to MongoDB.
+
+    ```shell
+    sudo service postgresql start
+    npm run db:import
+    ```
 
 1. Start the project. Once started you can view the application by opening http://localhost:3000 in your browser.
 
