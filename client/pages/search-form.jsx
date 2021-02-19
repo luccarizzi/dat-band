@@ -107,6 +107,7 @@ export default class SearchForm extends React.Component {
             </div>
             <div className='col-10 col-sm-6 col-md-4'>
               <input
+                id='input-search'
                 className="form-control btn-light"
                 onChange={this.handleSearchInput}
                 type="text"
