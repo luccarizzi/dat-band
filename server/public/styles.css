@@ -18,6 +18,10 @@
   font-size: 12px;
 }
 
+.text-justify {
+  text-align: justify;
+}
+
 @media (min-width: 376px) {
   .font-title {
     font-size: 18px;

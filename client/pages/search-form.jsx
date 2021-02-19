@@ -80,6 +80,7 @@ export default class SearchForm extends React.Component {
                 your blurry <cite title="Source Title">Memory</cite>
               </figcaption>
             </figure>
+            <p className='text-justify fw-light'>Dat-band allows you to search for bands, albums or musicians. You can also go between pages by clicking on other links.</p>
           </div>
         </div>
         <form>
@@ -99,7 +100,7 @@ export default class SearchForm extends React.Component {
                 className="form-control btn-light"
                 onChange={this.handleSearchInput}
                 type="text"
-                placeholder='search'>
+                placeholder='Search'>
               </input>
             </div>
           </div>
