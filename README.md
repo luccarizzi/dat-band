@@ -21,17 +21,17 @@ Currently not available.
 
 ### Current:
 
-User can search for a band, album or musician  
-user can see a list of results according to the search input  
-User can click on a result and be redirected to the selected page  
-User can see a dedicated page of the selected band, album or musician  
-User can click on link to other pages within the current page  
-User can watch YouTube videos within the Band page  
+* User can search for a band, album or musician
+* User can see a list of results according to the search input
+* User can click on a result and be redirected to the selected page
+* User can see a dedicated page of the selected band, album or musician
+* User can click on link to other pages within the current page
+* User can watch YouTube videos within the Band page
 
 ### Future:
 
-User can search for albums by release year. 
-User can search for bands by music genre
+* User can search for albums by release year
+* User can search for bands by music genre
 
 ## Lessons Learned
 
