@@ -1,6 +1,6 @@
 # Dat-Band
 
-Full Stack web application for music fans to find information related to bands, albums and musicians.
+A full stack web application for music fans to find information related to bands, albums and musicians.
 
 ## Technologies Used
 
