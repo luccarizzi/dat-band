@@ -30,7 +30,21 @@ values                      ('Los Angeles'), --1
                             ('Hartlepool'), --29
                             ('Chingford'), --30
                             ('East Ham'), --31
-                            ('Birmingham'); --32
+                            ('Birmingham'), --32
+                            ('Lafayette'), --33
+                            ('Seattle'), --34
+                            ('Hampstead'), --35
+                            ('Cleveland'), --36
+                            ('Venice Beach'), --37
+                            ('Pasadena'), --38
+                            ('Amsterdam'), --39
+                            ('Bloomington'), --40
+                            ('Chicago'), --41
+                            ('Liverpool'), --42
+                            ('West Bromwich'), --43
+                            ('Blackheath'), --44
+                            ('Sutton Coldfield'), --45
+                            ('Norfolk'); --46
 
 insert into "states"        ("state")
 values                      ('California'), --1
@@ -51,7 +65,14 @@ values                      ('California'), --1
                             ('London'), --16
                             ('East Midlands'), --17
                             ('North East'), --18
-                            ('West Midlands'); --19
+                            ('West Midlands'), --19
+                            ('Indiana'), --20
+                            ('Washington'), --21
+                            ('Ohio'), --22
+                            ('North Holland'), --23
+                            ('Illinois'), --24
+                            ('North West'), --25
+                            ('Virginia'); --26
 
 insert into "countries"     ("country")
 values                      ('United States'), --1
@@ -60,7 +81,8 @@ values                      ('United States'), --1
                             ('Belgium'), --4
                             ('Germany'), --5
                             ('Canada'), --6
-                            ('England'); --7
+                            ('England'), --7
+                            ('Netherlands'); --8
 
 insert into "cityState"     ("cityId", "stateId")
 values                      (1, 1),
@@ -94,7 +116,21 @@ values                      (1, 1),
                             (29, 18),
                             (30, 16),
                             (31, 16),
-                            (32, 19);
+                            (32, 19),
+                            (33, 20),
+                            (34, 21),
+                            (35, 16),
+                            (36, 22),
+                            (37, 1),
+                            (38, 1),
+                            (39, 23),
+                            (40, 20),
+                            (41, 24),
+                            (42, 25),
+                            (43, 19),
+                            (44, 19),
+                            (45, 19),
+                            (46, 26);
 
 insert into "stateCountry"  ("stateId", "countryId")
 values                      (1, 1),
@@ -115,60 +151,55 @@ values                      (1, 1),
                             (16, 7),
                             (17, 7),
                             (18, 7),
-                            (19, 7);
+                            (19, 7),
+                            (20, 1),
+                            (21, 1),
+                            (22, 1),
+                            (23, 8),
+                            (24, 1),
+                            (25, 7),
+                            (26, 1);
 
 insert into "bands"         ("bandName", "debutYear", "cityId", "bandGenre", "bandImageUrl")
-values                      ('Metallica', '1981', 1, 'Thrash Metal', 'https://consequenceofsound.net/wp-content/uploads/2020/06/Metallica-Zoom.jpg?quality=80'),
-                            ('Megadeth', '1983', 1, 'Thrash Metal', 'https://www.udiscovermusic.com/wp-content/uploads/2020/02/Megadeth-2018-press-shot-web-optimised-1000.jpg'),
-                            ('Iron Maiden', '1975', 24, 'Heavy Metal', 'https://cdn.mos.cms.futurecdn.net/siHgwBd6RWtMx2jKX8cK9b.jpg');
+values                      ('Metallica', '1981', 1, 'Thrash Metal', 'https://consequenceofsound.net/wp-content/uploads/2020/06/Metallica-Zoom.jpg?quality=80'), --1
+                            ('Megadeth', '1983', 1, 'Thrash Metal', 'https://www.udiscovermusic.com/wp-content/uploads/2020/02/Megadeth-2018-press-shot-web-optimised-1000.jpg'), --2
+                            ('Iron Maiden', '1975', 24, 'Heavy Metal', 'https://cdn.mos.cms.futurecdn.net/siHgwBd6RWtMx2jKX8cK9b.jpg'), --3
+                            ('Guns N Roses', '1985', 1, 'Hard Rock', 'https://bloximages.chicago2.vip.townnews.com/buffalonews.com/content/tncms/assets/v3/editorial/e/18/e18b3352-e9a5-547c-9f1b-ae0c2bc1e3b3/5ef2daf83e12d.image.jpg?resize=1200%2C797'), --4
+                            ('Van Halen', '1974', 38, 'Hard Rock', 'https://images-na.ssl-images-amazon.com/images/I/81mNAfWkJkL._AC_SL1500_.jpg'), --5
+                            ('The Beatles', '1960', 42, 'Rock', 'https://www.rollingstone.com/wp-content/uploads/2018/06/rs-7349-20121003-beatles-1962-624x420-1349291947.jpg?resize=1800,1200&w=1800'), --6
+                            ('Judas Priest', '1969', 32, 'Heavy Metal', 'https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F6fcbc442-1e0b-11e8-95c3-8b5a448e6e58.jpg?crop=3032%2C2021%2C0%2C0'), --7
+                            ('Black Sabbath', '1968', 32, 'Heavy Metal', 'https://cdn.mos.cms.futurecdn.net/QPotSyKUg6XcZ2qGih97km.jpg'); --8
 
 insert into "albums"        ("albumTitle", "releaseYear", "recordLabel", "albumImageUrl")
-values                      ('Kill `Em All', '1983', 'Megaforce Records', 'https://img.discogs.com/vzc_hGUuoEkf9x_83pyyeS5laDk=/fit-in/600x596/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-384613-1470347454-4183.jpeg.jpg'),
-                            ('Ride the Lightning','1984','Megaforce Records','https://upload.wikimedia.org/wikipedia/en/f/f4/Ridetl.png'),
-                            ('Master of Puppets','1986','Elektra Records','https://upload.wikimedia.org/wikipedia/en/b/b2/Metallica_-_Master_of_Puppets_cover.jpg'),
-                            ('Killing Is My Business... and Business Is Good!','1985','Combat Records','https://upload.wikimedia.org/wikipedia/en/5/54/Combat_KIMB.jpg'),
-                            ('Peace Sells... but Who`s Buying?','1986','Capitol Records','https://upload.wikimedia.org/wikipedia/en/4/40/Megadeth_-_Peace_Sells..._But_Who%27s_Buying-.jpg'),
-                            ('So Far, So Good... So What!','1988','Capitol Records','https://upload.wikimedia.org/wikipedia/en/7/7f/Megadeth-SoFar.jpg'),
-                            ('Iron Maiden', '1980', 'EMI', 'https://upload.wikimedia.org/wikipedia/en/7/7c/Iron_Maiden_%28album%29_cover.jpg'),
-                            ('Killers', '1981', 'EMI', 'https://upload.wikimedia.org/wikipedia/en/b/b4/Iron_Maiden_Killers.jpg'),
-                            ('The Number of the Beast', '1982', 'EMI', 'https://upload.wikimedia.org/wikipedia/en/3/32/IronMaiden_NumberOfBeast.jpg'),
-                            ('Piece of Mind', '1983', 'EMI', 'https://upload.wikimedia.org/wikipedia/en/8/85/Iron_Maiden_-_Piece_Of_Mind.jpg'),
-                            ('Powerslave', '1984', 'EMI', 'https://upload.wikimedia.org/wikipedia/en/1/1c/Iron_Maiden_-_Powerslave.jpg'),
-                            ('Somewhere in Time', '1986', 'EMI', 'https://upload.wikimedia.org/wikipedia/en/9/9b/Iron_Maiden_-_Somewhere_in_Time.jpg'),
-                            ('Seventh Son of a Seventh Son', '1988', 'EMI', 'https://upload.wikimedia.org/wikipedia/en/c/c0/Iron_Maiden_-_Seventh_Son_Of_A_Seventh_Son.jpg'),
-                            ('No Prayer for the Dying', '1990', 'EMI', 'https://upload.wikimedia.org/wikipedia/en/5/5c/IronMaidenNoPrayerForTheDying.jpg'),
-                            ('Fear of the Dark', '1992', 'EMI', 'https://upload.wikimedia.org/wikipedia/en/e/eb/Iron_Maiden_-_Fear_Of_The_Dark.jpg'),
-                            ('The X Factor', '1995', 'EMI', 'https://upload.wikimedia.org/wikipedia/en/2/21/Iron_Maiden_-_The_X_Factor.jpg'),
-                            ('Virtual XI', '1998', 'EMI', 'https://upload.wikimedia.org/wikipedia/en/3/3a/Iron_Maiden_-_Virtual_XI.jpg'),
-                            ('Brave New World', '2000', 'EMI', 'https://upload.wikimedia.org/wikipedia/en/0/03/Iron_Maiden_-_Brave_New_World.jpg'),
-                            ('Dance of Death', '2003', 'EMI', 'https://upload.wikimedia.org/wikipedia/en/d/de/Iron_Maiden-Dance_of_Death.jpg'),
-                            ('A Matter of Life and Death', '2006', 'EMI', 'https://upload.wikimedia.org/wikipedia/en/7/77/Iron_Maiden_-_A_Matter_Of_Life_And_Death.jpg'),
-                            ('The Final Frontier', '2010', 'EMI', 'https://upload.wikimedia.org/wikipedia/en/8/86/The_Final_Frontier_cover.jpg'),
-                            ('The Book of Souls', '2015', 'Parlophone', 'https://upload.wikimedia.org/wikipedia/en/1/1b/Iron_Maiden_-_The_Book_of_Souls.png');
-                            -- ('', '', '', ''),
-                            -- ('', '', '', ''),
-                            -- ('', '', '', ''),
-                            -- ('', '', '', ''),
-                            -- ('', '', '', ''),
-                            -- ('', '', '', ''),
-                            -- ('', '', '', ''),
-                            -- ('', '', '', ''),
-                            -- ('', '', '', ''),
-                            -- ('', '', '', ''),
-                            -- ('', '', '', ''),
-                            -- ('', '', '', ''),
-                            -- ('', '', '', ''),
-                            -- ('', '', '', ''),
-                            -- ('', '', '', ''),
-                            -- ('', '', '', ''),
-                            -- ('', '', '', ''),
-                            -- ('', '', '', ''),
-                            -- ('', '', '', ''),
-                            -- ('', '', '', ''),
-                            -- ('', '', '', ''),
-                            -- ('', '', '', ''),
-                            -- ('', '', '', ''),
-                            -- ('', '', '', ''),
+values                      ('Kill `Em All', '1983', 'Megaforce Records', 'https://img.discogs.com/vzc_hGUuoEkf9x_83pyyeS5laDk=/fit-in/600x596/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-384613-1470347454-4183.jpeg.jpg'), --1
+                            ('Ride the Lightning','1984','Megaforce Records','https://upload.wikimedia.org/wikipedia/en/f/f4/Ridetl.png'), --2
+                            ('Master of Puppets','1986','Elektra Records','https://upload.wikimedia.org/wikipedia/en/b/b2/Metallica_-_Master_of_Puppets_cover.jpg'), --3
+                            ('Killing Is My Business... and Business Is Good!','1985','Combat Records','https://upload.wikimedia.org/wikipedia/en/5/54/Combat_KIMB.jpg'), --4
+                            ('Peace Sells... but Who`s Buying?','1986','Capitol Records','https://upload.wikimedia.org/wikipedia/en/4/40/Megadeth_-_Peace_Sells..._But_Who%27s_Buying-.jpg'), --5
+                            ('So Far, So Good... So What!','1988','Capitol Records','https://upload.wikimedia.org/wikipedia/en/7/7f/Megadeth-SoFar.jpg'), --6
+                            ('Iron Maiden', '1980', 'EMI', 'https://upload.wikimedia.org/wikipedia/en/7/7c/Iron_Maiden_%28album%29_cover.jpg'), --7
+                            ('Killers', '1981', 'EMI', 'https://upload.wikimedia.org/wikipedia/en/b/b4/Iron_Maiden_Killers.jpg'), --8
+                            ('The Number of the Beast', '1982', 'EMI', 'https://upload.wikimedia.org/wikipedia/en/3/32/IronMaiden_NumberOfBeast.jpg'), --9
+                            ('Piece of Mind', '1983', 'EMI', 'https://upload.wikimedia.org/wikipedia/en/8/85/Iron_Maiden_-_Piece_Of_Mind.jpg'), --10
+                            ('Powerslave', '1984', 'EMI', 'https://upload.wikimedia.org/wikipedia/en/1/1c/Iron_Maiden_-_Powerslave.jpg'), --11
+                            ('Somewhere in Time', '1986', 'EMI', 'https://upload.wikimedia.org/wikipedia/en/9/9b/Iron_Maiden_-_Somewhere_in_Time.jpg'), --12
+                            ('Seventh Son of a Seventh Son', '1988', 'EMI', 'https://upload.wikimedia.org/wikipedia/en/c/c0/Iron_Maiden_-_Seventh_Son_Of_A_Seventh_Son.jpg'), --13
+                            ('No Prayer for the Dying', '1990', 'EMI', 'https://upload.wikimedia.org/wikipedia/en/5/5c/IronMaidenNoPrayerForTheDying.jpg'), --14
+                            ('Fear of the Dark', '1992', 'EMI', 'https://upload.wikimedia.org/wikipedia/en/e/eb/Iron_Maiden_-_Fear_Of_The_Dark.jpg'), --15
+                            ('The X Factor', '1995', 'EMI', 'https://upload.wikimedia.org/wikipedia/en/2/21/Iron_Maiden_-_The_X_Factor.jpg'), --16
+                            ('Virtual XI', '1998', 'EMI', 'https://upload.wikimedia.org/wikipedia/en/3/3a/Iron_Maiden_-_Virtual_XI.jpg'), --17
+                            ('Brave New World', '2000', 'EMI', 'https://upload.wikimedia.org/wikipedia/en/0/03/Iron_Maiden_-_Brave_New_World.jpg'), --18
+                            ('Dance of Death', '2003', 'EMI', 'https://upload.wikimedia.org/wikipedia/en/d/de/Iron_Maiden-Dance_of_Death.jpg'), --19
+                            ('A Matter of Life and Death', '2006', 'EMI', 'https://upload.wikimedia.org/wikipedia/en/7/77/Iron_Maiden_-_A_Matter_Of_Life_And_Death.jpg'), --20
+                            ('The Final Frontier', '2010', 'EMI', 'https://upload.wikimedia.org/wikipedia/en/8/86/The_Final_Frontier_cover.jpg'), --21
+                            ('The Book of Souls', '2015', 'Parlophone', 'https://upload.wikimedia.org/wikipedia/en/1/1b/Iron_Maiden_-_The_Book_of_Souls.png'), --22
+                            ('Appetite for Destruction', '1987', 'Geffen Records', 'https://upload.wikimedia.org/wikipedia/en/6/60/GunsnRosesAppetiteforDestructionalbumcover.jpg'), --23
+                            ('G N` R Lies', '1988', 'Geffen Records', 'https://upload.wikimedia.org/wikipedia/en/a/ad/GNR_GNRLies_Original.jpg'), --24
+                            ('Van Halen', '1978', 'Warner Bros', 'https://upload.wikimedia.org/wikipedia/en/0/0d/Van_Halen_album.jpg'), --25
+                            ('Van Halen II', '1979', 'Warner Bros', 'https://upload.wikimedia.org/wikipedia/en/3/35/Van_Halen_-_Van_Halen_II.jpg'), --26
+                            ('Please Please Me', '1963', 'EMI', 'https://upload.wikimedia.org/wikipedia/en/c/c0/PleasePleaseMe_audio_cover.jpg'), --27
+                            ('Screaming for Vengeance', '1982', 'Columbia', 'https://upload.wikimedia.org/wikipedia/en/4/45/Judas_Priest_SforV.jpg'), --28
+                            ('Black Sabbath', '1970', 'Vertigo', 'https://upload.wikimedia.org/wikipedia/en/d/da/Black_Sabbath_debut_album.jpg'); --29
 
 insert into "musicians"     ("musicianFirstName", "musicianLastName", "cityId", "dob", "musicianImageUrl")
 values                      ('James','Hetfield', 2,'August 3, 1963','https://i.pinimg.com/originals/46/26/10/462610b50d7ec520a1fe945f463d0333.jpg'), --1
@@ -205,7 +236,30 @@ values                      ('James','Hetfield', 2,'August 3, 1963','https://i.p
                             ('Paul', 'Di`Anno', 30, 'May 17, 1958', 'https://i.pinimg.com/736x/18/db/fd/18dbfdabea8bb7c123fc2ffd6f447011--vintage-rock-paul-dianno.jpg'), --32
                             ('Clive', 'Burr', 31, 'March 8, 1957', 'https://townsquare.media/site/295/files/2013/03/Clive-Burr.jpg?w=980&q=75'), --33
                             ('Blaze', 'Bayley', 32, 'May 29, 1963', 'http://www.getreadytorock.com/reviews2008/blaze_bayley_gig08a.jpg'), --34
-                            ('Dennis', 'Stratton', 24, 'October 9, 1952', 'http://3.bp.blogspot.com/-x5mNM1jHF_s/T-jMkUa4ioI/AAAAAAAAAlk/1g80NSPZPcg/s1600/dennis+live75.jpg'); --35
+                            ('Dennis', 'Stratton', 24, 'October 9, 1952', 'http://3.bp.blogspot.com/-x5mNM1jHF_s/T-jMkUa4ioI/AAAAAAAAAlk/1g80NSPZPcg/s1600/dennis+live75.jpg'), --35
+                            ('Axl', 'Rose', 33, 'February 6, 1962', 'https://i.pinimg.com/originals/99/a5/91/99a5912a0936b1ebff3e4b2f2de55dab.png'), --36
+                            ('Duff', 'McKagan', 34, 'February 5, 1964', 'https://dyslexicrhetoric.files.wordpress.com/2009/02/duff02.jpg'), --37
+                            ('Slash', '', 35, '23 July 1965', 'https://i.pinimg.com/originals/36/9c/e9/369ce9bf43c642dc711fba51ee1a13a3.jpg'), --38
+                            ('Izzy', 'Stradlin', 33, 'April 8, 1962', 'http://images4.fanpop.com/image/photos/17300000/Izzy-izzy-stradlin-17342343-465-700.jpg'), --39
+                            ('Steven', 'Adler', 36, 'January 22, 1965', 'https://i.pinimg.com/originals/9e/26/95/9e269503b4167323a794f6143be88d38.jpg'), --40
+                            ('Matt', 'Sorum', 37, 'November 19, 1960', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqOdA4YwlW3bj2n3se4yNkD_ZgvUWFwAn0aA&usqp=CAU'), --41
+                            ('Eddie', 'Van Halen', 39, 'January 26, 1955', 'https://i.pinimg.com/originals/08/74/da/0874da1cdde99b5f12c6344e5a763cda.jpg'), --42
+                            ('Alex', 'Van Halen', 39, 'May 8, 1953', 'https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/alex-van-halen-fin-costello.jpg'), --43
+                            ('David', 'Lee Roth', 40, 'October 10, 1954', 'https://i.pinimg.com/originals/e0/d1/ea/e0d1ea5db52474b950e2536c66bae46f.jpg'), --44
+                            ('Michael', 'Anthony', 41, 'June 20, 1954', 'https://pbs.twimg.com/media/C-jurG5UIAAxhlu.jpg'), --45
+                            ('John', 'Lennon', 42, 'October 8, 1940', 'https://cdn.britannica.com/01/136501-050-D9110414/John-Lennon.jpg'), --46
+                            ('Paul', 'McCartney', 42, 'June 18, 1942', 'https://i.pinimg.com/originals/b3/c6/7e/b3c67e1b7bda67699025b694172d0469.jpg'), --47
+                            ('George', 'Harrison', 42, 'February 25, 1943', 'https://i.pinimg.com/originals/b5/4e/8d/b54e8d80de64f1454251328e88650321.jpg'), --48
+                            ('Ringo', 'Starr', 42, 'July 7, 1940', 'https://i.pinimg.com/originals/e7/11/0f/e7110f01dd7605f234c003a77b78107e.jpg'), --49
+                            ('Ian', 'Hill', 43, 'January 20, 1952', 'https://townsquare.media/site/366/files/2015/04/Ian-Hill.jpg'), --50
+                            ('Glenn', 'Tipton', 44, 'October 25, 1947', 'https://cdn.mos.cms.futurecdn.net/ruQZeYRT4umuwMWg2sqsBA.jpg'), --51
+                            ('Rob', 'Halford', 45, 'August 25, 1951', 'https://www.nydailynews.com/resizer/l4wiBcq_buyVUTw9sJ_X77GTvik=/1200x0/top/arc-anglerfish-arc2-prod-tronc.s3.amazonaws.com/public/ULKLH7W6ZCS5M3GWCY2QWR57HU.jpg'), --52
+                            ('Scott', 'Travis', 46, 'September 6, 1961', 'https://upload.wikimedia.org/wikipedia/commons/3/32/Scott_Travis2005.jpg'), --53
+                            ('Richie', 'Faulkner', 24, 'January 1, 1980', 'https://i.pinimg.com/736x/ed/25/fc/ed25fc6964e87ca288f1cecab24db33d.jpg'), --54
+                            ('Tommy', 'Iommi', 32, 'February 19, 1948', 'https://i.redd.it/9prgocmee8h01.jpg'), --55
+                            ('Bill', 'Ward', 32, 'May 5, 1948', 'https://upload.wikimedia.org/wikipedia/commons/6/6b/BillWardIn1970.png'), --56
+                            ('Geezer', 'Butler', 32, 'July 17, 1949', 'https://upload.wikimedia.org/wikipedia/commons/3/36/2019_RiP_Deadland_Ritual_-_Geezer_Butler_-_by_2eight_-_8SC9785.jpg'), --57
+                            ('Ozzy', 'Osbourne', 32, 'December 1948', 'https://i.ytimg.com/vi/I2CUfarP-P8/hqdefault.jpg'); --58
 
 insert into "discography"   ("bandId", "albumId")
 values                      (1, 1),
@@ -229,29 +283,14 @@ values                      (1, 1),
                             (3, 19),
                             (3, 20),
                             (3, 21),
-                            (3, 22);
-                            -- (, ),
-                            -- (, ),
-                            -- (, ),
-                            -- (, ),
-                            -- (, ),
-                            -- (, ),
-                            -- (, ),
-                            -- (, ),
-                            -- (, ),
-                            -- (, ),
-                            -- (, ),
-                            -- (, ),
-                            -- (, ),
-                            -- (, ),
-                            -- (, ),
-                            -- (, ),
-                            -- (, ),
-                            -- (, ),
-                            -- (, ),
-                            -- (, ),
-                            -- (, ),
-                            -- (, ),
+                            (3, 22),
+                            (4, 23),
+                            (4, 24),
+                            (5, 25),
+                            (5, 26),
+                            (6, 27),
+                            (7, 28),
+                            (8, 29);
 
 insert into "members"       ("bandId", "musicianId", "current")
 values                      (1, 1, true),
@@ -289,7 +328,30 @@ values                      (1, 1, true),
                             (3, 32, false),
                             (3, 33, false),
                             (3, 34, false),
-                            (3, 35, false);
+                            (3, 35, false),
+                            (4, 36, true),
+                            (4, 37, true),
+                            (4, 38, true),
+                            (4, 39, false),
+                            (4, 40, false),
+                            (4, 41, false),
+                            (5, 42, false),
+                            (5, 43, false),
+                            (5, 44, false),
+                            (5, 45, false),
+                            (6, 46, false),
+                            (6, 47, false),
+                            (6, 48, false),
+                            (6, 49, false),
+                            (7, 50, true),
+                            (7, 51, true),
+                            (7, 52, true),
+                            (7, 53, true),
+                            (7, 54, true),
+                            (8, 55, false),
+                            (8, 56, false),
+                            (8, 57, false),
+                            (8, 58, false);
 
 insert into "videos"        ("bandId", "videoUrl")
 values                      (1, 'CD-E-LDc384'),
@@ -300,7 +362,18 @@ values                      (1, 'CD-E-LDc384'),
                             (2, 'rUGIocJK9Tc'),
                             (3, 'Xg9aQvjMS60'),
                             (3, 'p4w2BZXL6Ss'),
-                            (3, 'WxnN05vOuSM');
+                            (3, 'WxnN05vOuSM'),
+                            (4, '1w7OgIMMRc4'),
+                            (4, 'o1tj2zJ2Wvg'),
+                            (5, 'SwYN7mTi6HM'),
+                            (5, 'fuKDBPw8wQA'),
+                            (6, '2Q_ZzBGPdqE'),
+                            (7, 'L397TWLwrUU'),
+                            (7, 'nM__lPTWThU'),
+                            (7, 'JhY9GOhFwN4'),
+                            (8, '0qanF-91aJo'),
+                            (8, 'hkXHsK4AQPs');
+
 
 insert into "carouselImages"("bandId","bandCarouselImageUrl")
 values                      (1, 'https://consequenceofsound.net/wp-content/uploads/2020/06/Metallica-Zoom.jpg?quality=80'),
@@ -311,7 +384,22 @@ values                      (1, 'https://consequenceofsound.net/wp-content/uploa
                             (2, 'https://specials-images.forbesimg.com/imageserve/5f57ad29b488eaeabd9364e8/960x0.jpg?fit=scale'),
                             (3, 'https://cdn.mos.cms.futurecdn.net/siHgwBd6RWtMx2jKX8cK9b.jpg'),
                             (3, 'https://list.lisimg.com/image/283947/500full.jpg'),
-                            (3, 'https://static.billboard.com/files/media/iron-maiden-1988-billboard-1548-768x433.jpg');
+                            (3, 'https://static.billboard.com/files/media/iron-maiden-1988-billboard-1548-768x433.jpg'),
+                            (4, 'https://bloximages.chicago2.vip.townnews.com/buffalonews.com/content/tncms/assets/v3/editorial/e/18/e18b3352-e9a5-547c-9f1b-ae0c2bc1e3b3/5ef2daf83e12d.image.jpg?resize=1200%2C797'),
+                            (4, 'https://townsquare.media/site/295/files/2014/10/gnr-.jpg?w=980&q=75'),
+                            (4, 'https://gis.scdn7.secure.raxcdn.com/mediaLibrary/images/english/5298.png'),
+                            (5, 'https://images-na.ssl-images-amazon.com/images/I/81mNAfWkJkL._AC_SL1500_.jpg'),
+                            (5, 'https://i.pinimg.com/originals/67/7b/b2/677bb2d458bce16287b8358ccf6c9880.jpg'),
+                            (5, 'https://media.bizj.us/view/img/6256781/van-halen*750xx3713-2090-509-415.jpg'),
+                            (6, 'https://www.rollingstone.com/wp-content/uploads/2018/06/rs-7349-20121003-beatles-1962-624x420-1349291947.jpg?resize=1800,1200&w=1800'),
+                            (6, 'https://api.time.com/wp-content/uploads/2015/12/the-beatles2.jpg'),
+                            (6, 'https://static.onecms.io/wp-content/uploads/sites/6/2018/07/gettyimages-74251316-2000.jpg'),
+                            (7, 'https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F6fcbc442-1e0b-11e8-95c3-8b5a448e6e58.jpg?crop=3032%2C2021%2C0%2C0'),
+                            (7, 'https://cdn.mos.cms.futurecdn.net/ycQMYThLsqatrzrxrKwarb.jpg'),
+                            (7, 'https://2ab9pu2w8o9xpg6w26xnz04d-wpengine.netdna-ssl.com/wp-content/uploads/2020/02/judas-priest-press-crop-1480x832.jpg'),
+                            (8, 'https://cdn.mos.cms.futurecdn.net/QPotSyKUg6XcZ2qGih97km.jpg'),
+                            (8, 'http://bravewords.com/medias-static/images/news/2015/5675C42A-black-sabbath-ronnie-james-dio-era-to-be-featured-in-rock-n-roll-fantasy-camp-image.jpg'),
+                            (8, 'https://www.nme.com/wp-content/uploads/2016/09/2012BlackSabbathPR300512-1.jpg');
 
 insert into "personnel"     ("musicianId", "albumId")
 values                      (1, 1),
@@ -422,29 +510,42 @@ values                      (1, 1),
                             (28, 22),
                             (29, 22),
                             (30, 22),
-                            (31, 22);
-                            -- (, ),
-                            -- (, ),
-                            -- (, ),
-                            -- (, ),
-                            -- (, ),
-                            -- (, ),
-                            -- (, ),
-                            -- (, ),
-                            -- (, ),
-                            -- (, ),
-                            -- (, ),
-                            -- (, ),
-                            -- (, ),
-                            -- (, ),
-                            -- (, ),
-                            -- (, ),
-                            -- (, ),
-
+                            (31, 22),
+                            (36, 23),
+                            (37, 23),
+                            (38, 23),
+                            (39, 23),
+                            (40, 23),
+                            (36, 24),
+                            (37, 24),
+                            (38, 24),
+                            (39, 24),
+                            (40, 24),
+                            (42, 25),
+                            (43, 25),
+                            (44, 25),
+                            (45, 25),
+                            (42, 26),
+                            (43, 26),
+                            (44, 26),
+                            (45, 26),
+                            (46, 27),
+                            (47, 27),
+                            (48, 27),
+                            (49, 27),
+                            (50, 28),
+                            (51, 28),
+                            (52, 28),
+                            (55, 29),
+                            (56, 29),
+                            (57, 29),
+                            (58, 29);
 
 insert into "genres"        ("genre")
-values                      ('Thrash Metal'),
-                            ('Heavy Metal');
+values                      ('Thrash Metal'), --1
+                            ('Heavy Metal'), --2
+                            ('Hard Rock'), --3
+                            ('Rock'); --4
 
 insert into "albumGenre"    ("albumId","genreId")
 values                      (1, 1),
@@ -468,23 +569,14 @@ values                      (1, 1),
                             (19, 2),
                             (20, 2),
                             (21, 2),
-                            (22, 2);
-                            -- (, ),
-                            -- (, ),
-                            -- (, ),
-                            -- (, ),
-                            -- (, ),
-                            -- (, ),
-                            -- (, ),
-                            -- (, ),
-                            -- (, ),
-                            -- (, ),
-                            -- (, ),
-                            -- (, ),
-                            -- (, ),
-                            -- (, ),
-                            -- (, ),
-                            -- (, ),
+                            (22, 2),
+                            (23, 3),
+                            (24, 3),
+                            (25, 3),
+                            (26, 3),
+                            (27, 4),
+                            (28, 2),
+                            (29, 2);
 
 insert into "tracks"        ("albumId", "trackNo", "track", "length")
 values                      (1, 1, 'Hit the Lights', '4:17'),
@@ -574,7 +666,7 @@ values                      (1, 1, 'Hit the Lights', '4:17'),
                             (10, 9, 'To Tame a Land', '7:26'),
                             (11, 1, 'Aces High', '4:31'),
                             (11, 2, '2 Minutes to Midnight', '6:04'),
-                            (11, 3, 'Losfer Words (Big &apos;Orra)', '4:15'),
+                            (11, 3, 'Losfer Words (Big `Orra)', '4:15'),
                             (11, 4, 'Flash of the Blade', '4:05'),
                             (11, 5, 'The Duellists', '6:18'),
                             (11, 6, 'Back in the Village', '5:02'),
@@ -688,36 +780,76 @@ values                      (1, 1, 'Hit the Lights', '4:17'),
                             (22, 8, 'Shadows of the Valley', '7:32'),
                             (22, 9, 'Tears of a Clown', '4:59'),
                             (22, 10, 'The Man of Sorrows', '6:28'),
-                            (22, 11, 'Empire of the Clouds', '18:01');
-                            -- (, , '', ''),
-                            -- (, , '', ''),
-                            -- (, , '', ''),
-                            -- (, , '', ''),
-                            -- (, , '', ''),
-                            -- (, , '', ''),
-                            -- (, , '', ''),
-                            -- (, , '', ''),
-                            -- (, , '', ''),
-                            -- (, , '', ''),
-                            -- (, , '', ''),
-                            -- (, , '', ''),
-                            -- (, , '', ''),
-                            -- (, , '', ''),
-                            -- (, , '', ''),
-                            -- (, , '', ''),
-                            -- (, , '', ''),
-                            -- (, , '', ''),
-                            -- (, , '', ''),
-                            -- (, , '', ''),
-                            -- (, , '', ''),
-                            -- (, , '', ''),
-                            -- (, , '', ''),
-                            -- (, , '', ''),
-                            -- (, , '', ''),
-                            -- (, , '', ''),
-                            -- (, , '', ''),
-                            -- (, , '', ''),
-                            -- (, , '', ''),
-                            -- (, , '', ''),
-                            -- (, , '', ''),
-                            -- (, , '', ''),
+                            (22, 11, 'Empire of the Clouds', '18:01'),
+                            (23, 1, 'Welcome to the Jungle', '4:31'),
+                            (23, 2, 'It`s So Easy', '3:21'),
+                            (23, 3, 'Nightrain', '4:26'),
+                            (23, 4, 'Out ta Get Me', '4:20'),
+                            (23, 5, 'Mr. Brownstone', '3:46'),
+                            (23, 6, 'Paradise City', '6:46'),
+                            (23, 7, 'My Michelle', '3:39'),
+                            (23, 8, 'Think About You', '3:50'),
+                            (23, 9, 'Sweet Child o` Mine', '5:55'),
+                            (23, 10, 'You`re Crazy', '3:16'),
+                            (23, 11, 'Anything Goes"', '3:25'),
+                            (23, 12, 'Rocket Queen', '6:13'),
+                            (24, 1, 'Reckless Life', '3:23'),
+                            (24, 2, 'Nice Boys', '3:01'),
+                            (24, 3, 'Move to the City', '3:42'),
+                            (24, 4, 'Mama Kin', '3:57'),
+                            (24, 5, 'Patience', '5:56'),
+                            (24, 6, 'Used to Love Her', '3:13'),
+                            (24, 7, 'You`re Crazy', '4:10'),
+                            (24, 8, 'One in a Million', '6:09'),
+                            (25, 1, 'Runnin` with the Devil', '3:36'),
+                            (25, 2, 'Eruption', '1:42'),
+                            (25, 3, 'You Really Got Me', '2:38'),
+                            (25, 4, 'Ain`t Talkin` `bout Love', '3:50'),
+                            (25, 5, 'I`m the One', '3:47'),
+                            (25, 6, 'Jamie`s Cryin', '3:31'),
+                            (25, 7, 'Atomic Punk', '3:02'),
+                            (25, 8, 'Feel Your Love Tonight', '3:43'),
+                            (25, 9, 'Little Dreamer', '3:23'),
+                            (25, 10, 'Ice Cream Man', '3:20'),
+                            (25, 11, 'On Fire', '3:01'),
+                            (26, 1, 'You`re No Good', '3:16'),
+                            (26, 2, 'Dance the Night Away', '3:06'),
+                            (26, 3, 'Somebody Get Me a Doctor', '2:52'),
+                            (26, 4, 'Bottoms Up!', '3:05'),
+                            (26, 5, 'Outta Love Again', '2:51'),
+                            (26, 6, 'Light Up the Sky', '3:13'),
+                            (26, 7, 'Spanish Fly', '1:00'),
+                            (26, 8, 'D.O.A.', '4:09'),
+                            (26, 9, 'Women in Love...', '4:08'),
+                            (26, 10, 'Beautiful Girls', '3:56'),
+                            (27, 1, 'I Saw Her Standing There', '2:55'),
+                            (27, 2, 'Misery', '1:49'),
+                            (27, 3, 'Anna (Go to Him)', '2:55'),
+                            (27, 4, 'Chains', '2:23'),
+                            (27, 5, 'Boys', '2:24'),
+                            (27, 6, 'Ask Me Why', '2:24'),
+                            (27, 7, 'Please Please Me', '1:59'),
+                            (27, 8, 'Love Me Do', '2:21'),
+                            (27, 9, 'P.S. I Love You', '2:04'),
+                            (27, 10, 'Baby It`s You', '2:40'),
+                            (27, 11, 'Do You Want to Know a Secret', '1:56'),
+                            (27, 12, 'A Taste of Honey', '2:03'),
+                            (27, 13, 'There`s a Place', '1:51'),
+                            (27, 14, 'Twist and Shout', '2:32'),
+                            (28, 1, 'The Hellion', '0:41'),
+                            (28, 2, 'Electric Eye', '3:39'),
+                            (28, 3, 'Riding on the Wind', '3:07'),
+                            (28, 4, 'Bloodstone', '3:51'),
+                            (28, 5, '(Take These) Chains', '3:07'),
+                            (28, 6, 'Pain and Pleasure', '4:17'),
+                            (28, 7, 'Screaming for Vengeance', '4:43'),
+                            (28, 8, 'You`ve Got Another Thing Comin`', '	5:09'),
+                            (28, 9, 'Fever', '5:20'),
+                            (28, 10, 'Devil`s Child', '4:48'),
+                            (29, 1, 'Black Sabbath', '6:20'),
+                            (29, 2, 'The Wizard', '4:24'),
+                            (29, 3, 'Behind the Wall of Sleep', '3:37'),
+                            (29, 4, 'N.I.B.', '6:08'),
+                            (29, 5, 'Evil Woman', '3:25'),
+                            (29, 6, 'Sleeping Village', '3:46'),
+                            (29, 7, 'Warning', '10:28');

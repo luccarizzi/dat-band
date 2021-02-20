@@ -71,7 +71,7 @@ export default class DropdownMenu extends React.Component {
       noResult = <NoMatchMessage result={this.props.result} />;
     }
 
-    const dataList = data.map((data, index) => {
+    const dataList = data.map(data => {
       let result;
       switch (category) {
         case 'band':
