@@ -88,7 +88,7 @@ export default class SearchForm extends React.Component {
                 The database is currently limited. The following bands can be searched.
               </p>
               <p className='m-0'>
-                - Iron Maiden, Megadeth and Metallica
+                - Black Sabbath, Guns N Roses, Iron Maiden, Judas Priest, Megadeth, Metallica, The Beatles, Van Halen.
               </p>
             </div>
           </div>

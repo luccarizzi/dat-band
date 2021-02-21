@@ -109,6 +109,9 @@ app.get('/api/band/:bandId', (req, res, next) => {
   db
     .query(sqlImageCarousel, params)
     .then(result => {
+      if (!result.rows[0]) {
+        throw new ClientError(404, `cannot find product with bandId ${bandId}`);
+      }
       data.imageCarousel = result.rows;
       return db.query(sqlTitle, params);
     })
@@ -180,6 +183,9 @@ app.get('/api/album/:albumId', (req, res, next) => {
   db
     .query(sqlImage, params)
     .then(result => {
+      if (!result.rows[0]) {
+        throw new ClientError(404, `cannot find product with albumId ${albumId}`);
+      }
       data.image = result.rows;
       return db.query(sqlTitle, params);
     })
@@ -245,6 +251,9 @@ app.get('/api/musician/:musicianId', (req, res, next) => {
   db
     .query(sqlImage, params)
     .then(result => {
+      if (!result.rows[0]) {
+        throw new ClientError(404, `cannot find product with musicianId ${musicianId}`);
+      }
       data.image = result.rows;
       return db.query(sqlTitle, params);
     })
