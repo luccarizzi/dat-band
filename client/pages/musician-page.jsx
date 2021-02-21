@@ -4,6 +4,7 @@ import MusicianTitle from '../components/musician/musician-title';
 import MusicianInfo from '../components/musician/musician-info';
 import MusicianAssociated from '../components/musician/musician-associated';
 import MusicianRecorded from '../components/musician/musician-recorded';
+import NotFound from '../components/not-found';
 
 export default class MusicianPage extends React.Component {
   constructor(props) {

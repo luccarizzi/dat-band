@@ -4,6 +4,7 @@ import AlbumInfo from '../components/album/album-info';
 import AlbumTitle from '../components/album/album-title';
 import AlbumPersonnel from '../components/album/album-personnel';
 import AlbumTrackList from '../components/album/album-track-list';
+import NotFound from '../components/not-found';
 
 export default class AlbumPage extends React.Component {
   constructor(props) {
