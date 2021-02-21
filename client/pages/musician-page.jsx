@@ -30,6 +30,12 @@ export default class MusicianPage extends React.Component {
   page() {
     const { data } = this.state;
     const { image, title, info, associated, recorded } = data;
+    if (data.error) {
+      return (
+        <NotFound />
+      );
+    }
+
     if (data) {
       return (
         <div className='container'>

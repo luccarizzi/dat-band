@@ -47,11 +47,11 @@ export default class BandPage extends React.Component {
   page() {
     const { data } = this.state;
     const { imageCarousel, title, info, members, discography, videography, genre } = data;
-    // if (data.error) {
-    //   return (
-    //     <NotFound />
-    //   )
-    // }
+    if (data.error) {
+      return (
+        <NotFound />
+      );
+    }
 
     if (data) {
       return (

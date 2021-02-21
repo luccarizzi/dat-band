@@ -30,6 +30,12 @@ export default class AlbumPage extends React.Component {
   page() {
     const { data } = this.state;
     const { image, title, info, personnel, trackList } = data;
+    if (data.error) {
+      return (
+        <NotFound />
+      );
+    }
+
     if (data) {
       return (
         <div className='container'>
