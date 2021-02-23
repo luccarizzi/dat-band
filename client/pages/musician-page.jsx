@@ -17,7 +17,7 @@ export default class MusicianPage extends React.Component {
 
   componentDidMount() {
     const { path } = this.props.queriedRoute.route;
-    fetch(`api/${path}`)
+    fetch(`/api/${path}`)
       .then(res => res.json())
       .then(data => {
         this.setState({

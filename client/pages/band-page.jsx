@@ -19,7 +19,7 @@ export default class BandPage extends React.Component {
 
   componentDidMount() {
     const { path } = this.props.queriedRoute.route;
-    fetch(`api/${path}`)
+    fetch(`/api/${path}`)
       .then(res => res.json())
       .then(data => {
         this.setState({
@@ -32,7 +32,7 @@ export default class BandPage extends React.Component {
   componentDidUpdate(prevProps) {
     if (this.props !== prevProps) {
       const { path } = this.props.queriedRoute.route;
-      fetch(`api/${path}`)
+      fetch(`/api/${path}`)
         .then(res => res.json())
         .then(data => {
           this.setState({
