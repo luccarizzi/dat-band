@@ -6,6 +6,7 @@ import BandMembers from '../components/band/band-members';
 import BandDiscography from '../components/band/band-discography';
 import BandVideography from '../components/band/band-videography';
 import BandSeeAlso from '../components/band/band-see-also';
+import NotFound from '../components/not-found';
 
 export default class BandPage extends React.Component {
   constructor(props) {
@@ -46,11 +47,11 @@ export default class BandPage extends React.Component {
   page() {
     const { data } = this.state;
     const { imageCarousel, title, info, members, discography, videography, genre } = data;
-    // if (data.error) {
-    //   return (
-    //     <p>error</p>
-    //   )
-    // }
+    if (data.error) {
+      return (
+        <NotFound />
+      );
+    }
 
     if (data) {
       return (
